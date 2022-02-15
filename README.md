@@ -1,7 +1,7 @@
 # Neonatologie
 Dossier pour la Néonatologie
 
-Télécharger Node js http://nodejs.org/en/ (la version recommandait pour les users Cocher Automatically install the necessary tools ....
+Télécharger Node js http://nodejs.org/en/ (la version recommander pour les users Cocher Automatically install the necessary tools ....)
 
 Installer vue/cli dans PowerShell : npm install -g @vue/cli
 
