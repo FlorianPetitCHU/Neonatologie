@@ -1,0 +1,58 @@
+// Import theming functions
+@import '~@angular/material/theming';
+// Import your custom theme
+@import '/src/styles.scss';
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.button-toolbar{
+  margin-top: 10px;
+  margin-right: 2px;
+  border-style: none;
+  background:  rgb(219, 227, 245);
+
+
+}
+
+.p-toolbar{
+  margin: 0;
+  position: fixed;
+  width: 100%;
+  background:  rgb(211, 220, 243);
+
+}
+
+.color-toolbar{
+  background:  rgb(202,213,233);
+}
+
+.color-button-toolbar{
+
+
+  color:  black
+}
+
+.link-home{
+  color: white;
+  text-decoration: none;
+}
+html{
+  background:  rgb(209,220,242);
+}
+.Second-button-toolbar{
+  margin-right: 2px;
+  border-style: none;
+  background:  rgb(219, 227, 245);
+}
+
+.mat-button-toggle-checked {
+  background-color: white !important;
+
+}
+
+
+.mat-button-toggle-label-content{
+  line-height: 0 !important;
+}

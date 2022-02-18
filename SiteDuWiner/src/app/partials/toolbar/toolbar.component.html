@@ -1,0 +1,21 @@
+<p class="p-toolbar">
+  <mat-toolbar class="color-toolbar">
+  <mat-button-toggle-group >
+    <mat-button-toggle class="Second-button-toolbar color-button-toolbar" routerLink="/home">Admission</mat-button-toggle>
+    <mat-button-toggle class="Second-button-toolbar color-button-toolbar" routerLink="/recueilDeDonnesPiedatriquesComponent">Données transverses pédiatriques</mat-button-toggle>
+  </mat-button-toggle-group>
+</mat-toolbar>
+  <mat-toolbar class="color-toolbar">
+    <div class="Donnes-Trans" *ngIf="router.url === '/recueilDeDonnesPiedatriquesComponent'
+    || router.url === '/contexteFamilial'">
+      <mat-button-toggle-group >
+       <mat-button-toggle class="Second-button-toolbar color-button-toolbar" routerLink="/contexteFamilial">Contexte familial et social</mat-button-toggle>
+       <mat-button-toggle class="Second-button-toolbar color-button-toolbar" value="2">ATCD familiaux - Arbre Généalogique</mat-button-toggle>
+       <mat-button-toggle class="Second-button-toolbar color-button-toolbar" value="3">Grossesse - période Néonatale</mat-button-toggle>
+       <mat-button-toggle class="Second-button-toolbar color-button-toolbar" value="4">Vaccinations</mat-button-toggle>
+       <mat-button-toggle class="Second-button-toolbar color-button-toolbar" value="5">Croissance</mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+  </mat-toolbar>
+</p>
+
