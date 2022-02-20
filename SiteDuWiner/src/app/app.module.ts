@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import {MatExpansionModule} from '@angular/material/expansion';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ToolbarComponent } from './partials/toolbar/toolbar.component';
@@ -14,6 +15,16 @@ import { ContexteFamilialComponent } from './pages/contexte-familial/contexte-fa
 import { AtcdFamComponent } from './pages/atcd-fam/atcd-fam.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { GrosssessePeriodeNeonatComponent } from './pages/grosssesse-periode-neonat/grosssesse-periode-neonat.component';
+import { VaccinComponent } from './pages/vaccin/vaccin.component';
+import { CroissanceComponent } from './pages/croissance/croissance.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSelectModule} from '@angular/material/select';
+import { FormsModule } from '@angular/forms';
+import {MatTableModule} from '@angular/material/table';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+
 
 
 
@@ -26,18 +37,29 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     IndexComponent,
     RecueilDeDonnesPiedatriquesComponent,
     ContexteFamilialComponent,
-    AtcdFamComponent
+    AtcdFamComponent,
+    GrosssessePeriodeNeonatComponent,
+    VaccinComponent,
+    CroissanceComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    MatExpansionModule,
     MatToolbarModule,
     MatIconModule,
     MatGridListModule,
     MatInputModule,
     MatButtonToggleModule,
-    MatButtonModule
+    MatButtonModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    FormsModule,
+    MatTableModule,
+    MatDatepickerModule
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
