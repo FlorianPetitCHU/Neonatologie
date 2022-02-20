@@ -82,8 +82,19 @@
                     <mat-grid-tile>Profession</mat-grid-tile>
                   </mat-grid-list>
                 </div>
-                <mat-grid-list cols="9" rowHeight="10:1" class="tableInput" >
-                  <mat-grid-tile><input type="text" ></mat-grid-tile>
+                <mat-grid-list cols="9" rowHeight="10:1" class="tableInput">
+                  <mat-grid-tile><input matInput  [(ngModel)]="test" #ctrl="ngModel"  ></mat-grid-tile>
+                  <mat-grid-tile><input matInput ></mat-grid-tile>
+                  <mat-grid-tile><input matInput ></mat-grid-tile>
+                  <mat-grid-tile><input matInput ></mat-grid-tile>
+                  <mat-grid-tile><input matInput ></mat-grid-tile>
+                  <mat-grid-tile><input matInput ></mat-grid-tile>
+                  <mat-grid-tile><input matInput ></mat-grid-tile>
+                  <mat-grid-tile><input matInput ></mat-grid-tile>
+                  <mat-grid-tile><input matInput ></mat-grid-tile>
+                </mat-grid-list>
+                <mat-grid-list cols="9" rowHeight="10:1" class="tableInput" *ngIf="test != ''" >
+                  <mat-grid-tile><input matInput ></mat-grid-tile>
                   <mat-grid-tile><input matInput ></mat-grid-tile>
                   <mat-grid-tile><input matInput ></mat-grid-tile>
                   <mat-grid-tile><input matInput ></mat-grid-tile>
