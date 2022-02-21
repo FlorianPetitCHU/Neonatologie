@@ -1,10 +1,16 @@
 <p class="p-toolbar">
+
+
+
+
   <mat-toolbar class="color-toolbar">
-  <mat-button-toggle-group >
-    <mat-button-toggle class="Second-button-toolbar color-button-toolbar" routerLink="/home">Admission</mat-button-toggle>
-    <mat-button-toggle class="Second-button-toolbar color-button-toolbar" routerLink="/recueilDeDonnesPiedatriquesComponent">Données transverses pédiatriques</mat-button-toggle>
-  </mat-button-toggle-group>
-</mat-toolbar>
+    <mat-button-toggle-group>
+      <mat-button-toggle class="Second-button-toolbar color-button-toolbar" routerLink="/home">Admission
+      </mat-button-toggle>
+      <mat-button-toggle class="Second-button-toolbar color-button-toolbar"
+        routerLink="/recueilDeDonnesPiedatriquesComponent">Données transverses pédiatriques</mat-button-toggle>
+    </mat-button-toggle-group>
+  </mat-toolbar>
   <mat-toolbar class="color-toolbar">
     <div class="Donnes-Trans" *ngIf="router.url === '/recueilDeDonnesPiedatriquesComponent'
     || router.url === '/contexteFamilial'
@@ -12,18 +18,21 @@
     || router.url === '/grosssessePeriodeNeonat'
     || router.url === '/vaccin'
     || router.url === '/croissance'">
-      <mat-button-toggle-group >
-       <mat-button-toggle class="Second-button-toolbar color-button-toolbar" routerLink="/contexteFamilial">Contexte familial et social</mat-button-toggle>
-       <mat-button-toggle class="Second-button-toolbar color-button-toolbar" routerLink="/atcdFam">ATCD familiaux - Arbre Généalogique</mat-button-toggle>
-       <mat-button-toggle class="Second-button-toolbar color-button-toolbar" routerLink="/grosssessePeriodeNeonat">Grossesse - période Néonatale</mat-button-toggle>
-       <mat-button-toggle class="Second-button-toolbar color-button-toolbar" routerLink="/vaccin">Vaccinations</mat-button-toggle>
-       <mat-button-toggle class="Second-button-toolbar color-button-toolbar" routerLink="/croissance">Croissance</mat-button-toggle>
+      <mat-button-toggle-group>
+        <mat-button-toggle class="Second-button-toolbar color-button-toolbar" routerLink="/contexteFamilial">Contexte
+          familial et social</mat-button-toggle>
+        <mat-button-toggle class="Second-button-toolbar color-button-toolbar" routerLink="/atcdFam">ATCD familiaux -
+          Arbre Généalogique</mat-button-toggle>
+        <mat-button-toggle class="Second-button-toolbar color-button-toolbar" routerLink="/grosssessePeriodeNeonat">
+          Grossesse - période Néonatale</mat-button-toggle>
+        <mat-button-toggle class="Second-button-toolbar color-button-toolbar" routerLink="/vaccin">Vaccinations
+        </mat-button-toggle>
+        <mat-button-toggle class="Second-button-toolbar color-button-toolbar" routerLink="/croissance">Croissance
+        </mat-button-toggle>
       </mat-button-toggle-group>
 
     </div>
 
   </mat-toolbar>
-
 </p>
-
 
