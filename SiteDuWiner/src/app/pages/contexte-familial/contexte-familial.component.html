@@ -1,8 +1,16 @@
 <p class="nav-place"></p>
+  <mat-toolbar class="color-toolbar">
+    <mat-button-toggle-group>
+      <mat-button-toggle class="Second-button-toolbar color-button-toolbar" (click)="role_soignant()">Soignant
+      </mat-button-toggle>
+      <mat-button-toggle class="Second-button-toolbar color-button-toolbar" (click)="role_med()">Médecin
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+  </mat-toolbar>
 <section>
   <div>
     <div class="">
-      <div class="row">
+      <div class="row" *ngIf = "role == 1">
         <mat-expansion-panel  [expanded]="true" >
           <mat-expansion-panel-header class="panel">
             <mat-panel-title>
@@ -93,8 +101,10 @@
                   <mat-grid-tile><input matInput ></mat-grid-tile>
                   <mat-grid-tile><input matInput ></mat-grid-tile>
                 </mat-grid-list>
+                  <div class="showInputField"></div>
+                  <button (click)="CreateTable()">ADD</button>
                 <mat-grid-list cols="9" rowHeight="10:1" class="tableInput" *ngIf="test != ''" >
-                  <mat-grid-tile><input matInput ></mat-grid-tile>
+                  <mat-grid-tile><input matInput (change) = "CreateTable()"></mat-grid-tile>
                   <mat-grid-tile><input matInput ></mat-grid-tile>
                   <mat-grid-tile><input matInput ></mat-grid-tile>
                   <mat-grid-tile><input matInput ></mat-grid-tile>
@@ -104,6 +114,7 @@
                   <mat-grid-tile><input matInput ></mat-grid-tile>
                   <mat-grid-tile><input matInput ></mat-grid-tile>
                 </mat-grid-list>
+
                 <div class="infoMere">
                   <div class="content">
                     <label >Nom de jeune fille de la mère</label>
