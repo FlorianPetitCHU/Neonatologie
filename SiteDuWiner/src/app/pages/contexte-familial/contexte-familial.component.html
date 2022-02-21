@@ -1,0 +1,129 @@
+<p class="nav-place"></p>
+<section>
+  <div>
+    <div class="">
+      <div class="row">
+        <mat-expansion-panel  [expanded]="true" >
+          <mat-expansion-panel-header class="panel">
+            <mat-panel-title>
+              <h1>Identidication de l'enfant</h1>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="row">
+            <div class="content">
+              <label>Nom</label>
+              <input type="text">
+              <label>Prenom</label>
+              <input type="text">
+              <label>Sexe</label>
+              <select>
+                <option>Masculain</option>
+                <option>Feminin</option>
+                <option>Non definie</option>
+              </select>
+              <label>age</label>
+              <input type="number">
+            </div>
+            <h3>Naisssance</h3>
+            <div class="content">
+              <label>Date</label>
+              <input type="date">
+              <label>Heure</label>
+              <input type="time">
+            </div>
+            <div class="content">
+              <label>lieu</label>
+              <input type="text" style="width: 80%;">
+            </div>
+          </div>
+        </mat-expansion-panel>
+      </div>
+      <div class="row">
+        <mat-expansion-panel  [expanded]="true">
+          <mat-expansion-panel-header class="panel">
+            <mat-panel-title>
+              <h1>Statut juridique</h1>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="row">
+            <div class="content">
+              <label>Titulaire de l'autorité parental</label>
+              <select [(ngModel)]="secondSelectValue">
+                <option></option>
+                <option value="Titulaire_Pere">Pére</option>
+                <option value="Titulaire_Mere">Mére</option>
+                <option value="Titulaire_Autre">Autre</option>
+              </select>
+              <input type="text" *ngIf="secondSelectValue == 'Titulaire_Autre'" >
+            </div>
+          </div>
+        </mat-expansion-panel>
+      </div>
+      <div class="row">
+        <mat-expansion-panel  [expanded]="true">
+          <mat-expansion-panel-header class="panel">
+            <mat-panel-title>
+              <h1>Parents</h1>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="row">
+            <div class="content">
+              <div class="tableau">
+                <div class="tablHeader">
+                  <mat-grid-list cols="9" rowHeight="10:1">
+                    <mat-grid-tile>Nom</mat-grid-tile>
+                    <mat-grid-tile>Prenom</mat-grid-tile>
+                    <mat-grid-tile>Type parent</mat-grid-tile>
+                    <mat-grid-tile>Date de naiss</mat-grid-tile>
+                    <mat-grid-tile>Addresse postale</mat-grid-tile>
+                    <mat-grid-tile>Téléphone</mat-grid-tile>
+                    <mat-grid-tile>Email</mat-grid-tile>
+                    <mat-grid-tile>Langue</mat-grid-tile>
+                    <mat-grid-tile>Profession</mat-grid-tile>
+                  </mat-grid-list>
+                </div>
+                <mat-grid-list cols="9" rowHeight="10:1" class="tableInput">
+                  <mat-grid-tile><input matInput  [(ngModel)]="test" #ctrl="ngModel"  ></mat-grid-tile>
+                  <mat-grid-tile><input matInput ></mat-grid-tile>
+                  <mat-grid-tile><input matInput ></mat-grid-tile>
+                  <mat-grid-tile><input matInput ></mat-grid-tile>
+                  <mat-grid-tile><input matInput ></mat-grid-tile>
+                  <mat-grid-tile><input matInput ></mat-grid-tile>
+                  <mat-grid-tile><input matInput ></mat-grid-tile>
+                  <mat-grid-tile><input matInput ></mat-grid-tile>
+                  <mat-grid-tile><input matInput ></mat-grid-tile>
+                </mat-grid-list>
+                <mat-grid-list cols="9" rowHeight="10:1" class="tableInput" *ngIf="test != ''" >
+                  <mat-grid-tile><input matInput ></mat-grid-tile>
+                  <mat-grid-tile><input matInput ></mat-grid-tile>
+                  <mat-grid-tile><input matInput ></mat-grid-tile>
+                  <mat-grid-tile><input matInput ></mat-grid-tile>
+                  <mat-grid-tile><input matInput ></mat-grid-tile>
+                  <mat-grid-tile><input matInput ></mat-grid-tile>
+                  <mat-grid-tile><input matInput ></mat-grid-tile>
+                  <mat-grid-tile><input matInput ></mat-grid-tile>
+                  <mat-grid-tile><input matInput ></mat-grid-tile>
+                </mat-grid-list>
+                <div class="infoMere">
+                  <div class="content">
+                    <label >Nom de jeune fille de la mère</label>
+                    <input matInput>
+                  </div>
+                  <div class="content">
+                    <label>Niveau d'étude de la mère</label>
+                    <input matInput>
+                  </div>
+                  <div class="content">
+                    <label>Niveau d'étude du second parent</label>
+                    <input matInput>
+                  </div>
+              </div>
+             </div>
+            </div>
+          </div>
+        </mat-expansion-panel>
+      </div>
+    </div>
+  </div>
+</section>
+
