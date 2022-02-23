@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./atcd-fam.component.scss']
 })
 export class AtcdFamComponent implements OnInit {
-
+secondSelectValue = null;
+  test = "";
   constructor() { }
 
   ngOnInit(): void {
