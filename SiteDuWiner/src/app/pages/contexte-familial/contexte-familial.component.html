@@ -1,17 +1,17 @@
 <p class="nav-place"></p>
-  <mat-toolbar class="color-toolbar">
-    <mat-button-toggle-group>
-      <mat-button-toggle class="Second-button-toolbar color-button-toolbar" (click)="role_soignant()">Soignant
-      </mat-button-toggle>
-      <mat-button-toggle class="Second-button-toolbar color-button-toolbar" (click)="role_med()">Médecin
-      </mat-button-toggle>
-    </mat-button-toggle-group>
-  </mat-toolbar>
+<mat-toolbar class="color-toolbar">
+  <mat-button-toggle-group>
+    <mat-button-toggle class="Second-button-toolbar color-button-toolbar" (click)="role_soignant()">Soignant
+    </mat-button-toggle>
+    <mat-button-toggle class="Second-button-toolbar color-button-toolbar" (click)="role_med()">Médecin
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+</mat-toolbar>
 <section>
   <div>
     <div class="">
-      <div class="row" *ngIf = "role == 1">
-        <mat-expansion-panel  [expanded]="true" >
+      <div class="row" *ngIf="role == 1">
+        <mat-expansion-panel [expanded]="true">
           <mat-expansion-panel-header class="panel">
             <mat-panel-title>
               <h1>Identidication de l'enfant</h1>
@@ -47,7 +47,7 @@
         </mat-expansion-panel>
       </div>
       <div class="row">
-        <mat-expansion-panel  [expanded]="true">
+        <mat-expansion-panel [expanded]="true">
           <mat-expansion-panel-header class="panel">
             <mat-panel-title>
               <h1>Statut juridique</h1>
@@ -62,13 +62,13 @@
                 <option value="Titulaire_Mere">Mére</option>
                 <option value="Titulaire_Autre">Autre</option>
               </select>
-              <input type="text" *ngIf="secondSelectValue == 'Titulaire_Autre'" >
+              <input type="text" *ngIf="secondSelectValue == 'Titulaire_Autre'">
             </div>
           </div>
         </mat-expansion-panel>
       </div>
       <div class="row">
-        <mat-expansion-panel  [expanded]="true">
+        <mat-expansion-panel [expanded]="true">
           <mat-expansion-panel-header class="panel">
             <mat-panel-title>
               <h1>Parents</h1>
@@ -91,33 +91,31 @@
                   </mat-grid-list>
                 </div>
                 <mat-grid-list cols="9" rowHeight="10:1" class="tableInput">
-                  <mat-grid-tile><input matInput  [(ngModel)]="test" #ctrl="ngModel"  ></mat-grid-tile>
-                  <mat-grid-tile><input matInput ></mat-grid-tile>
-                  <mat-grid-tile><input matInput ></mat-grid-tile>
-                  <mat-grid-tile><input matInput ></mat-grid-tile>
-                  <mat-grid-tile><input matInput ></mat-grid-tile>
-                  <mat-grid-tile><input matInput ></mat-grid-tile>
-                  <mat-grid-tile><input matInput ></mat-grid-tile>
-                  <mat-grid-tile><input matInput ></mat-grid-tile>
-                  <mat-grid-tile><input matInput ></mat-grid-tile>
+                  <mat-grid-tile><input matInput [(ngModel)]="test" #ctrl="ngModel"></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
                 </mat-grid-list>
-                  <div class="showInputField"></div>
-                  <button (click)="CreateTable()">ADD</button>
-                <mat-grid-list cols="9" rowHeight="10:1" class="tableInput" *ngIf="test != ''" >
-                  <mat-grid-tile><input matInput (change) = "CreateTable()"></mat-grid-tile>
-                  <mat-grid-tile><input matInput ></mat-grid-tile>
-                  <mat-grid-tile><input matInput ></mat-grid-tile>
-                  <mat-grid-tile><input matInput ></mat-grid-tile>
-                  <mat-grid-tile><input matInput ></mat-grid-tile>
-                  <mat-grid-tile><input matInput ></mat-grid-tile>
-                  <mat-grid-tile><input matInput ></mat-grid-tile>
-                  <mat-grid-tile><input matInput ></mat-grid-tile>
-                  <mat-grid-tile><input matInput ></mat-grid-tile>
+                <div class="showInputField"></div>
+                <mat-grid-list cols="9" rowHeight="10:1" class="tableInput" *ngIf="test != ''">
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
                 </mat-grid-list>
 
                 <div class="infoMere">
                   <div class="content">
-                    <label >Nom de jeune fille de la mère</label>
+                    <label>Nom de jeune fille de la mère</label>
                     <input matInput>
                   </div>
                   <div class="content">
@@ -128,8 +126,153 @@
                     <label>Niveau d'étude du second parent</label>
                     <input matInput>
                   </div>
+                </div>
               </div>
-             </div>
+            </div>
+          </div>
+        </mat-expansion-panel>
+      </div>
+      <div class="row">
+        <mat-expansion-panel [expanded]="true">
+          <mat-expansion-panel-header class="panel">
+            <mat-panel-title>
+              <h1>Frères et soeurs</h1>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="row">
+            <div class="content">
+              <div class="tableau">
+                <div class="tablHeader">
+                  <mat-grid-list cols="6" rowHeight="10:1">
+                    <mat-grid-tile>Nom</mat-grid-tile>
+                    <mat-grid-tile>Prenom</mat-grid-tile>
+                    <mat-grid-tile>Date de naiss</mat-grid-tile>
+                    <mat-grid-tile>Place Fratrie</mat-grid-tile>
+                    <mat-grid-tile>Gémélité</mat-grid-tile>
+                    <mat-grid-tile>Adopté</mat-grid-tile>
+                  </mat-grid-list>
+                </div>
+                <mat-grid-list cols="6" rowHeight="10:1" class="tableInput">
+                  <mat-grid-tile><input matInput [(ngModel)]="test" #ctrl="ngModel"></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                </mat-grid-list>
+                <div class="showInputField"></div>
+                <mat-grid-list cols="6" rowHeight="10:1" class="tableInput" *ngIf="test != ''">
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                </mat-grid-list>
+              </div>
+            </div>
+          </div>
+        </mat-expansion-panel>
+      </div>
+      <div class="row">
+        <mat-expansion-panel [expanded]="true">
+          <mat-expansion-panel-header class="panel">
+            <mat-panel-title>
+              <h1>Contexte social parents</h1>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="row">
+            <div class="content">
+              <div class="tableau">
+                <div class="tablHeader">
+                  <mat-grid-list cols="6" rowHeight="10:1">
+                    <mat-grid-tile>Période de</mat-grid-tile>
+                    <mat-grid-tile>à</mat-grid-tile>
+                    <mat-grid-tile>Situation familliale</mat-grid-tile>
+                    <mat-grid-tile>Lieu de vie de l'enfant</mat-grid-tile>
+                    <mat-grid-tile>Type de logement</mat-grid-tile>
+                    <mat-grid-tile>Commentaire</mat-grid-tile>
+                  </mat-grid-list>
+                </div>
+                <mat-grid-list cols="6" rowHeight="10:1" class="tableInput">
+                  <mat-grid-tile><input matInput [(ngModel)]="test" #ctrl="ngModel"></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                </mat-grid-list>
+                <div class="showInputField"></div>
+                <mat-grid-list cols="6" rowHeight="10:1" class="tableInput" *ngIf="test != ''">
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                </mat-grid-list>
+                <div class="infoMere">
+                  <div class="content">
+                    <label>Couverture sociale :</label>
+                    <input matInput>
+                  </div>
+                  <div class="content">
+                    <label>ALD 100% :</label>
+                    <input matInput>
+                  </div>
+                  <div class="content">
+                    <label>D3P :</label>
+                    <input matInput>
+                  </div>
+                  <div class="content">
+                    <label>Autre mesure social :</label>
+                    <input matInput>
+                  </div>
+                  <div class="content">
+                    <label>Contraintes et difficultés :</label>
+                    <input matInput>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </mat-expansion-panel>
+      </div>
+      <div class="row">
+        <mat-expansion-panel [expanded]="true">
+          <mat-expansion-panel-header class="panel">
+            <mat-panel-title>
+              <h1>Séjour à l'étranger</h1>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="row">
+            <div class="content">
+              <div class="tableau">
+                <div class="tablHeader">
+                  <mat-grid-list cols="5" rowHeight="10:1">
+                    <mat-grid-tile>Période de</mat-grid-tile>
+                    <mat-grid-tile>à</mat-grid-tile>
+                    <mat-grid-tile>Pays</mat-grid-tile>
+                    <mat-grid-tile>Durée</mat-grid-tile>
+                    <mat-grid-tile>Commentaire</mat-grid-tile>
+                  </mat-grid-list>
+                </div>
+                <mat-grid-list cols="5" rowHeight="10:1" class="tableInput">
+                  <mat-grid-tile><input matInput [(ngModel)]="test" #ctrl="ngModel"></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                </mat-grid-list>
+                <div class="showInputField"></div>
+                <mat-grid-list cols="5" rowHeight="10:1" class="tableInput" *ngIf="test != ''">
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                </mat-grid-list>
+              </div>
             </div>
           </div>
         </mat-expansion-panel>
@@ -137,4 +280,3 @@
     </div>
   </div>
 </section>
-

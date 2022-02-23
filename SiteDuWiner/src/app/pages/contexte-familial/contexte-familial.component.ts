@@ -19,12 +19,6 @@ role : any;
   console.log(this.role);}
   role_soignant() {this.role = 2;
   console.log(this.role);}
-  CreateTable() {let row = document.createElement('div');
-      row.className = 'row';
-      row.innerHTML = `
-      <br>
-      <input type="text">`;
-      document.querySelector('.showInputField').appendChild(row);}
 }
 
 
