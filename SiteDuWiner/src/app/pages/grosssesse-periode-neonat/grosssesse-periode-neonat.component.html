@@ -1,9 +1,182 @@
 <p class="nav-place"></p>
-  <mat-toolbar class="color-toolbar">
-    <mat-button-toggle-group>
-      <mat-button-toggle class="Second-button-toolbar color-button-toolbar" (click)="role_soignant()">Soignant
-      </mat-button-toggle>
-      <mat-button-toggle class="Second-button-toolbar color-button-toolbar" (click)="role_med()">Médecin
-      </mat-button-toggle>
-    </mat-button-toggle-group>
-  </mat-toolbar>
+<mat-toolbar class="color-toolbar">
+  <mat-button-toggle-group>
+    <mat-button-toggle class="Second-button-toolbar color-button-toolbar" (click)="role_soignant()">Soignant
+    </mat-button-toggle>
+    <mat-button-toggle class="Second-button-toolbar color-button-toolbar" (click)="role_med()">Médecin
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+</mat-toolbar>
+<div class="row">
+  <mat-expansion-panel [expanded]="true">
+    <mat-expansion-panel-header class="panel">
+      <mat-panel-title>
+        <h1>Passé obstétrical</h1>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="row">
+      <div class="content">
+        <div class="tableau">
+          <div class="tablHeader">
+            <mat-grid-list cols="7" rowHeight="10:1">
+              <mat-grid-tile>Année</mat-grid-tile>
+              <mat-grid-tile>Terme (SA)</mat-grid-tile>
+              <mat-grid-tile>Terme (J)</mat-grid-tile>
+              <mat-grid-tile>Sexe</mat-grid-tile>
+              <mat-grid-tile>P.N. (g)</mat-grid-tile>
+              <mat-grid-tile>Mode d'accouchement</mat-grid-tile>
+              <mat-grid-tile>Observations</mat-grid-tile>
+            </mat-grid-list>
+          </div>
+          <mat-grid-list cols="7" rowHeight="10:1" class="tableInput">
+            <mat-grid-tile><input matInput [(ngModel)]="fdp" #ctrl="ngModel"></mat-grid-tile>
+            <mat-grid-tile><input matInput></mat-grid-tile>
+            <mat-grid-tile><input matInput></mat-grid-tile>
+            <mat-grid-tile><input matInput></mat-grid-tile>
+            <mat-grid-tile><input matInput></mat-grid-tile>
+            <mat-grid-tile><input matInput></mat-grid-tile>
+            <mat-grid-tile><input matInput></mat-grid-tile>
+          </mat-grid-list>
+          <div class="showInputField"></div>
+          <mat-grid-list cols="7" rowHeight="10:1" class="tableInput" *ngIf="fdp != ''">
+            <mat-grid-tile><input matInput></mat-grid-tile>
+            <mat-grid-tile><input matInput></mat-grid-tile>
+            <mat-grid-tile><input matInput></mat-grid-tile>
+            <mat-grid-tile><input matInput></mat-grid-tile>s
+            <mat-grid-tile><input matInput></mat-grid-tile>
+            <mat-grid-tile><input matInput></mat-grid-tile>
+            <mat-grid-tile><input matInput></mat-grid-tile>
+          </mat-grid-list>
+        </div>
+      </div>
+    </div>
+  </mat-expansion-panel>
+</div>
+<div class="row">
+  <mat-expansion-panel [expanded]="true">
+    <mat-expansion-panel-header class="panel">
+      <mat-panel-title>
+        <h1>Grossesse</h1>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="row">
+      <div class="content">
+        <div class="content">
+          <label>Grossesse normale :</label>
+          <input type="checkbox" name="" id="">Oui
+          <input type="checkbox" name="" id="">Non
+          <p></p>
+        </div>
+        <div class="content">
+          <label>Gestité/Parité :</label>
+          G <input matGInput>
+          D <input matGInput>
+        </div>
+        <div class="content">
+          <label>Groupe Sanguin :</label>
+          <input matInput>
+          <label>Rhésus :</label>
+          <input type="checkbox" name="" id="">Positif
+          <input type="checkbox" name="" id="">Négatif
+          <p></p>
+        </div>
+        <div>
+          <label>RAI :</label>
+          <input type="checkbox" name="" id="">Fait
+          <input type="checkbox" name="" id="">Non-fait
+          <label>Date :</label>
+          <input type="text" name="" id="">
+          <label>Commentaire :</label>
+          <input type="text" name="" id="">
+          <p></p>
+        </div>
+        <div class="tableau">
+          <div class="tablHeader">
+            <mat-grid-list cols="4" rowHeight="18:1">
+              <mat-grid-tile>Sérologie</mat-grid-tile>
+              <mat-grid-tile>(+) (-) (?)</mat-grid-tile>
+              <mat-grid-tile>Date</mat-grid-tile>
+              <mat-grid-tile>Commentaires</mat-grid-tile>
+            </mat-grid-list>
+          </div>
+          <mat-grid-list cols="4" rowHeight="10:1" class="tableInput">
+            <mat-grid-tile><input matInput [(ngModel)]="test" #ctrl="ngModel"></mat-grid-tile>
+            <mat-grid-tile><input type="checkbox" name="" id=""><input type="checkbox" name="" id=""><input type="checkbox" name="" id=""></mat-grid-tile>
+            <mat-grid-tile><input matInput></mat-grid-tile>
+            <mat-grid-tile><input matInput></mat-grid-tile>
+          </mat-grid-list>
+          <div class="showInputField"></div>
+          <mat-grid-list cols="4" rowHeight="10:1" class="tableInput" *ngIf="test != ''">
+            <mat-grid-tile><input matInput></mat-grid-tile>
+            <mat-grid-tile><input matInput></mat-grid-tile>
+            <mat-grid-tile><input matInput></mat-grid-tile>
+            <mat-grid-tile><input matInput></mat-grid-tile>
+          </mat-grid-list>
+        </div>
+        <div class="tableau">
+          <div class="tablHeader">
+            <mat-grid-list cols="3" rowHeight="12:1">
+              <mat-grid-tile>Autres Sérologie</mat-grid-tile>
+              <mat-grid-tile>Date</mat-grid-tile>
+              <mat-grid-tile>Commentaires</mat-grid-tile>
+            </mat-grid-list>
+          </div>
+          <div class="showInputField">
+          <mat-grid-list cols="3" rowHeight="10:1" class="tableInput">
+            <mat-grid-tile><input matInput [(ngModel)]="test" #ctrl="ngModel"></mat-grid-tile>
+            <mat-grid-tile><input matInput></mat-grid-tile>
+            <mat-grid-tile><input matInput></mat-grid-tile>
+          </mat-grid-list>
+          </div>
+          <div class="showInputField">
+          <mat-grid-list cols="3" rowHeight="10:1" class="tableInput" *ngIf="test != ''">
+            <mat-grid-tile><input matInput></mat-grid-tile>
+            <mat-grid-tile><input matInput></mat-grid-tile>
+            <mat-grid-tile><input matInput></mat-grid-tile>
+          </mat-grid-list>
+        </div>
+        <div class="content">
+          <label>Commentaire :</label>
+          <input matInput>
+        </div>
+        <div class="content">
+          <label>Commentaire :</label>
+          <input matInput>
+        </div>
+        <div class="tableau">
+          <div class="tablHeader">
+            <mat-grid-list cols="5" rowHeight="10:1">
+              <mat-grid-tile>Date</mat-grid-tile>
+              <mat-grid-tile>Evènements</mat-grid-tile>
+              <mat-grid-tile>SA</mat-grid-tile>
+              <mat-grid-tile>J</mat-grid-tile>
+              <mat-grid-tile>Résultat / Commentaires</mat-grid-tile>
+            </mat-grid-list>
+          </div>
+          <mat-grid-list cols="5" rowHeight="10:1" class="tableInput">
+            <mat-grid-tile><input matInput [(ngModel)]="test" #ctrl="ngModel"></mat-grid-tile>
+            <mat-grid-tile><input matInput></mat-grid-tile>
+            <mat-grid-tile><input matInput></mat-grid-tile>
+            <mat-grid-tile><input matInput></mat-grid-tile>
+            <mat-grid-tile><input matInput></mat-grid-tile>
+          </mat-grid-list>
+          <div class="showInputField"></div>
+          <mat-grid-list cols="5" rowHeight="10:1" class="tableInput" *ngIf="test != ''">
+            <mat-grid-tile><input matInput></mat-grid-tile>
+            <mat-grid-tile><input matInput></mat-grid-tile>
+            <mat-grid-tile><input matInput></mat-grid-tile>
+            <mat-grid-tile><input matInput></mat-grid-tile>
+            <mat-grid-tile><input matInput></mat-grid-tile>
+          </mat-grid-list>
+        </div>
+        <div class="content">
+          <label>Grossesse normale :</label>
+          <input type="checkbox" name="" id="">Oui
+          <input type="checkbox" name="" id="">Non
+          <p></p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </mat-expansion-panel>
+</div>

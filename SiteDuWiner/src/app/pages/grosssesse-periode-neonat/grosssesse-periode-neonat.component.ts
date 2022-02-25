@@ -6,9 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./grosssesse-periode-neonat.component.scss']
 })
 export class GrosssessePeriodeNeonatComponent implements OnInit {
-
+secondSelectValue = null;
+  test = "";
   constructor() { }
-
+  fdp = "";
   ngOnInit(): void {
   }
 role : any;
