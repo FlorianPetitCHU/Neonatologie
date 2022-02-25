@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { ToolbarComponent } from './partials/toolbar/toolbar.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
-import { IndexComponent } from './pages/index/index.component';
+import { AdmissionComponent } from './pages/Admission/Admission.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatInputModule} from '@angular/material/input';
 import { RecueilDeDonnesPiedatriquesComponent } from './pages/recueil-de-donnes-piedatriques/recueil-de-donnes-piedatriques.component';
@@ -32,7 +32,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
   declarations: [
     AppComponent,
     ToolbarComponent,
-    IndexComponent,
+    AdmissionComponent,
     RecueilDeDonnesPiedatriquesComponent,
     ContexteFamilialComponent,
     AtcdFamComponent,

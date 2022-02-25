@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { IndexComponent } from './pages/index/index.component';
+import { AdmissionComponent } from './pages/Admission/Admission.component';
 import { RecueilDeDonnesPiedatriquesComponent } from './pages/recueil-de-donnes-piedatriques/recueil-de-donnes-piedatriques.component';
 import { ContexteFamilialComponent } from './pages/contexte-familial/contexte-familial.component';
 import { VaccinComponent } from './pages/vaccin/vaccin.component';
@@ -9,8 +9,8 @@ import { CroissanceComponent } from './pages/croissance/croissance.component';
 import { AtcdFamComponent } from './pages/atcd-fam/atcd-fam.component';
 const routes: Routes = [
   {
-    path: "home",
-    component: IndexComponent
+    path: "Admission",
+    component: AdmissionComponent
   },
   {
     path: "recueilDeDonnesPiedatriquesComponent",
