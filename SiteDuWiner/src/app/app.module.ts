@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 import {MatExpansionModule} from '@angular/material/expansion';
 import { AppRoutingModule } from './app-routing.module';
@@ -57,7 +58,8 @@ import {MatRadioModule} from '@angular/material/radio';
     FormsModule,
     MatTableModule,
     MatDatepickerModule,
-    MatRadioModule
+    MatRadioModule,
+    MatCheckboxModule
   ],
 
   providers: [],
