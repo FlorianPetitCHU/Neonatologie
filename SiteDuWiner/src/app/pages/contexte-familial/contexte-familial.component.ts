@@ -8,8 +8,10 @@ import { Component, OnInit,ViewChild } from '@angular/core';
 })
 export class ContexteFamilialComponent implements OnInit {
   secondSelectValue = null;
-  test = "";
-
+  val1 = "";
+  val2 = "";
+  val3 = "";
+  val4 = "";
   constructor() { }
 
   ngOnInit(): void {

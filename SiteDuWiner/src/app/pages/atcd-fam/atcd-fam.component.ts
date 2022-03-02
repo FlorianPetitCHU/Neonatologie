@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AtcdFamComponent implements OnInit {
 secondSelectValue = null;
   test = "";
+  AntecedentsFamiliaux = "";
   constructor() { }
 
   ngOnInit(): void {
