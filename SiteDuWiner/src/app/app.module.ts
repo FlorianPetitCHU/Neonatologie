@@ -24,6 +24,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import {MatTableModule} from '@angular/material/table';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatRadioModule} from '@angular/material/radio';
 
 
 
@@ -55,7 +56,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatSelectModule,
     FormsModule,
     MatTableModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatRadioModule
   ],
 
   providers: [],
