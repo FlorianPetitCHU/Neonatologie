@@ -21,10 +21,10 @@
             <div class="content">
               <div class="content">
                 <label>Consanguinité des parents :</label>
-                <input type="checkbox" name="" id="">
-                <p></p>
-                <input type="checkbox" name="" id="">
-                <p></p>
+                <mat-radio-group aria-label="Select an option">
+                  <mat-radio-button value="1">Oui</mat-radio-button>
+                  <mat-radio-button value="2">Non</mat-radio-button>
+                </mat-radio-group>
               </div>
               <div class="content">
                 <label>Tabagisme des parents :</label>
@@ -33,12 +33,17 @@
               <div class="content">
                 <label>Autres addiction des parents :</label>
                 <input matInput>
+                <p></p>
               </div>
               <div>
                 <label>Antécédents famliaux</label>
-                <input type="checkbox" name="cheese" id="cheese">
+                <mat-radio-group aria-label="Select an option" [(ngModel)]="AntecedentsFamiliaux" #ctrl="ngModel"
+                  required>
+                  <mat-radio-button value="1">Oui</mat-radio-button>
+                  <mat-radio-button value="2">Non</mat-radio-button>
+                </mat-radio-group>
               </div>
-              <div class="tableau">
+              <div class="tableau" *ngIf="AntecedentsFamiliaux == '1'">
                 <div class="tablHeader">
                   <mat-grid-list cols="3" rowHeight="10:1">
                     <mat-grid-tile>Lien familial</mat-grid-tile>
@@ -47,17 +52,26 @@
                   </mat-grid-list>
                 </div>
                 <mat-grid-list cols="3" rowHeight="10:1" class="tableInput">
-                  <mat-grid-tile><input matInput [(ngModel)]="test" #ctrl="ngModel"></mat-grid-tile>
+                  <mat-grid-tile><select [(ngModel)]="test" #ctrl="ngModel">
+                      <option>Test</option>
+                    </select></mat-grid-tile>
                   <mat-grid-tile><input matInput></mat-grid-tile>
                   <mat-grid-tile><input matInput></mat-grid-tile>
                 </mat-grid-list>
                 <div class="showInputField"></div>
                 <mat-grid-list cols="3" rowHeight="10:1" class="tableInput" *ngIf="test != ''">
-                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><select [(ngModel)]="test" #ctrl="ngModel">
+                      <option>Test</option>
+                    </select></mat-grid-tile>
                   <mat-grid-tile><input matInput></mat-grid-tile>
                   <mat-grid-tile><input matInput></mat-grid-tile>
                 </mat-grid-list>
               </div>
+              <div class="content"><label>Mère</label><label>Taille(cm) :</label><input type="number"><label>Poids(kg)
+                  :</label><input type="number"><label>IMC(kg/m²) :</label><input type="number"></div>
+              <div class="content"><label>Père</label><label>Taille(cm) :</label><input type="number"><label>Poids(kg)
+                  :</label><input type="number"><label>IMC(kg/m²) :</label><input type="number"></div>
+                 <div class="content"><label>Taille cible(cm):</label><input type="number"> </div>
               <div class="content">
                 <label>Commentaire :</label>
                 <input matInput>
