@@ -7,10 +7,15 @@ import { VaccinComponent } from './pages/vaccin/vaccin.component';
 import { GrosssessePeriodeNeonatComponent } from './pages/grosssesse-periode-neonat/grosssesse-periode-neonat.component';
 import { CroissanceComponent } from './pages/croissance/croissance.component';
 import { AtcdFamComponent } from './pages/atcd-fam/atcd-fam.component';
+import { ExamInitialComponent } from './pages/exam-initial/exam-initial.component';
 const routes: Routes = [
   {
     path: "Admission",
     component: AdmissionComponent
+  },
+  {
+    path: "ExamenCliniqueInitial",
+    component: ExamInitialComponent
   },
   {
     path: "recueilDeDonnesPiedatriquesComponent",

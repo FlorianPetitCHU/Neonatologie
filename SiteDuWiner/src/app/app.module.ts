@@ -26,6 +26,7 @@ import { FormsModule } from '@angular/forms';
 import {MatTableModule} from '@angular/material/table';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatRadioModule} from '@angular/material/radio';
+import { ExamInitialComponent } from './pages/exam-initial/exam-initial.component';
 
 
 
@@ -40,7 +41,8 @@ import {MatRadioModule} from '@angular/material/radio';
     AtcdFamComponent,
     GrosssessePeriodeNeonatComponent,
     VaccinComponent,
-    CroissanceComponent
+    CroissanceComponent,
+    ExamInitialComponent
   ],
   imports: [
     BrowserModule,

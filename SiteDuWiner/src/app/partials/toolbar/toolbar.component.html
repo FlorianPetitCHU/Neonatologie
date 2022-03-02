@@ -9,7 +9,14 @@
       </mat-button-toggle>
       <mat-button-toggle class="Second-button-toolbar color-button-toolbar"
         routerLink="/recueilDeDonnesPiedatriquesComponent">Données transverses pédiatriques</mat-button-toggle>
-    </mat-button-toggle-group>
+      <mat-button-toggle class="Second-button-toolbar color-button-toolbar"
+        routerLink="/ExamenCliniqueInitial">Examen Clinique Initial</mat-button-toggle>
+      <mat-button-toggle class="Second-button-toolbar color-button-toolbar"
+        routerLink="/">Evolution Médicale</mat-button-toggle>
+      <mat-button-toggle class="Second-button-toolbar color-button-toolbar"
+        routerLink="/">Sortie</mat-button-toggle>
+
+      </mat-button-toggle-group>
   </mat-toolbar>
   <mat-toolbar class="color-toolbar">
     <div class="Donnes-Trans" *ngIf="router.url === '/recueilDeDonnesPiedatriquesComponent'
