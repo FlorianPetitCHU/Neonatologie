@@ -373,7 +373,62 @@
       </mat-expansion-panel-header>
       <div class="row">
         <div class="content">
-
+          <label>Premier jour des DR</label>
+          <input matInput>
+          <label>Date de début de grossesse</label>
+          <input type="date">
+        </div>
+        <div class="content">
+          <label>Moyen de détermination</label>
+          <select>
+            <option></option>
+            <option>a remplire</option>
+          </select>
+          <label>Terme prévu le</label>
+          <input type="date">
+        </div>
+        <div class="content">
+          <label>Surveillance au lieu d'accouchement</label>
+          <mat-radio-group aria-label="Select an option">
+            <mat-radio-button value="1">Oui</mat-radio-button>
+            <mat-radio-button value="2">Non</mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <div class="content">
+          <label>condition de vie pendant la grossesse</label>
+          <br>
+          <!-- police plus petite -->
+          <label style="margin-left: 10px;font-size: 14px;">(activité,conditions de travail,trajets,voyages,date d'arrêt de travail)</label>
+          <br>
+          <input matInput style="width: 100%;">
+        </div>
+        <div class="content">
+          <label>Transfusion antérieures</label>
+          <mat-radio-group aria-label="Select an option">
+            <mat-radio-button value="1">Oui</mat-radio-button>
+            <mat-radio-button value="2">Non</mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <div class="content">
+          <label>Prévention rhésus antérieure</label>
+          <mat-radio-group aria-label="Select an option">
+            <mat-radio-button value="1">Oui</mat-radio-button>
+            <mat-radio-button value="2">Non</mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <div class="content">
+          <label>Amniocentèse</label>
+          <mat-radio-group aria-label="Select an option">
+            <mat-radio-button value="1">Oui</mat-radio-button>
+            <mat-radio-button value="2">Non</mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <div class="content">
+          <label>Ponction sang foetal</label>
+          <mat-radio-group aria-label="Select an option">
+            <mat-radio-button value="1">Oui</mat-radio-button>
+            <mat-radio-button value="2">Non</mat-radio-button>
+          </mat-radio-group>
         </div>
       </div>
     </mat-expansion-panel>
@@ -389,6 +444,152 @@
       </mat-expansion-panel-header>
       <div class="row">
         <div class="content">
+          <label>Date et heure de l'accouchement</label>
+          <input type="date">
+          <input type="datetime">
+          <label>Au terme de (SA+J)</label>
+          <input matInput>+ <input matInput>
+        </div>
+        <div class="content">
+          <label>Lieu naissance</label>
+          <input matInput style="width: 60%;">
+        </div>
+        <div class="content">
+          <label>Présentation</label>
+          <select style="width: 40%;">
+            <option></option>
+            <option>a remplire</option>
+          </select>
+          <input matInput style="width: 40%;">
+        </div>
+        <div class="content">
+          <mat-radio-group>
+            <mat-radio-button value="1">Voie basse</mat-radio-button>
+            <mat-radio-button value="2">Césarienne</mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <div class="content">
+          <label>Anomalies RCF</label>
+          <input matInput style="width: 40%;">
+        </div>
+        <div class="content">
+          <label>Déclenchement</label>
+          <mat-radio-group>
+            <mat-radio-button value="1">Spontané</mat-radio-button>
+            <mat-radio-button value="2">Provoquée</mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <div class="content">
+          <label>Poche des eaux</label>
+          <mat-radio-group>
+            <mat-radio-button value="1">Rupture spontannée</mat-radio-button>
+            <mat-radio-button value="2">Rupture Provoquée</mat-radio-button>
+            <label>Date de fissuration ou de rupture</label>
+            <input type="date">
+            <input type="datetime">
+          </mat-radio-group>
+        </div>
+        <div class="content">
+          <label>Durée RPDE</label>
+          <input matInput>
+          <label>Durée du travail</label>
+          <input matInput>
+          <label>Durée de l'expulsion</label>
+          <input matInput>
+        </div>
+        <div class="content">
+          <mat-grid-list cols="6" rowHeight="8:1">
+            <mat-grid-tile colspan="1">
+              <label style="position: absolute;
+              left: 5px;">Liquide amniotique</label>
+              </mat-grid-tile>
+            <mat-grid-tile colspan="5">
+              <div  class="aligne-gauche">
+                <label >Couleur</label>
+                <select>
+                  <option></option>
+                  <option>couleurs a définire uniquement primaire ?</option>
+                </select>
+              </div>
+               <input matInput style="width: 40%;">
+              </mat-grid-tile>
+              <mat-grid-tile colspan="1">
+                </mat-grid-tile>
+              <mat-grid-tile colspan="5">
+                <div  class="aligne-gauche">
+                  <label>Abondance</label>
+                  <select>
+                    <option></option>
+                    <option>Abondance a définire uniquement </option>
+                  </select>
+                </div>
+                 <input matInput style="width: 40%;">
+                </mat-grid-tile>
+          </mat-grid-list>
+        </div>
+        <div class="content">
+          <mat-grid-list cols="6" rowHeight="10:1">
+            <mat-grid-tile colspan="1">
+              <div class="aligne-gauche">
+               <label>Fièvre pendant le travail</label>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="5">
+              <div class="aligne-gauche">
+                <mat-radio-group aria-label="Select an option">
+                  <mat-radio-button value="1">Oui</mat-radio-button>
+                  <mat-radio-button value="2">Non</mat-radio-button>
+                </mat-radio-group>
+             </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+        </div>
+        <div class="content">
+          <mat-grid-list cols="6" rowHeight="10:1">
+            <mat-grid-tile colspan="1">
+              <div class="aligne-gauche">
+               <label>Antibiothérapie per partum</label>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="5">
+              <div class="aligne-gauche">
+                <mat-radio-group aria-label="Select an option">
+                  <mat-radio-button value="1">Oui</mat-radio-button>
+                  <mat-radio-button value="2">Non</mat-radio-button>
+                </mat-radio-group>
+             </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+        </div>
+        <div class="content">
+          <mat-grid-list cols="6" rowHeight="10:1">
+            <mat-grid-tile colspan="1">
+              <div class="aligne-gauche">
+               <label>Autres traitements</label>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="5">
+              <div class="aligne-gauche">
+                <mat-radio-group aria-label="Select an option">
+                  <mat-radio-button value="1">Oui</mat-radio-button>
+                  <mat-radio-button value="2">Non</mat-radio-button>
+                </mat-radio-group>
+             </div>
+            </mat-grid-tile>
+          </mat-grid-list>
+        </div>
+        <div class="content">
+          <mat-grid-list cols="6" rowHeight="10:1">
+            <mat-grid-tile colspan="1">
+              <div class="aligne-gauche">
+                <label>Commentaires</label>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="5">
+              <input matInput style="width: 100%;">
+            </mat-grid-tile>
+          </mat-grid-list>
+
 
         </div>
       </div>
@@ -405,7 +606,188 @@
       </mat-expansion-panel-header>
       <div class="row">
         <div class="content">
-
+          <mat-grid-list cols="6" rowHeight="10:1">
+            <mat-grid-tile colspan="1">
+              <div class="aligne-gauche">
+                <label>Anesthésie</label>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="5">
+              <div class="aligne-gauche">
+                <mat-radio-group aria-label="Select an option">
+                  <mat-radio-button value="1">Pas d'anesthésie</mat-radio-button>
+                  <mat-radio-button value="2">Locorégionale</mat-radio-button>
+                  <mat-radio-button value="2">Anesthésie générale</mat-radio-button>
+                </mat-radio-group>
+              </div>
+            </mat-grid-tile>
+          </mat-grid-list>
+        </div>
+        <div class="content">
+          <mat-grid-list cols="6" rowHeight="10:1">
+            <mat-grid-tile colspan="1">
+              <div class="aligne-gauche">
+                <label>PA (mmHG)</label>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="5">
+              <div class="aligne-gauche">
+                <input matInput><label>/</label><input matInput>
+              </div>
+            </mat-grid-tile>
+          </mat-grid-list>
+        </div>
+        <div class="content">
+          <mat-grid-list cols="6" rowHeight="10:1">
+            <mat-grid-tile colspan="1">
+              <div class="aligne-gauche">
+                <label>RCF</label>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="5">
+              <div class="aligne-gauche">
+              </div>
+            </mat-grid-tile>
+          </mat-grid-list>
+        </div>
+        <div class="content">
+          <mat-grid-list cols="6" rowHeight="10:1">
+            <mat-grid-tile colspan="1">
+              <div class="aligne-gauche" style="margin-left: 10px;">
+                <label>AnomaliesRCF</label>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="5">
+              <input matInput style="width: 100%;">
+            </mat-grid-tile>
+          </mat-grid-list>
+        </div>
+        <div class="content">
+          <mat-grid-list cols="6" rowHeight="10:1">
+            <mat-grid-tile colspan="1">
+              <div class="aligne-gauche" style="margin-left: 10px;">
+                <label>Rythme de base</label>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="5">
+              <div class="aligne-gauche">
+              <mat-radio-group aria-label="Select an option">
+                <mat-radio-button value="1">Normal (110-160)</mat-radio-button>
+                <mat-radio-button value="2">Tachycarde (>160 + 10 mn)</mat-radio-button>
+                <mat-radio-button value="2">Bradycarde (<110+10mn)</mat-radio-button>
+              </mat-radio-group>
+            </div>
+            </mat-grid-tile>
+          </mat-grid-list>
+        </div>
+        <div class="content">
+          <mat-grid-list cols="6" rowHeight="10:1">
+            <mat-grid-tile colspan="1">
+              <div class="aligne-gauche" style="margin-left: 10px;">
+                <label>Variabilité</label>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="5">
+              <input matInput style="width: 100%;">
+            </mat-grid-tile>
+          </mat-grid-list>
+        </div>
+        <div class="content">
+          <mat-grid-list cols="6" rowHeight="10:1">
+            <mat-grid-tile colspan="1">
+              <div class="aligne-gauche" style="margin-left: 10px;">
+                <label>Réactivité</label>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="5">
+              <input matInput style="width: 100%;">
+            </mat-grid-tile>
+          </mat-grid-list>
+        </div>
+        <div class="content">
+          <mat-grid-list cols="6" rowHeight="10:1">
+            <mat-grid-tile colspan="1">
+              <div class="aligne-gauche" style="margin-left: 10px;">
+                <label>Ralentissements</label>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="5">
+              <div class="aligne-gauche">
+                <mat-radio-group aria-label="Select an option">
+                  <mat-radio-button value="Précoces">Précoces</mat-radio-button>
+                  <mat-radio-button value="Tardifs">Tardifs</mat-radio-button>
+                  <mat-radio-button value="Variables">Variables</mat-radio-button>
+                  <mat-radio-button value="Prolonges">Prolongés</mat-radio-button>
+                </mat-radio-group>
+              </div>
+            </mat-grid-tile>
+          </mat-grid-list>
+        </div>
+        <div class="content">
+          <mat-grid-list cols="6" rowHeight="10:1">
+            <mat-grid-tile colspan="1">
+              <div class="aligne-gauche">
+                <label>Cordon</label>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="5">
+              <div class="aligne-gauche">
+                <mat-radio-group aria-label="Select an option">
+                  <mat-radio-button value="1">Normal</mat-radio-button>
+                  <mat-radio-button value="2">Anomalies</mat-radio-button>
+                </mat-radio-group>
+              </div>
+            </mat-grid-tile>
+          </mat-grid-list>
+        </div>
+        <div class="content">
+          <mat-grid-list cols="6" rowHeight="10:1">
+            <mat-grid-tile colspan="1">
+              <div class="aligne-gauche">
+                <label>Placenta</label>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="2">
+              <div class="aligne-gauche">
+                <mat-radio-group aria-label="Select an option">
+                  <mat-radio-button value="1">Normal</mat-radio-button>
+                  <mat-radio-button value="2">Anomalies</mat-radio-button>
+                </mat-radio-group>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="3">
+              <div class="aligne-gauche">
+                <label>Poids placenta(g)</label>
+                <input matInput>
+              </div>
+            </mat-grid-tile>
+          </mat-grid-list>
+        </div>
+        <div class="content">
+          <mat-grid-list cols="6" rowHeight="10:1">
+            <mat-grid-tile colspan="1">
+              <div class="aligne-gauche">
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="5">
+              <div class="aligne-gauche">
+                <label><input type="checkbox">Bactériologie</label>
+                <label><input type="checkbox">Anapath</label>
+              </div>
+            </mat-grid-tile>
+          </mat-grid-list>
+        </div>
+        <div class="content">
+          <mat-grid-list cols="6" rowHeight="8:1">
+            <mat-grid-tile colspan="1">
+              <div class="aligne-gauche">
+                <label>Résumé de l'accouchement</label>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="5">
+            </mat-grid-tile>
+          </mat-grid-list>
+          <textarea style="width: 100%;" matInput cdkTextareaAutosize ></textarea>
         </div>
       </div>
     </mat-expansion-panel>
@@ -421,7 +803,256 @@
       </mat-expansion-panel-header>
       <div class="row">
         <div class="content">
-
+          <mat-grid-list cols="6" rowHeight="10:1">
+            <mat-grid-tile colspan="1">
+              <div class="aligne-gauche">
+                <label>Terme(SA+J)</label>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="5">
+              <div class="aligne-gauche">
+                <label>40+1</label>
+              </div>
+            </mat-grid-tile>
+          </mat-grid-list>
+        </div>
+        <div class="content">
+          <mat-grid-list cols="10" rowHeight="6:1">
+            <mat-grid-tile colspan="1">
+              <div class="aligne-gauche">
+                <label>Poids(g)</label>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="1">
+              <div class="aligne-gauche">
+                <input matInput style="width:90%">
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="1">
+              <div class="aligne-gauche">
+                <label>Taille (cm)</label>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="1">
+              <div class="aligne-gauche">
+                <input matInput style="width:90%">
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="1">
+              <div class="aligne-gauche">
+                <label>PC(cm)</label>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="1">
+              <div class="aligne-gauche">
+                <input matInput style="width:90%">
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="1">
+              <label>Apgar</label>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="1">
+              <div class="tableau"style="width: 100%;">
+                <div class="tablHeader">
+                    <label >Temps</label>
+                </div>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="1">
+              <div class="tableau" style="width: 100%;">
+                <div class="tablHeader">
+                    <label>Apgar</label>
+                </div>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="1">
+              <div class="tableau" style="width: 100%;">
+                <div class="tablHeader">
+                    <label>New apgar</label>
+                </div>
+              </div>
+            </mat-grid-tile>
+          </mat-grid-list>
+        </div>
+        <div style="margin-left: 15px;">
+          <mat-grid-list cols="10" rowHeight="6:1">
+            <mat-grid-tile colspan="1">
+              <div class="aligne-gauche">
+                <label>Percentile Poids</label>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="1">
+              <div class="aligne-gauche">
+                <input matInput style="width:90%">
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="1">
+              <div class="aligne-gauche">
+                <label>Percentile taille</label>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="1">
+              <div class="aligne-gauche">
+                <input matInput style="width:90%">
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="1">
+              <div class="aligne-gauche">
+                <label>Percentile PC</label>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="1">
+              <div class="aligne-gauche">
+                <input matInput style="width:90%">
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="1">
+            </mat-grid-tile>
+            <mat-grid-tile colspan="1">
+              <div class="tableau"style="width: 100%;">
+                <div class="tablHeader">
+                    <label >1min</label>
+                </div>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="1">
+              <div class="tableau" style="width: 100%;">
+                <input matInput>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="1">
+              <div class="tableau" style="width: 100%;">
+                <input matInput>
+              </div>
+            </mat-grid-tile>
+          </mat-grid-list>
+        </div>
+        <div style="margin-left: 15px;">
+          <mat-grid-list cols="10" rowHeight="6:1">
+            <mat-grid-tile colspan="7">
+            </mat-grid-tile>
+            <mat-grid-tile colspan="1">
+              <div class="tableau"style="width: 100%;">
+                <div class="tablHeader">
+                    <label >3min</label>
+                </div>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="1">
+              <div class="tableau" style="width: 100%;">
+                <input matInput>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="1">
+              <div class="tableau" style="width: 100%;">
+                <input matInput>
+              </div>
+            </mat-grid-tile>
+          </mat-grid-list>
+        </div>
+        <div style="margin-left: 15px;">
+          <mat-grid-list cols="10" rowHeight="6:1">
+            <mat-grid-tile colspan="7">
+            </mat-grid-tile>
+            <mat-grid-tile colspan="1">
+              <div class="tableau"style="width: 100%;">
+                <div class="tablHeader">
+                    <label >5min</label>
+                </div>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="1">
+              <div class="tableau" style="width: 100%;">
+                <input matInput>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="1">
+              <div class="tableau" style="width: 100%;">
+                <input matInput>
+              </div>
+            </mat-grid-tile>
+          </mat-grid-list>
+        </div>
+        <div style="margin-left: 15px;">
+          <mat-grid-list cols="10" rowHeight="6:1">
+            <mat-grid-tile colspan="7">
+            </mat-grid-tile>
+            <mat-grid-tile colspan="1">
+              <div class="tableau"style="width: 100%;">
+                <div class="tablHeader">
+                    <label >10min</label>
+                </div>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="1">
+              <div class="tableau" style="width: 100%;">
+                <input matInput>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="1">
+              <div class="tableau" style="width: 100%;">
+                <input matInput>
+              </div>
+            </mat-grid-tile>
+          </mat-grid-list>
+        </div>
+        <div class="content">
+          <mat-grid-list cols="6" rowHeight="10:1">
+            <mat-grid-tile colspan="2">
+              <div class="aligne-gauche">
+                <label>Manoeuvres de réanimation en salle de naissance</label>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="4">
+              <div class="aligne-gauche">
+                <mat-radio-group aria-label="Select an option">
+                  <mat-radio-button value="1">Oui</mat-radio-button>
+                  <mat-radio-button value="2">Non</mat-radio-button>
+                </mat-radio-group>
+              </div>
+            </mat-grid-tile>
+          </mat-grid-list>
+        </div>
+        <div class="content">
+          <mat-grid-list cols="6" rowHeight="10:1">
+            <mat-grid-tile colspan="1">
+              <div class="aligne-gauche">
+                <label>Particularités examen clinique</label>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="5">
+              <input matInput style="width: 100%;">
+            </mat-grid-tile>
+          </mat-grid-list>
+        </div>
+        <div class="content">
+          <mat-grid-list cols="6" rowHeight="10:1">
+            <mat-grid-tile colspan="1">
+              <div class="aligne-gauche">
+                <label>Prélèvement périphériques</label>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="5">
+                <input matInput style="width: 100%;">
+            </mat-grid-tile>
+          </mat-grid-list>
+        </div>
+        <div class="content">
+          <mat-grid-list cols="6" rowHeight="10:1">
+            <mat-grid-tile colspan="2">
+              <div class="aligne-gauche">
+                <label>Emission du méconium dans les 48h</label>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="4">
+              <div class="aligne-gauche">
+                <mat-radio-group aria-label="Select an option">
+                  <mat-radio-button value="1">Oui</mat-radio-button>
+                  <mat-radio-button value="2">Non</mat-radio-button>
+                </mat-radio-group>
+              </div>
+            </mat-grid-tile>
+          </mat-grid-list>
         </div>
       </div>
     </mat-expansion-panel>
@@ -461,6 +1092,7 @@
             <!-- aligner a droite -->
             <input matInput style="float:right;width: 40%;">
           </div>
+          <div class="content">
           <div class="tableau">
             <div class="tablHeader">
               <mat-grid-list cols="7" rowHeight="8:1">
@@ -489,6 +1121,7 @@
               <mat-grid-tile><input matInput> </mat-grid-tile>
             </mat-grid-list>
           </div>
+        </div>
           <div class="content">
             <label>Nombre de placentas</label><input matInput>
             <label>Nombre de poches des eaux</label><input matInput>
