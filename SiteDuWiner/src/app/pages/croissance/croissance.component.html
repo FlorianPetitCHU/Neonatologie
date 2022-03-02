@@ -39,7 +39,7 @@
         <mat-grid-tile><input type="checkbox"></mat-grid-tile>
       </mat-grid-list>
       <div class="tablHeader">
-        <mat-grid-list cols="7" rowHeight="10:3">
+        <mat-grid-list cols="7" rowHeight="10:1">
           <mat-grid-tile></mat-grid-tile>
           <mat-grid-tile>Taille cible</mat-grid-tile>
           <mat-grid-tile>DS Taille cible</mat-grid-tile>
@@ -59,7 +59,7 @@
         <mat-grid-tile>???</mat-grid-tile>
       </mat-grid-list>
       <div class="tablHeader">
-        <mat-grid-list cols="6" rowHeight="10:3">
+        <mat-grid-list cols="6" rowHeight="10:1">
           <mat-grid-tile></mat-grid-tile>
           <mat-grid-tile>Poids père (kg)</mat-grid-tile>
           <mat-grid-tile>Taille père (cm)</mat-grid-tile>
@@ -68,7 +68,7 @@
           <mat-grid-tile>DS IMC</mat-grid-tile>
         </mat-grid-list>
       </div>
-      <mat-grid-list cols="6" rowHeight="10:3">
+      <mat-grid-list cols="6" rowHeight="10:1">
         <mat-grid-tile>Données du Père</mat-grid-tile>
         <mat-grid-tile><input type="number"></mat-grid-tile>
         <mat-grid-tile><input type="number"></mat-grid-tile>
@@ -77,7 +77,7 @@
         <mat-grid-tile>??</mat-grid-tile>
       </mat-grid-list>
       <div class="tablHeader">
-        <mat-grid-list cols="6" rowHeight="10:3">
+        <mat-grid-list cols="6" rowHeight="10:1">
           <mat-grid-tile></mat-grid-tile>
           <mat-grid-tile>Poids mère (kg)</mat-grid-tile>
           <mat-grid-tile>Taille mère (cm)</mat-grid-tile>
@@ -96,9 +96,16 @@
       </mat-grid-list>
     </div>
   </div>
-  <label>Choix de la courbe</label><p></p>
+  <p>Choix de la courbe</p>
   <mat-radio-group aria-label="Select an option">
     <mat-radio-button value="1">Courbe fille</mat-radio-button>
     <mat-radio-button value="2">Courbe garçon</mat-radio-button>
-  </mat-radio-group>
+  </mat-radio-group><br><br>
+  <label>Données de suivi enfant ----------------------------------------------------------------- </label>
+  <p> Ordre de tri des tableaux
+  <mat-radio-group aria-label="Select an option">
+    <mat-radio-button value="1">Croissant</mat-radio-button>
+    <mat-radio-button value="2">Décroissant</mat-radio-button>
+  </mat-radio-group></p>
+  <p><input type="checkbox"> Afficher toutes les données</p>
 </div>
