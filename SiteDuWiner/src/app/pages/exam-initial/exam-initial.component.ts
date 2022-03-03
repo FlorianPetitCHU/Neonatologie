@@ -6,7 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./exam-initial.component.scss']
 })
 export class ExamInitialComponent implements OnInit {
-
+pouValue = null;
+AuscCardValue = null;
+VentilSpont = null;
+Signedelutte = null;
+Auscultrespiratoire = null;
+Abdomen = null;
+OrgGenExt = null;
+Anus = null;
   constructor() { }
 
   ngOnInit(): void {
