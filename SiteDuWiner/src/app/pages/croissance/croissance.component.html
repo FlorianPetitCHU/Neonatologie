@@ -103,9 +103,128 @@
   </mat-radio-group><br><br>
   <label>Données de suivi enfant</label>
   <p> Ordre de tri des tableaux
-  <mat-radio-group aria-label="Select an option">
-    <mat-radio-button value="1">Croissant</mat-radio-button>
-    <mat-radio-button value="2">Décroissant</mat-radio-button>
-  </mat-radio-group></p>
+    <mat-radio-group aria-label="Select an option">
+      <mat-radio-button value="1">Croissant</mat-radio-button>
+      <mat-radio-button value="2">Décroissant</mat-radio-button>
+    </mat-radio-group>
+  </p>
   <p><input type="checkbox"> Afficher toutes les données</p>
 </div>
+<mat-expansion-panel [expanded]="true">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <h1 style="color: black; font-size: medium;">Auxologie</h1>
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <div class="tablHeader">
+    <mat-grid-list cols="12" rowHeight="10:3">
+      <mat-grid-tile></mat-grid-tile>
+      <mat-grid-tile>N de dossier</mat-grid-tile>
+      <mat-grid-tile>Date</mat-grid-tile>
+      <mat-grid-tile>Age</mat-grid-tile>
+      <mat-grid-tile>Poids (kg)</mat-grid-tile>
+      <mat-grid-tile>DS Poids</mat-grid-tile>
+      <mat-grid-tile>Taille (cm)</mat-grid-tile>
+      <mat-grid-tile>DS Taille</mat-grid-tile>
+      <mat-grid-tile>IMC</mat-grid-tile>
+      <mat-grid-tile>DS IMC</mat-grid-tile>
+      <mat-grid-tile>PC (cm)</mat-grid-tile>
+      <mat-grid-tile>DS PC</mat-grid-tile>
+    </mat-grid-list>
+  </div>
+  <mat-grid-list cols="12" rowHeight="10:3">
+    <mat-grid-tile><input type="number"></mat-grid-tile>
+    <mat-grid-tile><input type="date"></mat-grid-tile>
+    <mat-grid-tile><input type="number"></mat-grid-tile>
+    <mat-grid-tile><input type="number"></mat-grid-tile>
+    <mat-grid-tile><input type="number"></mat-grid-tile>
+    <mat-grid-tile>??</mat-grid-tile>
+    <mat-grid-tile><input type="number"></mat-grid-tile>
+    <mat-grid-tile>????</mat-grid-tile>
+    <mat-grid-tile><input type="number"></mat-grid-tile>
+    <mat-grid-tile>?????</mat-grid-tile>
+    <mat-grid-tile><input type="number"></mat-grid-tile>
+    <mat-grid-tile>?????</mat-grid-tile>
+  </mat-grid-list>
+</mat-expansion-panel>
+<mat-expansion-panel [expanded]="true">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <h1 style="color: black; font-size: medium;">Auxologie 2 & âge osseux</h1>
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <div class="tablHeader">
+    <mat-grid-list cols="9" rowHeight="10:3">
+      <mat-grid-tile></mat-grid-tile>
+      <mat-grid-tile>N de dossier</mat-grid-tile>
+      <mat-grid-tile>Date</mat-grid-tile>
+      <mat-grid-tile>Age</mat-grid-tile>
+      <mat-grid-tile>Envergure des bras (cm)</mat-grid-tile>
+      <mat-grid-tile>Taille assis(e) (cm)</mat-grid-tile>
+      <mat-grid-tile>Longeur des pieds (cm)</mat-grid-tile>
+      <mat-grid-tile>Tour de taille (cm)</mat-grid-tile>
+      <mat-grid-tile>Age osseux Greulich-Pyle (AAMM)</mat-grid-tile>
+    </mat-grid-list>
+  </div>
+  <mat-grid-list cols="9" rowHeight="10:3">
+    <mat-grid-tile><input type="number"></mat-grid-tile>
+    <mat-grid-tile><input type="date"></mat-grid-tile>
+    <mat-grid-tile><input type="number"></mat-grid-tile>
+    <mat-grid-tile><input type="number"></mat-grid-tile>
+    <mat-grid-tile><input type="number"></mat-grid-tile>
+    <mat-grid-tile><input type="number"></mat-grid-tile>
+    <mat-grid-tile><input type="number"></mat-grid-tile>
+    <mat-grid-tile><input type="number"></mat-grid-tile>
+    <mat-grid-tile><input type="number"></mat-grid-tile>
+  </mat-grid-list>
+</mat-expansion-panel>
+<mat-expansion-panel [expanded]="true">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <h1 style="color: black; font-size: medium;">Puberté</h1>
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <div class="tablHeader">
+    <mat-grid-list cols="7" rowHeight="10:3">
+      <mat-grid-tile></mat-grid-tile>
+      <mat-grid-tile>N de dossier</mat-grid-tile>
+      <mat-grid-tile>Date</mat-grid-tile>
+      <mat-grid-tile>Age</mat-grid-tile>
+      <mat-grid-tile>Méthode d'évaluation de la puberté</mat-grid-tile>
+      <mat-grid-tile>Poitrine (1 - 5)</mat-grid-tile>
+      <mat-grid-tile>Poils pubiens ????</mat-grid-tile>
+    </mat-grid-list>
+  </div>
+  <mat-grid-list cols="7" rowHeight="10:3">
+    <mat-grid-tile></mat-grid-tile>
+    <mat-grid-tile><input type="date"></mat-grid-tile>
+    <mat-grid-tile><input type="number"></mat-grid-tile>
+    <mat-grid-tile><input type="number"></mat-grid-tile>
+    <mat-grid-tile><input type="number"></mat-grid-tile>
+    <mat-grid-tile><input type="number"></mat-grid-tile>
+    <mat-grid-tile><input type="number"></mat-grid-tile>
+  </mat-grid-list>
+</mat-expansion-panel>
+<mat-expansion-panel [expanded]="true">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <h1 style="color: black; font-size: medium;">Commentaire</h1>
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <div class="tablHeader">
+    <mat-grid-list cols="5" rowHeight="10:3">
+      <mat-grid-tile></mat-grid-tile>
+      <mat-grid-tile>N de dossier</mat-grid-tile>
+      <mat-grid-tile>Date</mat-grid-tile>
+      <mat-grid-tile>Age</mat-grid-tile>
+      <mat-grid-tile>Commentaire</mat-grid-tile>
+    </mat-grid-list>
+  </div>
+  <mat-grid-list cols="5" rowHeight="10 :3">
+    <mat-grid-tile> </mat-grid-tile>
+    <mat-grid-tile><input type="number"></mat-grid-tile>
+    <mat-grid-tile><input type="number"></mat-grid-tile>
+    <mat-grid-tile><input type="number"></mat-grid-tile>
+    <mat-grid-tile><input type="text"></mat-grid-tile>
+  </mat-grid-list>
+</mat-expansion-panel>
