@@ -27,6 +27,8 @@ import {MatTableModule} from '@angular/material/table';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatRadioModule} from '@angular/material/radio';
 import { ExamInitialComponent } from './pages/exam-initial/exam-initial.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { DialogSignerComponent } from './pages/dialog-signer/dialog-signer.component';
 
 
 
@@ -42,7 +44,8 @@ import { ExamInitialComponent } from './pages/exam-initial/exam-initial.componen
     GrosssessePeriodeNeonatComponent,
     VaccinComponent,
     CroissanceComponent,
-    ExamInitialComponent
+    ExamInitialComponent,
+    DialogSignerComponent
   ],
   imports: [
     BrowserModule,
@@ -61,7 +64,8 @@ import { ExamInitialComponent } from './pages/exam-initial/exam-initial.componen
     MatTableModule,
     MatDatepickerModule,
     MatRadioModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatDialogModule
   ],
 
   providers: [],

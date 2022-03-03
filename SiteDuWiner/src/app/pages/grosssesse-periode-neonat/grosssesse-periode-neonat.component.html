@@ -1,6 +1,6 @@
 <p class="nav-place"></p>
 <mat-toolbar class="color-toolbar">
-  <button mat-raised-button [disabled]="signer()">signer</button>
+  <button mat-raised-button [disabled]="signer()" (click)="openDialogSigner()">signer</button>
   <mat-button-toggle-group >
     <mat-button-toggle class="Second-button-toolbar color-button-toolbar" (click)="role_soignant()">Soignant
     </mat-button-toggle>
@@ -12,7 +12,7 @@
   <mat-expansion-panel [expanded]="true">
     <mat-expansion-panel-header class="panel">
       <mat-panel-title>
-        <h1>Passé obstétrical</h1>
+        Passé obstétrical
       </mat-panel-title>
     </mat-expansion-panel-header>
     <div class="row">
@@ -29,7 +29,7 @@
               <mat-grid-tile>Observations</mat-grid-tile>
             </mat-grid-list>
           </div>
-          <mat-grid-list cols="7" rowHeight="10:1" class="tableInput">
+          <mat-grid-list cols="7" rowHeight="8:1" class="tableInput">
             <mat-grid-tile><input matInput [(ngModel)]="val1" #ctrl="ngModel"></mat-grid-tile>
             <mat-grid-tile><input matInput></mat-grid-tile>
             <mat-grid-tile><input matInput></mat-grid-tile>
@@ -39,7 +39,7 @@
             <mat-grid-tile><input matInput></mat-grid-tile>
           </mat-grid-list>
           <div class="showInputField"></div>
-          <mat-grid-list cols="7" rowHeight="10:1" class="tableInput" *ngIf="val1 != ''">
+          <mat-grid-list cols="7" rowHeight="8:1" class="tableInput" *ngIf="val1 != ''">
             <mat-grid-tile><input matInput></mat-grid-tile>
             <mat-grid-tile><input matInput></mat-grid-tile>
             <mat-grid-tile><input matInput></mat-grid-tile>
@@ -58,7 +58,7 @@
   <mat-expansion-panel [expanded]="true">
     <mat-expansion-panel-header class="panel">
       <mat-panel-title>
-        <h1>Grossesse</h1>
+        Grossesse
       </mat-panel-title>
     </mat-expansion-panel-header>
     <div class="row">
@@ -72,7 +72,7 @@
         </div>
         <div class="content">
           <label>Gestité/Parité :</label>
-          G <input matGInput [(ngModel)]="sign1" style="background-color: yellow;">
+          G <input matGInput [(ngModel)]="sign1" style="background-color: rgb(235, 222, 78);">
           D <input matGInput>
         </div>
         <div class="content">
@@ -222,14 +222,14 @@
             </mat-grid-list>
           </div>
           <div class="showInputField">
-          <mat-grid-list cols="3" rowHeight="10:1" class="tableInput">
+          <mat-grid-list cols="3" rowHeight="18:1" class="tableInput">
             <mat-grid-tile><input matInput [(ngModel)]="val2" #ctrl="ngModel"></mat-grid-tile>
             <mat-grid-tile><input matInput></mat-grid-tile>
             <mat-grid-tile><input matInput></mat-grid-tile>
           </mat-grid-list>
           </div>
           <div class="showInputField">
-          <mat-grid-list cols="3" rowHeight="10:1" class="tableInput" *ngIf="val2 != ''">
+          <mat-grid-list cols="3" rowHeight="18:1" class="tableInput" *ngIf="val2 != ''">
             <mat-grid-tile><input matInput></mat-grid-tile>
             <mat-grid-tile><input matInput></mat-grid-tile>
             <mat-grid-tile><input matInput></mat-grid-tile>
@@ -369,7 +369,7 @@
     <mat-expansion-panel [expanded]="true">
       <mat-expansion-panel-header class="panel">
         <mat-panel-title>
-          <h1>Détails de la grosssesse</h1>
+          Détails de la grosssesse
         </mat-panel-title>
       </mat-expansion-panel-header>
       <div class="row">
@@ -440,7 +440,7 @@
     <mat-expansion-panel [expanded]="true">
       <mat-expansion-panel-header class="panel">
         <mat-panel-title>
-          <h1>Accouchement</h1>
+          Accouchement
         </mat-panel-title>
       </mat-expansion-panel-header>
       <div class="row">
@@ -602,7 +602,7 @@
     <mat-expansion-panel [expanded]="true">
       <mat-expansion-panel-header class="panel">
         <mat-panel-title>
-          <h1>Détails de l'accouchement</h1>
+          Détails de l'accouchement
         </mat-panel-title>
       </mat-expansion-panel-header>
       <div class="row">
@@ -772,8 +772,8 @@
             </mat-grid-tile>
             <mat-grid-tile colspan="5">
               <div class="aligne-gauche">
-                <label><input type="checkbox">Bactériologie</label>
-                <label><input type="checkbox">Anapath</label>
+                <mat-checkbox class="example-margin">Bactériologie</mat-checkbox>
+                <mat-checkbox class="example-margin">Anapath</mat-checkbox>
               </div>
             </mat-grid-tile>
           </mat-grid-list>
@@ -799,7 +799,7 @@
     <mat-expansion-panel [expanded]="true">
       <mat-expansion-panel-header class="panel">
         <mat-panel-title>
-          <h1>Naissance</h1>
+          Naissance
         </mat-panel-title>
       </mat-expansion-panel-header>
       <div class="row">
@@ -1064,7 +1064,7 @@
     <mat-expansion-panel [expanded]="true">
       <mat-expansion-panel-header class="panel">
         <mat-panel-title>
-          <h1>Détails de la Naissance</h1>
+          Détails de la Naissance
         </mat-panel-title>
       </mat-expansion-panel-header>
       <div class="row">
@@ -1082,14 +1082,14 @@
           </div>
           <p>Mesures prophylactiques</p>
           <div class="content">
-            <label><input type="checkbox">Désinfection oculaire</label>
-            <label><input type="checkbox">Vitamine K</label>
+            <mat-checkbox class="example-margin">Désinfection oculaire</mat-checkbox>
+            <mat-checkbox class="example-margin">Vitamine K</mat-checkbox>
           </div>
           <div class="content">
             <label>Perméabilité</label>
-            <label><input type="checkbox">Choanes</label>
-            <label><input type="checkbox">Oesophage</label>
-            <label><input type="checkbox">Anus</label>
+            <mat-checkbox class="example-margin">Choanes</mat-checkbox>
+            <mat-checkbox class="example-margin">Oesophage</mat-checkbox>
+            <mat-checkbox class="example-margin">Anus</mat-checkbox>
             <!-- aligner a droite -->
             <input matInput style="float:right;width: 40%;">
           </div>
@@ -1152,7 +1152,7 @@
     <mat-expansion-panel [expanded]="true">
       <mat-expansion-panel-header class="panel">
         <mat-panel-title>
-          <h1>Période néonatale</h1>
+          Période néonatale
         </mat-panel-title>
       </mat-expansion-panel-header>
       <div class="row">

@@ -1,11 +1,14 @@
 .nav-place{
-  height: 72px;
+  height: 64px;
   margin: auto;
 }
 label{
   margin-right: 5px;
 }
 input{
+  margin-right: 15px;
+}
+.example-margin{
   margin-right: 15px;
 }
 select{
@@ -29,7 +32,8 @@ select{
 }
 .panel{
   background-color: rgb(103, 141, 177)!important;
-  height: 30px;
+  height: 20%;
+  color: white;
 }
 h1{
   color: white;
@@ -64,3 +68,7 @@ h1{
   position: absolute;
   left: 5px;
 }
+.mat-radio-container-no-show .mat-radio-container {
+  display: none;
+}
+

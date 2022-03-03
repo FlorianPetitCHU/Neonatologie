@@ -8,10 +8,15 @@ import { GrosssessePeriodeNeonatComponent } from './pages/grosssesse-periode-neo
 import { CroissanceComponent } from './pages/croissance/croissance.component';
 import { AtcdFamComponent } from './pages/atcd-fam/atcd-fam.component';
 import { ExamInitialComponent } from './pages/exam-initial/exam-initial.component';
+import { DialogSignerComponent } from './pages/dialog-signer/dialog-signer.component';
 const routes: Routes = [
   {
     path: "Admission",
     component: AdmissionComponent
+  },
+  {
+    path: "Signer",
+    component: DialogSignerComponent
   },
   {
     path: "ExamenCliniqueInitial",

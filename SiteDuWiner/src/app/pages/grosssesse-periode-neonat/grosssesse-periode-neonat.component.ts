@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import {MatDialog} from '@angular/material/dialog';
+import { DialogSignerComponent } from '../dialog-signer/dialog-signer.component';
 @Component({
   selector: 'app-grosssesse-periode-neonat',
   templateUrl: './grosssesse-periode-neonat.component.html',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class GrosssessePeriodeNeonatComponent implements OnInit {
 secondSelectValue = null;
   test = "";
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
   val1 = "";
   val2 = "";
   val3 = "";
@@ -30,5 +31,9 @@ role : any;
     else{
       return true
     }
+  }
+  openDialogSigner() {
+
+    this.dialog.open(DialogSignerComponent);
   }
 }

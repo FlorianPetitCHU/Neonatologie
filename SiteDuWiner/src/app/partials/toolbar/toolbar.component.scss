@@ -29,8 +29,6 @@
 }
 
 .color-button-toolbar{
-
-
   color:  black
 }
 
@@ -38,9 +36,7 @@
   color: white;
   text-decoration: none;
 }
-html{
-  background:  rgb(209,220,242);
-}
+
 .Second-button-toolbar{
   margin-right: 2px;
   border-style: none;
@@ -51,8 +47,15 @@ html{
   background-color: white !important;
 
 }
-
-
 .mat-button-toggle-label-content{
-  line-height: 0 !important;
+  height: 20px;
 }
+.mat-button-toggle-group {
+  height: 32px;
+  align-items: center;
+}
+
+.mat-toolbar.color-toolbar.mat-toolbar-single-row{
+  height: 0%;
+}
+
