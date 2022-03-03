@@ -9,7 +9,11 @@ export class GrosssessePeriodeNeonatComponent implements OnInit {
 secondSelectValue = null;
   test = "";
   constructor() { }
-  fdp = "";
+  val1 = "";
+  val2 = "";
+  val3 = "";
+  val4 = "";
+  val5 = "";
   ngOnInit(): void {
   }
 role : any;
@@ -17,4 +21,14 @@ role : any;
   console.log(this.role);}
   role_soignant() {this.role = 2;
   console.log(this.role);}
+
+  sign1="";
+  signer(){
+    if(this.sign1 != ''){
+      return false
+    }
+    else{
+      return true
+    }
+  }
 }
