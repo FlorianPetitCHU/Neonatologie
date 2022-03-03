@@ -1,6 +1,7 @@
 <p class="nav-place"></p>
 <mat-toolbar class="color-toolbar">
-  <mat-button-toggle-group>
+  <button mat-raised-button [disabled]="signer()">signer</button>
+  <mat-button-toggle-group >
     <mat-button-toggle class="Second-button-toolbar color-button-toolbar" (click)="role_soignant()">Soignant
     </mat-button-toggle>
     <mat-button-toggle class="Second-button-toolbar color-button-toolbar" (click)="role_med()">Médecin
@@ -29,7 +30,7 @@
             </mat-grid-list>
           </div>
           <mat-grid-list cols="7" rowHeight="10:1" class="tableInput">
-            <mat-grid-tile><input matInput [(ngModel)]="fdp" #ctrl="ngModel"></mat-grid-tile>
+            <mat-grid-tile><input matInput [(ngModel)]="val1" #ctrl="ngModel"></mat-grid-tile>
             <mat-grid-tile><input matInput></mat-grid-tile>
             <mat-grid-tile><input matInput></mat-grid-tile>
             <mat-grid-tile><input matInput></mat-grid-tile>
@@ -38,7 +39,7 @@
             <mat-grid-tile><input matInput></mat-grid-tile>
           </mat-grid-list>
           <div class="showInputField"></div>
-          <mat-grid-list cols="7" rowHeight="10:1" class="tableInput" *ngIf="fdp != ''">
+          <mat-grid-list cols="7" rowHeight="10:1" class="tableInput" *ngIf="val1 != ''">
             <mat-grid-tile><input matInput></mat-grid-tile>
             <mat-grid-tile><input matInput></mat-grid-tile>
             <mat-grid-tile><input matInput></mat-grid-tile>
@@ -71,7 +72,7 @@
         </div>
         <div class="content">
           <label>Gestité/Parité :</label>
-          G <input matGInput>
+          G <input matGInput [(ngModel)]="sign1" style="background-color: yellow;">
           D <input matGInput>
         </div>
         <div class="content">
@@ -222,13 +223,13 @@
           </div>
           <div class="showInputField">
           <mat-grid-list cols="3" rowHeight="10:1" class="tableInput">
-            <mat-grid-tile><input matInput [(ngModel)]="test" #ctrl="ngModel"></mat-grid-tile>
+            <mat-grid-tile><input matInput [(ngModel)]="val2" #ctrl="ngModel"></mat-grid-tile>
             <mat-grid-tile><input matInput></mat-grid-tile>
             <mat-grid-tile><input matInput></mat-grid-tile>
           </mat-grid-list>
           </div>
           <div class="showInputField">
-          <mat-grid-list cols="3" rowHeight="10:1" class="tableInput" *ngIf="test != ''">
+          <mat-grid-list cols="3" rowHeight="10:1" class="tableInput" *ngIf="val2 != ''">
             <mat-grid-tile><input matInput></mat-grid-tile>
             <mat-grid-tile><input matInput></mat-grid-tile>
             <mat-grid-tile><input matInput></mat-grid-tile>
@@ -265,14 +266,14 @@
             </mat-grid-list>
           </div>
           <mat-grid-list cols="5" rowHeight="10:1" class="tableInput">
-            <mat-grid-tile><input matInput [(ngModel)]="test" #ctrl="ngModel"></mat-grid-tile>
+            <mat-grid-tile><input matInput [(ngModel)]="val3" #ctrl="ngModel"></mat-grid-tile>
             <mat-grid-tile><input matInput></mat-grid-tile>
             <mat-grid-tile><input matInput></mat-grid-tile>
             <mat-grid-tile><input matInput></mat-grid-tile>
             <mat-grid-tile><input matInput></mat-grid-tile>
           </mat-grid-list>
           <div class="showInputField"></div>
-          <mat-grid-list cols="5" rowHeight="10:1" class="tableInput" *ngIf="test != ''">
+          <mat-grid-list cols="5" rowHeight="10:1" class="tableInput" *ngIf="val3 != ''">
             <mat-grid-tile><input matInput></mat-grid-tile>
             <mat-grid-tile><input matInput></mat-grid-tile>
             <mat-grid-tile><input matInput></mat-grid-tile>
@@ -340,13 +341,13 @@
             </mat-grid-list>
           </div>
           <mat-grid-list cols="4" rowHeight="12:1" class="tableInput">
-            <mat-grid-tile><input matInput [(ngModel)]="test" #ctrl="ngModel"></mat-grid-tile>
+            <mat-grid-tile><input matInput [(ngModel)]="val4" #ctrl="ngModel"></mat-grid-tile>
             <mat-grid-tile><input matInput></mat-grid-tile>
             <mat-grid-tile><input matInput></mat-grid-tile>
             <mat-grid-tile><input matInput></mat-grid-tile>
           </mat-grid-list>
           <div class="showInputField"></div>
-          <mat-grid-list cols="4" rowHeight="12:1" class="tableInput" *ngIf="test != ''">
+          <mat-grid-list cols="4" rowHeight="12:1" class="tableInput" *ngIf="val4 != ''">
             <mat-grid-tile><input matInput></mat-grid-tile>
             <mat-grid-tile><input matInput></mat-grid-tile>
             <mat-grid-tile><input matInput></mat-grid-tile>
@@ -1106,7 +1107,22 @@
               </mat-grid-list>
             </div>
             <mat-grid-list cols="7" rowHeight="10:1" class="tableInput">
+              <mat-grid-tile><input matInput [(ngModel)]="val5"> </mat-grid-tile>
               <mat-grid-tile><input matInput> </mat-grid-tile>
+              <mat-grid-tile>
+                <select>
+                  <option>Masculin</option>
+                  <option>Feminin</option>
+                  <option>Non défini</option>
+                </select>
+              </mat-grid-tile>
+              <mat-grid-tile><input matInput> </mat-grid-tile>
+              <mat-grid-tile><input matInput> </mat-grid-tile>
+              <mat-grid-tile><input matInput> </mat-grid-tile>
+              <mat-grid-tile><input matInput> </mat-grid-tile>
+            </mat-grid-list>
+            <mat-grid-list cols="7" rowHeight="10:1" class="tableInput" *ngIf="val5 != ''">
+              <mat-grid-tile><input matInput > </mat-grid-tile>
               <mat-grid-tile><input matInput> </mat-grid-tile>
               <mat-grid-tile>
                 <select>
