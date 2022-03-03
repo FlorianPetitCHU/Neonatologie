@@ -14,6 +14,7 @@ Auscultrespiratoire = null;
 Abdomen = null;
 OrgGenExt = null;
 Anus = null;
+BoucheOreilleCou = null;
   constructor() { }
 
   ngOnInit(): void {

@@ -108,6 +108,125 @@
       </mat-radio-group></p>
       <p>Cordon ombilical : ??????</p>
       <h3>Membres - Peau</h3>
+      <mat-radio-group aria-label="Select an option" [(ngModel)]="BoucheOreilleCou">
+        <mat-radio-button value="1">Sans Particularité</mat-radio-button>
+        <mat-radio-button value="2">Particularité</mat-radio-button>
+      </mat-radio-group><input type="text" *ngIf="BoucheOreilleCou   == '2'">
+      <h3>Neurologique</h3>
+      <h4>Yeux :</h4>
+      <p>Ouverture spontanée des yeux : <mat-radio-group aria-label="Select an option">
+        <mat-radio-button value="1">Oui</mat-radio-button>
+        <mat-radio-button value="2">Non</mat-radio-button>
+      </mat-radio-group></p>??????
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="true">
+      <mat-expansion-panel-header class="panel">
+        <mat-panel-title>
+          <h1>Nouveau-né à terme</h1>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>Age gestationnel : <input type="number">SA <input type="number"> jours</p>
+      <p>Poids de naissance : <input type="number">g <input type="number"> Percentile</p>
+      <p>Taille de naissance : <input type="number">cm <input type="number"> Percentile</p>
+      <p>Périmètre crânien de naissance : <input type="number">cm <input type="number"> Percentile</p>
+      <p>Aspect : <select>
+          <option value="1">Rose</option>
+          <option value="2">Erythrosique</option>
+          <option value="3">Pâle</option>
+          <option value="4">Cyanosé</option>
+          <option value="5">Moribond</option>
+          <option selected></option>
+        </select></p>
+      <p>Température à l'arrivée : <input type="number">°C ??????????</p>
+      <h3>Examen cardio-hémodynamique</h3>
+      <p>Fréquence cardiaque : <input type="number"> Bpm</p>
+      <p>Pression artérielle :</p>
+      <p>PAS : <input type="number">mmHg | PAD : <input type="number">mmHg | PAM : <input type="number">mmHg</p>
+      <p>Pouls : <select [(ngModel)]="pouValue">
+          <option value="1">Tous perçus</option>
+          <option value="2">Sans anomalies</option>
+          <option value="3">Faibles</option>
+          <option value="4">Filants</option>
+          <option value="5">Bondissants</option>
+          <option value="6">Non perçus</option>
+          <option value="7">Autre</option>
+          <option selected></option>
+        </select><input type="text" *ngIf="pouValue == '7'"></p>
+      <p>Temps de recoloration cutanée: <input type="number">secondes</p>
+      <p>Auscultation cardiaque : <select [(ngModel)]="AuscCardValue">
+          <option value="1">Normale</option>
+          <option value="2">Anormale</option>
+          <option value="3">Autre</option>
+          <option selected></option>
+        </select><input type="text" *ngIf="AuscCardValue == '3'"></p>
+      <h3>Examen respiratoire</h3>
+      <p>Fréquence respiratoire : <input type="number">secondes</p>
+      <p>Ventilation spontanée : <mat-radio-group aria-label="Select an option" [(ngModel)]="VentilSpont">
+          <mat-radio-button value="1">Oui</mat-radio-button>
+          <mat-radio-button value="2">Non</mat-radio-button>
+        </mat-radio-group><select *ngIf="VentilSpont == '2'">
+          <option></option>
+          <option value="1">Ventilation non invasive</option>
+          <option value="2">Ventilation invasive</option>
+        </select> "texte libre en plus en cas de non ?"</p>
+      <p>Signe de lutte :<mat-radio-group aria-label="Select an option" [(ngModel)]="Signedelutte">
+          <mat-radio-button value="1">Oui</mat-radio-button>
+          <mat-radio-button value="2">Non</mat-radio-button>
+        </mat-radio-group>
+        <!-- condition a faire maiss pas compris -->
+      </p>
+      <p>Auscultation respiratoire : <mat-radio-group aria-label="Select an option" [(ngModel)]="Auscultrespiratoire">
+          <mat-radio-button value="1">Normal : Murmure vésiculaire bilatérale et symétrique</mat-radio-button>
+          <mat-radio-button value="2">Anormale</mat-radio-button>
+        </mat-radio-group><input type="text" *ngIf="Auscultrespiratoire == '2'"></p>
+      <h3>Examen abdominal</h3>
+      <p>Abdomen : <select [(ngModel)]="Abdomen">
+          <option value="1">Sans Particularités</option>
+          <option value="2">Souple</option>
+          <option value="3">Particularité</option>
+        </select><input type="text" *ngIf="Abdomen == '3'"></p>
+      <p>Hépatomégalie : <mat-radio-group aria-label="Select an option">
+          <mat-radio-button value="1">Oui</mat-radio-button>
+          <mat-radio-button value="2">Non</mat-radio-button>
+        </mat-radio-group>
+      </p>
+      <p>Splénomégalie : <mat-radio-group aria-label="Select an option">
+          <mat-radio-button value="1">Oui</mat-radio-button>
+          <mat-radio-button value="2">Non</mat-radio-button>
+        </mat-radio-group>
+      </p>
+      <p>Organes génitaux externes : <select>
+          <option value="1">Féminin</option>
+          <option value="2">Masculin</option>
+          <option selected></option>
+        </select><select [(ngModel)]="OrgGenExt">
+          <option value="1">Sans Particularités</option>
+          <option value="2">Particularité</option>
+        </select><input type="text" *ngIf="Abdomen == '2'"></p>
+      <p>Fosse lombaires : <input type="text"></p>
+      <p>Anus : <select [(ngModel)]="Anus">
+          <option value="1">Sans Particularités</option>
+          <option value="2">Particularité</option>
+        </select><input type="text" *ngIf="Anus == '2'"></p>
+      <p>Emission de méconium : <mat-radio-group aria-label="Select an option">
+          <mat-radio-button value="1">Oui</mat-radio-button>
+          <mat-radio-button value="2">Non</mat-radio-button>
+        </mat-radio-group>
+      </p>
+      <p>Cordon ombilical : ??????</p>
+      <h3>Membres - Peau</h3>
+      <mat-radio-group aria-label="Select an option" [(ngModel)]="BoucheOreilleCou">
+        <mat-radio-button value="1">Sans Particularité</mat-radio-button>
+        <mat-radio-button value="2">Particularité</mat-radio-button>
+      </mat-radio-group><input type="text" *ngIf="BoucheOreilleCou   == '2'">
+      <h3>Neurologique</h3>
+      <h4>Yeux :</h4>
+      <p>Ouverture spontanée des yeux : <mat-radio-group aria-label="Select an option">
+          <mat-radio-button value="1">Oui</mat-radio-button>
+          <mat-radio-button value="2">Non</mat-radio-button>
+        </mat-radio-group>
+      </p>??????
     </mat-expansion-panel>
   </div>
 </div>
