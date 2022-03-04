@@ -31,6 +31,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { DialogSignerComponent } from './pages/dialog-signer/dialog-signer.component';
 import { SortieComponent } from './pages/sortie/sortie.component';
 import { EvolMedComponent } from './pages/evol-med/evol-med.component';
+import { PrepaSortieComponent } from './pages/prepa-sortie/prepa-sortie.component';
+import { AssistSocialComponent } from './pages/assist-social/assist-social.component';
 
 
 
@@ -49,7 +51,9 @@ import { EvolMedComponent } from './pages/evol-med/evol-med.component';
     ExamInitialComponent,
     DialogSignerComponent,
     SortieComponent,
-    EvolMedComponent
+    EvolMedComponent,
+    PrepaSortieComponent,
+    AssistSocialComponent
   ],
   imports: [
     BrowserModule,

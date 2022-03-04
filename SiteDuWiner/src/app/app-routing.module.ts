@@ -11,10 +11,20 @@ import { ExamInitialComponent } from './pages/exam-initial/exam-initial.componen
 import { DialogSignerComponent } from './pages/dialog-signer/dialog-signer.component';
 import { SortieComponent } from './pages/sortie/sortie.component';
 import { EvolMedComponent } from './pages/evol-med/evol-med.component';
+import { PrepaSortieComponent } from './pages/prepa-sortie/prepa-sortie.component';
+import { AssistSocialComponent } from './pages/assist-social/assist-social.component';
 const routes: Routes = [
   {
     path: "Admission",
     component: AdmissionComponent
+  },
+  {
+    path: "AssistanteSociale",
+    component: AssistSocialComponent
+  },
+  {
+    path: "PreparationALaSortie",
+    component: PrepaSortieComponent
   },
   {
     path: "EvolutionMedical",
