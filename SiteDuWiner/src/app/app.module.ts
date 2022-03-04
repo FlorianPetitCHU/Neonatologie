@@ -29,6 +29,8 @@ import {MatRadioModule} from '@angular/material/radio';
 import { ExamInitialComponent } from './pages/exam-initial/exam-initial.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DialogSignerComponent } from './pages/dialog-signer/dialog-signer.component';
+import { SortieComponent } from './pages/sortie/sortie.component';
+import { EvolMedComponent } from './pages/evol-med/evol-med.component';
 
 
 
@@ -45,7 +47,9 @@ import { DialogSignerComponent } from './pages/dialog-signer/dialog-signer.compo
     VaccinComponent,
     CroissanceComponent,
     ExamInitialComponent,
-    DialogSignerComponent
+    DialogSignerComponent,
+    SortieComponent,
+    EvolMedComponent
   ],
   imports: [
     BrowserModule,
