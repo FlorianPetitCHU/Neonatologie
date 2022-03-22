@@ -1,56 +1,193 @@
 <p class="nav-place"></p>
-  <mat-toolbar class="color-toolbar">
-    <mat-button-toggle-group>
-      <mat-button-toggle class="Second-button-toolbar color-button-toolbar" (click)="role_soignant()">Soignant
-      </mat-button-toggle>
-      <mat-button-toggle class="Second-button-toolbar color-button-toolbar" (click)="role_med()">Médecin
-      </mat-button-toggle>
-    </mat-button-toggle-group>
-  </mat-toolbar>
-  <body ng-app="myapp" ng-controller="ListController">
-    <div class="container">
+<mat-toolbar class="color-toolbar">
+  <mat-button-toggle-group>
+    <mat-button-toggle class="Second-button-toolbar color-button-toolbar" (click)="role_soignant()">Soignant
+    </mat-button-toggle>
+    <mat-button-toggle class="Second-button-toolbar color-button-toolbar" (click)="role_med()">Médecin
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+</mat-toolbar>
+<section>
+  <div>
+    <div class="">
       <div class="row">
-        <div class="col-md-12">
-          <div class="panel panel-default">
-            <div class="panel-body">
-              <form ng-submit="addNew()">
-                <table class="table table-striped table-bordered">
-                  <thead>
-                    <tr>
-                      <th><input type="checkbox" ng-model="selectedAll" ng-click="checkAll()" /></th>
-                      <th>Firstname</th>
-                      <th>Lastname</th>
-                      <th>Email</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr ng-repeat="personalDetail in personalDetails">
-                      <td>
-                        <input type="checkbox" ng-model="personalDetail.selected" />
-                      </td>
-                      <td>
-                        <input type="text" class="form-control" ng-model="personalDetail.fname" required />
-                      </td>
-                      <td>
-                        <input type="text" class="form-control" ng-model="personalDetail.lname" required />
-                      </td>
-                      <td>
-                        <input type="email" class="form-control" ng-model="personalDetail.email" required />
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-
-                <div class="form-group">
-                  <input ng-hide="!personalDetails.length" type="button" class="btn btn-danger pull-right"
-                    ng-click="remove()" value="Remove">
-                  <input type="submit" class="btn btn-primary addnew pull-right" value="Add New">
-                </div>
-              </form>
+        <mat-expansion-panel [expanded]="true">
+          <mat-expansion-panel-header class="panel">
+            <mat-panel-title>
+              Admission en néonatologie
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="row">
+            <div class="content">
+              <div class="content">
+                <label>Date d'admission :</label>
+                <input type="datetime-local" matInput>
+              </div>
+              <div class="content">
+                <label>Mode d'entrée :</label>
+                <select [(ngModel)]="secondSelectValue">
+                  <option></option>
+                  <option value="Titulaire_Pere">1 - ???</option>
+                  <option value="Titulaire_Mere">2 - Entrée en urgence</option>
+                  <option value="Titulaire_Autre">Autre</option>
+                </select>
+              </div><br>
+              <div>
+                <label>Motif d'hospitalisation</label>
+                <input type="text">
+              </div><br>
+              <mat-radio-group aria-label="Select an option" [(ngModel)]="AntecedentsFamiliaux" #ctrl="ngModel"
+                required>
+                <mat-radio-button value="1">Pose bracelet sur incubateur</mat-radio-button><br>
+                <mat-radio-button value="2">Pose bracelet d'identification</mat-radio-button><br>
+                <mat-radio-button value="3">Patient déjà porteur du bracelet</mat-radio-button><br>
+                <mat-radio-button value="4">Refus pose bracelet</mat-radio-button><br>
+              </mat-radio-group>
             </div>
           </div>
-        </div>
+        </mat-expansion-panel>
+        <mat-expansion-panel [expanded]="true">
+          <mat-expansion-panel-header class="panel">
+            <mat-panel-title>
+              Si enfant né hors hopital
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="row">
+            <div class="content">
+              <div class="content">
+                <div>
+                  <label>En provenance de </label>
+                  <input type="text">
+                </div><br>
+                <label>Mode de transport :</label>
+                <select [(ngModel)]="secondSelectValue">
+                  <option></option>
+                  <option value="Titulaire_Pere">???</option>
+                  <option value="Titulaire_Mere">Ambulance</option>
+                  <option value="Titulaire_Autre">Autre</option>
+                </select>
+              </div><br>
+              <div>
+                <label>Lieu de naissance :</label>
+                <input type="text">
+              </div><br>
+              <mat-radio-group aria-label="Select an option" [(ngModel)]="AntecedentsFamiliaux" #ctrl="ngModel"
+                required>
+                <mat-radio-button value="1"> Dossier </mat-radio-button>
+                <mat-radio-button value="2"> Carnet de santé </mat-radio-button>
+                <mat-radio-button value="3"> Autre à preciser <input type="text"></mat-radio-button>
+              </mat-radio-group>
+              <div>
+                <label>Faits à signaler (SAMU / Ambulance) </label>
+                <input type="text">
+              </div><br>
+              <label> Scan de la fiche SAMU</label>
+              <a href=" ">Sélectionner le document scanné</a><br>
+              <mat-radio-button>T.I.U</mat-radio-button><br>
+              <div><label>Date de transfert </label>
+                <input type="date"><br>
+                <label>Maternité d'origine <input type="text"></label><br>
+                <label>Indications <input type="text"></label><br>
+              </div>
+            </div>
+          </div>
+        </mat-expansion-panel>
+        <mat-expansion-panel [expanded]="true">
+          <mat-expansion-panel-header class="panel">
+            <mat-panel-title>
+              Correspondants
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="row">
+            <div class="content">
+              <div class="tablHeader">
+                <mat-grid-list cols="7" rowHeight="10:1">
+                  <mat-grid-tile>Type</mat-grid-tile>
+                  <mat-grid-tile>Nom</mat-grid-tile>
+                  <mat-grid-tile>Spécialité</mat-grid-tile>
+                  <mat-grid-tile>Téléphone</mat-grid-tile>
+                  <mat-grid-tile>Email</mat-grid-tile>
+                  <mat-grid-tile>Adresse</mat-grid-tile>
+                  <mat-grid-tile>Actualiser le</mat-grid-tile>
+                </mat-grid-list>
+                <mat-grid-list cols="7" rowHeight="10:1" class="tableInput">
+                  <mat-grid-tile><select [(ngModel)]="secondSelectValue">
+                    <option></option>
+                    <option value="Titulaire_Pere">???</option>
+                    <option value="Titulaire_Mere">Médecin traitant</option>
+                    <option value="Titulaire_Autre">Autre</option>
+                  </select></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input type="tel"></mat-grid-tile>
+                  <mat-grid-tile><input type="email"></mat-grid-tile>
+                  <mat-grid-tile><input type="text"></mat-grid-tile>
+                  <mat-grid-tile><input type="date"></mat-grid-tile>
+                </mat-grid-list>
+                <mat-grid-list cols="7" rowHeight="10:1" class="tableInput" *ngIf="val1 != ''">
+                  <mat-grid-tile><input matInput [(ngModel)]="val2" #ctrl="ngModel"></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input type="tel"></mat-grid-tile>
+                  <mat-grid-tile><input type="email"></mat-grid-tile>
+                  <mat-grid-tile><input type="text"></mat-grid-tile>
+                  <mat-grid-tile><input type="date"></mat-grid-tile>
+                </mat-grid-list>
+              </div>
+            </div>
+          </div>
+        </mat-expansion-panel>
+        <mat-expansion-panel [expanded]="true">
+          <mat-expansion-panel-header class="panel">
+            <mat-panel-title>
+              Personne à prévenir
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="row">
+            <div class="content">
+              <div class="tablHeader">
+                <mat-grid-list cols="7" rowHeight="10:1">
+                  <mat-grid-tile>Nom</mat-grid-tile>
+                  <mat-grid-tile>Prenom</mat-grid-tile>
+                  <mat-grid-tile>Lien avec les parents</mat-grid-tile>
+                  <mat-grid-tile>Téléphone</mat-grid-tile>
+                  <mat-grid-tile>Email</mat-grid-tile>
+                  <mat-grid-tile>Adresse</mat-grid-tile>
+                  <mat-grid-tile>Actualiser le</mat-grid-tile>
+                </mat-grid-list>
+                <mat-grid-list cols="7" rowHeight="10:1" class="tableInput">
+                  <mat-grid-tile><input matInput [(ngModel)]="val1" #ctrl="ngModel"></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input type="tel"></mat-grid-tile>
+                  <mat-grid-tile><input type="email"></mat-grid-tile>
+                  <mat-grid-tile><input type="text"></mat-grid-tile>
+                  <mat-grid-tile><input type="date"></mat-grid-tile>
+                </mat-grid-list>
+                <mat-grid-list cols="7" rowHeight="10:1" class="tableInput" *ngIf="val1 != ''">
+                  <mat-grid-tile><input matInput [(ngModel)]="val2" #ctrl="ngModel"></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input type="tel"></mat-grid-tile>
+                  <mat-grid-tile><input type="email"></mat-grid-tile>
+                  <mat-grid-tile><input type="text"></mat-grid-tile>
+                  <mat-grid-tile><input type="date"></mat-grid-tile>
+                </mat-grid-list>
+              </div>
+            </div>
+          </div>
+        </mat-expansion-panel>
+        <mat-expansion-panel [expanded]="true">
+          <mat-expansion-panel-header class="panel">
+            <mat-panel-title>
+              Souhait d'ordre religieux, éthique, culturel ...
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="row"><br>
+            <input type="text">
+          </div>
+        </mat-expansion-panel>
       </div>
     </div>
-  </body>
-
+  </div>
+</section>
