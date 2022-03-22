@@ -1,4 +1,5 @@
 <p class="nav-place"></p>
+
 <section>
   <div>
     <div class="">
@@ -210,15 +211,9 @@
               <option>Toutes</option>
             </select>
             <label *ngIf="checkBox.checked">Evolution(s)       du</label>
-            <select *ngIf="checkBox.checked">
-              <option></option>
-              <option>date</option>
-            </select>
+            <input matInput type="date"*ngIf="checkBox.checked">
             <label *ngIf="checkBox.checked">au</label>
-            <select *ngIf="checkBox.checked">
-              <option></option>
-              <option>date</option>
-            </select>
+            <input matInput type="date"*ngIf="checkBox.checked">
             </div>
             <div class="content" *ngIf="checkBox.checked">
               <div class="tableau">
