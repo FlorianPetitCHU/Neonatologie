@@ -1,2 +1,272 @@
 <p class="nav-place"></p>
-<p>evol-med works!</p>
+<section>
+  <div>
+    <div class="">
+      <div class="row">
+        <mat-expansion-panel [expanded]="true">
+          <mat-expansion-panel-header class="panel">
+            <mat-panel-title>
+              Information Médicale transmise
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="row">
+            <div class="content">
+              <a href=" ">Saisie des information transmises</a>
+            </div>
+            <div class="content">
+              <label>Information transmise :</label> <input type="text" style="width: 80%;">
+            </div>
+          </div>
+        </mat-expansion-panel>
+      </div>
+      <div class="row">
+        <mat-expansion-panel [expanded]="true">
+          <mat-expansion-panel-header class="panel">
+            <mat-panel-title>
+              Inclusion dans un protocole de recherche
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="row">
+            <div class="content">
+              <mat-radio-group aria-label="Select an option">
+                <label>Patient concerné :</label>
+                <mat-radio-button value="1">Oui</mat-radio-button>
+                <mat-radio-button value="2">Non</mat-radio-button>
+              </mat-radio-group>
+            </div>
+            <div class="content">
+              <a href=" ">Inclusion dans un protocole de recherche</a>
+            </div>
+            <div class="tableau">
+              <div class="tablHeader">
+                <mat-grid-list cols="5" rowHeight="10:1">
+                  <mat-grid-tile>Date</mat-grid-tile>
+                  <mat-grid-tile>Protocole</mat-grid-tile>
+                  <mat-grid-tile>Commentaire</mat-grid-tile>
+                  <mat-grid-tile>Responsable</mat-grid-tile>
+                  <mat-grid-tile>Signé le</mat-grid-tile>
+                </mat-grid-list>
+              </div>
+              <mat-grid-list cols="5" rowHeight="10:1" class="tableInput">
+                <mat-grid-tile><input matInput type="date" [(ngModel)]="val3"></mat-grid-tile>
+                <mat-grid-tile>
+                  <select style="width: 100%;">
+                    <option></option>
+                    <option>protocole</option>
+                  </select>
+                </mat-grid-tile>
+                <mat-grid-tile><input matInput style="width: 100%;"></mat-grid-tile>
+                <mat-grid-tile>
+                  <select style="width: 100%;">
+                    <option></option>
+                    <option>Responsable</option>
+                  </select>
+                </mat-grid-tile>
+                <mat-grid-tile><input matInput type="date"></mat-grid-tile>
+              </mat-grid-list>
+              <div class="showInputField"></div>
+              <mat-grid-list cols="5" rowHeight="10:1" class="tableInput" *ngIf="val3 != ''">
+                <mat-grid-tile><input matInput type="date" ></mat-grid-tile>
+                <mat-grid-tile>
+                  <select style="width: 100%;">
+                    <option></option>
+                    <option>protocole</option>
+                  </select>
+                </mat-grid-tile>
+                <mat-grid-tile><input matInput style="width: 100%;"></mat-grid-tile>
+                <mat-grid-tile>
+                  <select style="width: 100%;">
+                    <option></option>
+                    <option>Responsable</option>
+                  </select>
+                </mat-grid-tile>
+                <mat-grid-tile><input matInput type="date"></mat-grid-tile>
+              </mat-grid-list>
+            </div>
+          </div>
+        </mat-expansion-panel>
+      </div>
+      <div class="row">
+        <mat-expansion-panel [expanded]="true">
+          <mat-expansion-panel-header class="panel">
+            <mat-panel-title>
+              Notes privées du service
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="row">
+            <div class="content">
+              <a href=" ">Consultation et saisie des notes de recherche</a>
+            </div>
+          </div>
+        </mat-expansion-panel>
+      </div>
+      <div class="row">
+        <mat-expansion-panel [expanded]="true">
+          <mat-expansion-panel-header class="panel">
+            <mat-panel-title>
+              Examens réalisés <p style="margin-left: 10%;color: red;">/!\Aujourd'huis pas de méthode de récupération des données de CyberLab</p>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="row">
+            <div class="content">
+          <label>Groupe Sanguin :</label>
+          <select>
+            <option></option>
+            <option>A+</option>
+            <option>A-</option>
+            <option>B+</option>
+            <option>B-</option>
+            <option>O+</option>
+            <option>O-</option>
+            <option>AB+</option>
+            <option>AB-</option>
+          </select>
+          <label style="margin-left: 10%;">Rhésus :</label>
+          <mat-radio-group aria-label="Select an option">
+            <mat-radio-button value="1">Positif</mat-radio-button>
+            <mat-radio-button value="2">Négatif</mat-radio-button>
+          </mat-radio-group>
+          <label style="margin-left: 10%;">Coombs :</label>
+          <mat-radio-group aria-label="Select an option">
+            <mat-radio-button value="1">Positif</mat-radio-button>
+            <mat-radio-button value="2">Négatif</mat-radio-button>
+          </mat-radio-group>
+            </div>
+            <div class="content">
+              <p>Le groupe sanguin définitif ne sera déterminé qu'après l'âge de 6 mois.</p>
+            </div>
+            <div class="content">
+              <p>Suivie bactériologie</p>
+              <div class="tableau">
+                <div class="tablHeader">
+                  <mat-grid-list cols="3" rowHeight="18:1">
+                    <mat-grid-tile>Date</mat-grid-tile>
+                    <mat-grid-tile>Germe</mat-grid-tile>
+                    <mat-grid-tile>Resultats</mat-grid-tile>
+                  </mat-grid-list>
+                </div>
+                <mat-grid-list cols="3" rowHeight="18:1" class="tableInput">
+                  <mat-grid-tile><input matInput type="date" [(ngModel)]="val4"></mat-grid-tile>
+                  <mat-grid-tile><input matInput style="width: 100%;"></mat-grid-tile>
+                  <mat-grid-tile><input matInput ></mat-grid-tile>
+                </mat-grid-list>
+                <div class="showInputField"></div>
+                <mat-grid-list cols="3" rowHeight="18:1" class="tableInput" *ngIf="val4 != ''">
+                  <mat-grid-tile><input matInput type="date"></mat-grid-tile>
+                  <mat-grid-tile><input matInput style="width: 100%;"></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                </mat-grid-list>
+              </div>
+            </div>
+            <div class="content">
+              <label>Autres Examens complémentaires :</label><input matInput style="width: 80%;">
+            </div>
+          </div>
+        </mat-expansion-panel>
+      </div>
+      <div class="row">
+        <mat-expansion-panel [expanded]="true">
+          <mat-expansion-panel-header class="panel">
+            <mat-panel-title>
+              Evolution
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="row">
+            <div class="content">
+              <p style="color: gray;">Nouvelle saisie</p> <hr>
+            </div>
+            <div class="content">
+              <label>Date / heure</label>
+              <input type="date">
+              <input type="datetime">
+              <mat-radio-group aria-label="Select an option">
+                <mat-radio-button value="1">Visite</mat-radio-button>
+                <mat-radio-button value="2">Staff/RCP</mat-radio-button>
+                <mat-radio-button value="3">Exam.complément.</mat-radio-button>
+                <mat-radio-button value="4">Suivie des soins</mat-radio-button>
+              </mat-radio-group>
+              <mat-radio-group aria-label="Select an option" style="margin-left: 5%;">
+                <mat-radio-button value="1">Synthèse périodique</mat-radio-button>
+              </mat-radio-group>
+            </div>
+            <div class="content">
+              <p>Description</p>
+              <textarea style="width: 100%;" matInput cdkTextareaAutosize></textarea>
+            </div>
+            <div class="content">
+              <label style="margin-left: 60%;">Signature</label>
+              <input matInput value="user" disabled="true" style="width: 20%;">
+              <mat-button-toggle class="Second-button-toolbar color-button-toolbar" style="background-color: rgb(203, 212, 243);">Historiser
+              </mat-button-toggle>
+            </div>
+            <div class="content">
+              <p style="color: gray;">Historique</p>
+              <hr>
+            </div>
+            <div class="content">
+            <mat-checkbox #checkBox>Afficher historique</mat-checkbox>
+            <select *ngIf="checkBox.checked" style="margin-left: 10%;">
+              <option></option>
+              <option>Toutes</option>
+            </select>
+            <label *ngIf="checkBox.checked">Evolution(s)       du</label>
+            <select *ngIf="checkBox.checked">
+              <option></option>
+              <option>date</option>
+            </select>
+            <label *ngIf="checkBox.checked">au</label>
+            <select *ngIf="checkBox.checked">
+              <option></option>
+              <option>date</option>
+            </select>
+            </div>
+            <div class="content" *ngIf="checkBox.checked">
+              <div class="tableau">
+                <div class="tablHeader">
+                  <mat-grid-list cols="5" rowHeight="11:1">
+                    <mat-grid-tile>Date</mat-grid-tile>
+                    <mat-grid-tile>Heure</mat-grid-tile>
+                    <mat-grid-tile>Type</mat-grid-tile>
+                    <mat-grid-tile>Description</mat-grid-tile>
+                    <mat-grid-tile>Signataire</mat-grid-tile>
+                  </mat-grid-list>
+                </div>
+                <mat-grid-list cols="5" rowHeight="11:1" class="tableInput">
+                  <mat-grid-tile><input matInput type="date" [(ngModel)]="val5"></mat-grid-tile>
+                  <mat-grid-tile><input matInput style="width: 100%;"></mat-grid-tile>
+                  <mat-grid-tile><input matInput style="width: 100%;"></mat-grid-tile>
+                  <mat-grid-tile><input matInput style="width: 100%;"></mat-grid-tile>
+                  <mat-grid-tile><input matInput style="width: 100%;"></mat-grid-tile>
+                </mat-grid-list>
+                <div class="showInputField"></div>
+                <mat-grid-list cols="5" rowHeight="11:1" class="tableInput" *ngIf="val5 != ''">
+                  <mat-grid-tile><input matInput type="date"></mat-grid-tile>
+                  <mat-grid-tile><input matInput style="width: 100%;"></mat-grid-tile>
+                  <mat-grid-tile><input matInput style="width: 100%;"></mat-grid-tile>
+                  <mat-grid-tile><input matInput style="width: 100%;"></mat-grid-tile>
+                  <mat-grid-tile><input matInput style="width: 100%;"></mat-grid-tile>
+                </mat-grid-list>
+              </div>
+            </div>
+          </div>
+        </mat-expansion-panel>
+      </div>
+      <div class="row">
+        <mat-expansion-panel [expanded]="true">
+          <mat-expansion-panel-header class="panel">
+            <mat-panel-title>
+              Synthèse
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="row">
+            <div class="content">
+              <textarea style="width: 100%;" matInput cdkTextareaAutosize></textarea>
+            </div>
+          </div>
+        </mat-expansion-panel>
+      </div>
+
+
+    </div>
+  </div>
+</section>

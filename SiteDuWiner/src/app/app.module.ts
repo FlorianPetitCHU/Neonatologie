@@ -36,7 +36,6 @@ import { AssistSocialComponent } from './pages/assist-social/assist-social.compo
 
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -73,7 +72,7 @@ import { AssistSocialComponent } from './pages/assist-social/assist-social.compo
     MatDatepickerModule,
     MatRadioModule,
     MatCheckboxModule,
-    MatDialogModule
+    MatDialogModule,
   ],
 
   providers: [],

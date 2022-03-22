@@ -22,9 +22,17 @@
     "@angular/router": "~13.2.0",
     "@material/toolbar": "^2.3.0",
     "angular-material-expansion-panel": "^0.7.2",
+    "detect-indent": "^7.0.0",
+    "imurmurhash": "^0.1.4",
+    "is-plain-obj": "^4.0.0",
     "ng-toggle-button": "^0.2.2",
+    "process": "^0.11.10",
     "rxjs": "~7.5.0",
+    "signal-exit": "^3.0.7",
+    "sort-keys": "^5.0.0",
     "tslib": "^2.3.0",
+    "write-file-atomic": "^4.0.1",
+    "write-json-file": "^5.0.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
