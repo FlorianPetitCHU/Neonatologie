@@ -1,2 +1,133 @@
 <p class="nav-place"></p>
-<p>sortie works!</p>
+<mat-toolbar class="color-toolbar">
+  <mat-button-toggle-group>
+    <mat-button-toggle class="Second-button-toolbar color-button-toolbar" (click)="role_soignant()">Soignant
+    </mat-button-toggle>
+    <mat-button-toggle class="Second-button-toolbar color-button-toolbar" (click)="role_med()">Médecin
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+</mat-toolbar>
+<section>
+  <div>
+    <div class="">
+      <div class="row">
+        <mat-expansion-panel [expanded]="true">
+          <mat-expansion-panel-header class="panel">
+            <mat-panel-title>
+              Coordonnées de la famille
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="row">
+            <div class="content">
+              <div class="content">
+                <label>Adresse de la famille :</label>
+                <input type="datetime-local" matInput>
+              </div>
+              <div class="content">
+                <label>Nom de la mère :</label>
+                <input type="text">
+                <label>Prénom de la mère :</label>
+                <input type="text">
+              </div><br>
+              <div>
+                <label>Nom du second parent :</label>
+                <input type="text">
+                <label>Prénom du second parent :</label>
+                <input type="text">
+              </div><br>
+              <mat-radio-group aria-label="Select an option" [(ngModel)]="Sortie" #ctrl="ngModel"
+                required>
+                <mat-radio-button value="1">Pose bracelet sur incubateur</mat-radio-button><br>
+                <mat-radio-button value="2">Pose bracelet d'identification</mat-radio-button><br>
+                <mat-radio-button value="3">Patient déjà porteur du bracelet</mat-radio-button><br>
+                <mat-radio-button value="4">Refus pose bracelet</mat-radio-button><br>
+              </mat-radio-group>
+            </div>
+          </div>
+        </mat-expansion-panel>
+        <mat-expansion-panel [expanded]="true">
+          <mat-expansion-panel-header class="panel">
+            <mat-panel-title>
+              Si enfant né hors hopital
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="row">
+            <div class="content">
+              <div class="content">
+                <div>
+                  <label>En provenance de </label>
+                  <input type="text">
+                </div><br>
+                <label>Mode de transport :</label>
+                <select [(ngModel)]="secondSelectValue">
+                  <option></option>
+                  <option value="Titulaire_Pere">???</option>
+                  <option value="Titulaire_Mere">Ambulance</option>
+                  <option value="Titulaire_Autre">Autre</option>
+                </select>
+              </div><br>
+              <div>
+                <label>Lieu de naissance :</label>
+                <input type="text">
+              </div><br>
+              <mat-radio-group aria-label="Select an option" [(ngModel)]="Sortie" #ctrl="ngModel"
+                required>
+                <mat-radio-button value="1"> Dossier </mat-radio-button>
+                <mat-radio-button value="2"> Carnet de santé </mat-radio-button>
+                <mat-radio-button value="3"> Autre à preciser <input type="text"></mat-radio-button>
+              </mat-radio-group>
+              <div>
+                <label>Faits à signaler (SAMU / Ambulance) </label>
+                <input type="text">
+              </div><br>
+              <label> Scan de la fiche SAMU</label>
+              <a href=" ">Sélectionner le document scanné</a><br>
+              <mat-radio-button>T.I.U</mat-radio-button><br>
+              <div><label>Date de transfert </label>
+                <input type="date"><br>
+                <label>Maternité d'origine <input type="text"></label><br>
+                <label>Indications <input type="text"></label><br>
+              </div>
+            </div>
+          </div>
+        </mat-expansion-panel>
+        <mat-expansion-panel [expanded]="true">
+          <mat-expansion-panel-header class="panel">
+            <mat-panel-title>
+              Correspondants
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="row">
+            <div class="content">
+             
+            </div>
+          </div>
+        </mat-expansion-panel>
+        <mat-expansion-panel [expanded]="true">
+          <mat-expansion-panel-header class="panel">
+            <mat-panel-title>
+              Personne à prévenir
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="row">
+            <div class="content">
+              <div class="tablHeader">
+               
+              </div>
+            </div>
+          </div>
+        </mat-expansion-panel>
+        <mat-expansion-panel [expanded]="true">
+          <mat-expansion-panel-header class="panel">
+            <mat-panel-title>
+              Souhait d'ordre religieux, éthique, culturel ...
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="row"><br>
+            <textarea style="width: 100%;" matInput cdkTextareaAutosize></textarea>
+          </div>
+        </mat-expansion-panel>
+      </div>
+    </div>
+  </div>
+</section>

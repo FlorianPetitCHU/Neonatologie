@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {writeJsonFile} from 'write-json-file';
+
 
 
 @Component({
