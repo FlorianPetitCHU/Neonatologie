@@ -1,0 +1,16 @@
+<body>
+    <button mat-icon-button [matMenuTriggerFor]="aboveMenu" aria-label="Example icon-button with a menu">
+        <span>Poste</span>
+    </button>
+    <mat-menu #aboveMenu="matMenu" yPosition="above">
+        <button mat-menu-item>
+            <span>Médecin</span>
+        </button>
+        <button mat-menu-item>
+            <span>Soignant</span>
+        </button>
+        <button mat-menu-item disabled>
+            <span>??</span>
+        </button>
+    </mat-menu>
+</body>

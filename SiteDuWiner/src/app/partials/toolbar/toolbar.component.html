@@ -1,9 +1,9 @@
-<p class="p-toolbar">
+<p class="p-toolbar" *ngIf="role != 0">
 
 
 
 
-  <mat-toolbar class="color-toolbar">
+  <mat-toolbar class="color-toolbar" *ngIf="role != 1">
     <mat-button-toggle-group>
       <mat-button-toggle class="Second-button-toolbar color-button-toolbar" routerLink="/Admission">Admission
       </mat-button-toggle>

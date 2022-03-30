@@ -14,6 +14,7 @@ import { EvolMedComponent } from './pages/evol-med/evol-med.component';
 import { PrepaSortieComponent } from './pages/prepa-sortie/prepa-sortie.component';
 import { AssistSocialComponent } from './pages/assist-social/assist-social.component';
 import { KinesComponent } from './pages/kines/kines.component';
+import { AcceuilComponent } from './pages/Acceuil/Acceuil.component';
 const routes: Routes = [
   {
     path: "Admission",
@@ -22,6 +23,10 @@ const routes: Routes = [
     {
     path: "kines",
     component: KinesComponent
+  },
+  {
+    path: "",
+    component: AcceuilComponent
   },
   {
     path: "AssistanteSociale",

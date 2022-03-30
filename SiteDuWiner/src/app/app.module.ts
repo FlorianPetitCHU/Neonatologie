@@ -26,6 +26,7 @@ import { FormsModule } from '@angular/forms';
 import {MatTableModule} from '@angular/material/table';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatRadioModule} from '@angular/material/radio';
+import {MatMenuModule} from '@angular/material/menu';
 import { ExamInitialComponent } from './pages/exam-initial/exam-initial.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DialogSignerComponent } from './pages/dialog-signer/dialog-signer.component';
@@ -34,6 +35,7 @@ import { EvolMedComponent } from './pages/evol-med/evol-med.component';
 import { PrepaSortieComponent } from './pages/prepa-sortie/prepa-sortie.component';
 import { AssistSocialComponent } from './pages/assist-social/assist-social.component';
 import { KinesComponent } from './pages/kines/kines.component';
+import { AcceuilComponent } from './pages/Acceuil/Acceuil.component';
 
 
 
@@ -54,7 +56,8 @@ import { KinesComponent } from './pages/kines/kines.component';
     EvolMedComponent,
     PrepaSortieComponent,
     AssistSocialComponent,
-    KinesComponent
+    KinesComponent,
+    AcceuilComponent
   ],
   imports: [
     BrowserModule,
@@ -75,6 +78,7 @@ import { KinesComponent } from './pages/kines/kines.component';
     MatRadioModule,
     MatCheckboxModule,
     MatDialogModule,
+    MatMenuModule,
   ],
 
   providers: [],

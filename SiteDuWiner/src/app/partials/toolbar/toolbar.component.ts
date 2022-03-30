@@ -12,7 +12,7 @@ export class ToolbarComponent implements OnInit {
 
   ngOnInit(): void {}
   toggle = true;
-  role : any;
+  role = 0;
   role_med() {this.role = 1;
   console.log(this.role);}
   role_soignant() {this.role = 2;
