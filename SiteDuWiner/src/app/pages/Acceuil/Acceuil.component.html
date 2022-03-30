@@ -3,11 +3,11 @@
         <span>Poste</span>
     </button>
     <mat-menu #aboveMenu="matMenu" yPosition="above">
-        <button mat-menu-item>
+        <button mat-menu-item (click)="role_med()">
             <span>Médecin</span>
         </button>
-        <button mat-menu-item>
-            <span>Soignant</span>
+        <button mat-menu-item (click)="role_soignant()">
+            <span >Soignant</span>
         </button>
         <button mat-menu-item disabled>
             <span>??</span>
