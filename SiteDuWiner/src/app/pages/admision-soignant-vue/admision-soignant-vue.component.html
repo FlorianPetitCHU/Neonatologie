@@ -1,6 +1,6 @@
 <p class="p-toolbar" >
   <label style="float: left;display: block;
-  width: 100%;" align="right">Médecin</label>
+  width: 100%;" align="right">Soignant</label>
   <mat-toolbar class="color-toolbar" *ngIf="role != 1">
     <mat-button-toggle-group>
       <mat-button-toggle class="Second-button-toolbar color-button-toolbar" style="background-color: white;" routerLink="/Admission">Admission
@@ -33,27 +33,25 @@
               Admission en néonatologie
             </mat-panel-title>
           </mat-expansion-panel-header>
-          <div class="row">
+          <div class="row" >
             <div class="content">
               <div class="content">
                 <label>Date d'admission :</label>
-                <input type="datetime-local" matInput>
+                <input type="datetime-local" matInput disabled>
               </div>
               <div class="content">
                 <label>Mode d'entrée :</label>
-                <select [(ngModel)]="secondSelectValue">
-                  <option></option>
-                  <option value="Titulaire_Pere">1 - ???</option>
+                <select [(ngModel)]="secondSelectValue" disabled>
                   <option value="Titulaire_Mere">2 - Entrée en urgence</option>
                   <option value="Titulaire_Autre">Autre</option>
                 </select>
               </div><br>
               <div>
                 <label>Motif d'hospitalisation</label>
-                <input type="text">
+                <input type="text" disabled value="Un motife">
               </div><br>
               <mat-radio-group aria-label="Select an option" [(ngModel)]="Admission"
-                required>
+                required disabled>
                 <mat-radio-button value="1">Pose bracelet sur incubateur</mat-radio-button><br>
                 <mat-radio-button value="2">Pose bracelet d'identification</mat-radio-button><br>
                 <mat-radio-button value="3">Patient déjà porteur du bracelet</mat-radio-button><br>
@@ -73,10 +71,10 @@
               <div class="content">
                 <div>
                   <label>En provenance de </label>
-                  <input type="text">
+                  <input type="text" disabled>
                 </div><br>
                 <label>Mode de transport :</label>
-                <select [(ngModel)]="secondSelectValue">
+                <select [(ngModel)]="secondSelectValue" disabled>
                   <option></option>
                   <option value="Titulaire_Pere">???</option>
                   <option value="Titulaire_Mere">Ambulance</option>
@@ -85,25 +83,25 @@
               </div><br>
               <div>
                 <label>Lieu de naissance :</label>
-                <input type="text">
+                <input type="text" disabled>
               </div><br>
-              <mat-radio-group aria-label="Select an option" [(ngModel)]="Admission" #ctrl="ngModel"
+              <mat-radio-group disabled aria-label="Select an option" [(ngModel)]="Admission" #ctrl="ngModel"
                 required>
                 <mat-radio-button value="1"> Dossier </mat-radio-button>
                 <mat-radio-button value="2"> Carnet de santé </mat-radio-button>
-                <mat-radio-button value="3"> Autre à preciser <input type="text"></mat-radio-button>
+                <mat-radio-button value="3"> Autre à preciser <input type="text" disabled></mat-radio-button>
               </mat-radio-group>
               <div>
                 <label>Faits à signaler (SAMU / Ambulance) </label>
-                <input type="text">
+                <input type="text" disabled>
               </div><br>
               <label> Scan de la fiche SAMU</label>
-              <a href=" ">Sélectionner le document scanné</a><br>
-              <mat-radio-button>T.I.U</mat-radio-button><br>
+              <a href=" " disabled>Sélectionner le document scanné</a><br>
+              <mat-radio-button disabled>T.I.U</mat-radio-button><br>
               <div><label>Date de transfert </label>
-                <input type="date"><br>
-                <label>Maternité d'origine <input type="text"></label><br>
-                <label>Indications <input type="text"></label><br>
+                <input type="date" disabled><br>
+                <label>Maternité d'origine <input type="text" disabled></label><br>
+                <label>Indications <input type="text" disabled></label><br>
               </div>
             </div>
           </div>
@@ -127,18 +125,18 @@
                   <mat-grid-tile>Actualiser le</mat-grid-tile>
                 </mat-grid-list>
                 <mat-grid-list cols="7" rowHeight="10:1" class="tableInput">
-                  <mat-grid-tile><select [(ngModel)]="secondSelectValue">
+                  <mat-grid-tile><select [(ngModel)]="secondSelectValue" disabled>
                     <option></option>
                     <option value="Titulaire_Pere">???</option>
                     <option value="Titulaire_Mere">Médecin traitant</option>
                     <option value="Titulaire_Autre">Autre</option>
                   </select></mat-grid-tile>
-                  <mat-grid-tile><input matInput></mat-grid-tile>
-                  <mat-grid-tile><input matInput></mat-grid-tile>
-                  <mat-grid-tile><input type="tel"></mat-grid-tile>
-                  <mat-grid-tile><input type="email"></mat-grid-tile>
-                  <mat-grid-tile><input type="text"></mat-grid-tile>
-                  <mat-grid-tile><input type="date"></mat-grid-tile>
+                  <mat-grid-tile><input matInput disabled></mat-grid-tile>
+                  <mat-grid-tile><input matInput disabled></mat-grid-tile>
+                  <mat-grid-tile><input type="tel" disabled></mat-grid-tile>
+                  <mat-grid-tile><input type="email" disabled></mat-grid-tile>
+                  <mat-grid-tile><input type="text" disabled></mat-grid-tile>
+                  <mat-grid-tile><input type="date" disabled></mat-grid-tile>
                 </mat-grid-list>
                 <mat-grid-list cols="7" rowHeight="10:1" class="tableInput" *ngIf="val1 != ''">
                   <mat-grid-tile><input matInput [(ngModel)]="val2" #ctrl="ngModel"></mat-grid-tile>
@@ -172,13 +170,13 @@
                   <mat-grid-tile>Actualiser le</mat-grid-tile>
                 </mat-grid-list>
                 <mat-grid-list cols="7" rowHeight="10:1" class="tableInput">
-                  <mat-grid-tile><input matInput [(ngModel)]="val1" #ctrl="ngModel"></mat-grid-tile>
-                  <mat-grid-tile><input matInput></mat-grid-tile>
-                  <mat-grid-tile><input matInput></mat-grid-tile>
-                  <mat-grid-tile><input type="tel"></mat-grid-tile>
-                  <mat-grid-tile><input type="email"></mat-grid-tile>
-                  <mat-grid-tile><input type="text"></mat-grid-tile>
-                  <mat-grid-tile><input type="date"></mat-grid-tile>
+                  <mat-grid-tile><input disabled matInput [(ngModel)]="val1" #ctrl="ngModel"></mat-grid-tile>
+                  <mat-grid-tile><input disabled matInput></mat-grid-tile>
+                  <mat-grid-tile><input disabled matInput></mat-grid-tile>
+                  <mat-grid-tile><input disabled type="tel"></mat-grid-tile>
+                  <mat-grid-tile><input disabled type="email"></mat-grid-tile>
+                  <mat-grid-tile><input disabled type="text"></mat-grid-tile>
+                  <mat-grid-tile><input disabled type="date"></mat-grid-tile>
                 </mat-grid-list>
                 <mat-grid-list cols="7" rowHeight="10:1" class="tableInput" *ngIf="val1 != ''">
                   <mat-grid-tile><input matInput [(ngModel)]="val2" #ctrl="ngModel"></mat-grid-tile>
@@ -200,7 +198,7 @@
             </mat-panel-title>
           </mat-expansion-panel-header>
           <div class="row"><br>
-            <textarea style="width: 100%;" matInput cdkTextareaAutosize></textarea>
+            <textarea style="width: 100%;" matInput cdkTextareaAutosize disabled></textarea>
           </div>
         </mat-expansion-panel>
       </div>

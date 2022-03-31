@@ -37,6 +37,7 @@ import { AssistSocialComponent } from './pages/assist-social/assist-social.compo
 import { KinesComponent } from './pages/kines/kines.component';
 import { AcceuilComponent } from './pages/Acceuil/Acceuil.component';
 import { AutorisationDeSoinComponent } from './pages/autorisation-de-soin/autorisation-de-soin.component';
+import { AdmisionSoignantVueComponent } from './pages/admision-soignant-vue/admision-soignant-vue.component';
 
 
 
@@ -59,7 +60,8 @@ import { AutorisationDeSoinComponent } from './pages/autorisation-de-soin/autori
     AssistSocialComponent,
     KinesComponent,
     AcceuilComponent,
-    AutorisationDeSoinComponent
+    AutorisationDeSoinComponent,
+    AdmisionSoignantVueComponent
   ],
   imports: [
     BrowserModule,

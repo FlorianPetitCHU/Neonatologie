@@ -1,4 +1,6 @@
 <p class="p-toolbar" >
+  <label style="float: left;display: block;
+  width: 100%;" align="right">Soignant/Médecin</label>
   <mat-toolbar class="color-toolbar" *ngIf="role != 1">
     <mat-button-toggle-group>
       <mat-button-toggle class="Second-button-toolbar color-button-toolbar" style="background-color: white;">Données transverses pédiatriques</mat-button-toggle>
@@ -27,14 +29,7 @@
   </mat-toolbar>
 </p>
 <p class="nav-place"></p>
-<mat-toolbar class="color-toolbar">
-  <mat-button-toggle-group>
-    <mat-button-toggle class="Second-button-toolbar color-button-toolbar" (click)="role_soignant()">Soignant
-    </mat-button-toggle>
-    <mat-button-toggle class="Second-button-toolbar color-button-toolbar" (click)="role_med()">Médecin
-    </mat-button-toggle>
-  </mat-button-toggle-group>
-</mat-toolbar>
+<button  mat-icon-button routerLink="/AdmissionSoignant"><mat-icon>assignment</mat-icon>Accès formulaire mèdecin</button>
 <section>
   <div>
     <div class="">
