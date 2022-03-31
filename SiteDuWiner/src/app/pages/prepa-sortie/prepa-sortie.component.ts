@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./prepa-sortie.component.scss']
 })
 export class PrepaSortieComponent implements OnInit {
-
+  val1 ="";
   constructor() { }
 
   ngOnInit(): void {

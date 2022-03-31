@@ -1,2 +1,62 @@
+<p class="p-toolbar" >
+  <label style="float: left;display: block;
+  width: 100%;" align="right">Medecin</label>
+  <mat-toolbar class="color-toolbar" >
+    <mat-button-toggle-group>
+      <mat-button-toggle class="Second-button-toolbar color-button-toolbar"  routerLink="/Admission">Admission
+      </mat-button-toggle>
+      <mat-button-toggle class="Second-button-toolbar color-button-toolbar"
+        routerLink="/ExamenCliniqueInitial">Examen clinique initial</mat-button-toggle>
+      <mat-button-toggle class="Second-button-toolbar color-button-toolbar"
+        routerLink="/EvolutionMedical">Evolution médicale</mat-button-toggle>
+        <mat-button-toggle class="Second-button-toolbar color-button-toolbar"
+        routerLink="/AssistanteSociale" >Assistante sociale</mat-button-toggle>
+        <mat-button-toggle class="Second-button-toolbar color-button-toolbar"
+        routerLink="/PreparationALaSortie" style="background-color: white;">Préparation à la sortie</mat-button-toggle>
+      <mat-button-toggle class="Second-button-toolbar color-button-toolbar"
+        routerLink="/Sortie">Sortie</mat-button-toggle>
+
+      </mat-button-toggle-group>
+
+  </mat-toolbar>
+</p>
+
 <p class="nav-place"></p>
-<p>prepa-sortie works!</p>
+
+<div class="content">
+<img src="../../../assets/autoSoins1.png" style="width: 100%;">
+<img src="../../../assets/autoSoins2.png" style="width: 100%;">
+</div>
+<div class="row">
+  <mat-expansion-panel [expanded]="true">
+    <mat-expansion-panel-header class="panel">
+      <mat-panel-title>
+        Autorisation de visite
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="row">
+      <div class="content">
+        <label>Nom du père</label> <input matInput style="width: 85%;">
+      </div>
+      <div class="content">
+        <label>Nom de la mère</label> <input matInput style="width: 85%;">
+      </div>
+      <div class="content">
+        <label>autorise Mr,Mme,Mile,</label> <input matInput style="width: 40%;" [(ngModel)]="val1" #ctrl="ngModel">
+        <select>
+          <option></option>
+          <option>Frère ou soeur</option>
+          <option>Grands-parents</option>
+        </select>
+      </div>
+      <div class="content" *ngIf="val1 != ''">
+        <label>autorise Mr,Mme,Mile,</label> <input matInput style="width: 40%;">
+        <select>
+          <option></option>
+          <option>Frère ou soeur</option>
+          <option>Grands-parents</option>
+        </select>
+      </div>
+    </div>
+  </mat-expansion-panel>
+</div>

@@ -1,4 +1,60 @@
 .nav-place{
-  height: 34px;
+  height: 50px;
   margin: auto;
 }
+.spacer {
+  flex: 1 1 auto;
+}
+
+.button-toolbar{
+  margin-top: 10px;
+  margin-right: 2px;
+  border-style: none;
+  background:  rgb(219, 227, 245);
+
+
+}
+
+.p-toolbar{
+  margin: 0;
+  position: fixed;
+  width: 100%;
+  background:  rgb(211, 220, 243);
+  z-index: 1000;
+}
+
+.color-toolbar{
+  background:  rgb(202,213,233);
+}
+
+.color-button-toolbar{
+  color:  black
+}
+
+.link-home{
+  color: white;
+  text-decoration: none;
+}
+
+.Second-button-toolbar{
+  margin-right: 2px;
+  border-style: none;
+  background:  rgb(219, 227, 245);
+}
+
+.mat-button-toggle-checked {
+  background-color: white !important;
+
+}
+.mat-button-toggle-label-content{
+  height: 20px;
+}
+.mat-button-toggle-group {
+  height: 32px;
+  align-items: center;
+}
+
+.mat-toolbar.color-toolbar.mat-toolbar-single-row{
+  height: 0%;
+}
+
