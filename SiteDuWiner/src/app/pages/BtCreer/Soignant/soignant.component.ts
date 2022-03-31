@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-medecin',
-  templateUrl: './medecin.component.html',
-  styleUrls: ['./medecin.component.scss']
+  templateUrl: './soignant.component.html',
+  styleUrls: ['./soignant.component.scss']
 })
-export class LogMedecinComponent implements OnInit {
+export class SoignantComponent implements OnInit {
 
   secondSelectValue = null;
   test = "";

@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './medecin.component.html',
   styleUrls: ['./medecin.component.scss']
 })
-export class LogMedecinComponent implements OnInit {
+export class MedecinComponent implements OnInit {
 
   secondSelectValue = null;
   test = "";

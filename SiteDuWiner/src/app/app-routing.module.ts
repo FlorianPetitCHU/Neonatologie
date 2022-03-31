@@ -17,16 +17,26 @@ import { KinesComponent } from './pages/kines/kines.component';
 import { AcceuilComponent } from './pages/Acceuil/Acceuil.component';
 import { AutorisationDeSoinComponent } from './pages/autorisation-de-soin/autorisation-de-soin.component';
 import { AdmisionSoignantVueComponent } from './pages/admision-soignant-vue/admision-soignant-vue.component';
-import { MedecinComponent } from './pages/Connexion/Medecin/medecin.component';
-import { SoignantComponent } from './pages/Connexion/Soignant/soignant.component';
+import { MedecinComponent } from './pages/BtCreer/Medecin/medecin.component';
+import { SoignantComponent } from './pages/BtCreer/Soignant/soignant.component';
+import { LogMedecinComponent } from './pages/Connexion/Medecin/medecin.component';
+import { LogSoignantComponent } from './pages/Connexion/Soignant/soignant.component';
 const routes: Routes = [
   {
     path: "Admission",
     component: AdmissionComponent
   },
   {
+    path: "LOGIDE",
+    component: LogSoignantComponent
+  },
+  {
+    path: "LOGMED",
+    component: LogMedecinComponent
+  },
+  {
     path: "TDB MED",
-    component: MedecinComponent
+    component: SoignantComponent
   },
   {
     path: "TDB",
