@@ -1,6 +1,6 @@
 <p class="p-toolbar" >
   <label style="float: left;display: block;
-  width: 100%;" align="right">Medecin</label>
+  width: 100%;" align="right">Médecin</label>
   <mat-toolbar class="color-toolbar" *ngIf="role != 1">
     <mat-button-toggle-group>
       <mat-button-toggle class="Second-button-toolbar color-button-toolbar" style="background-color: white;" routerLink="/Admission">Admission
@@ -12,6 +12,8 @@
         <mat-button-toggle class="Second-button-toolbar color-button-toolbar"
         routerLink="/AssistanteSociale">Assistante sociale</mat-button-toggle>
         <mat-button-toggle class="Second-button-toolbar color-button-toolbar"
+        routerLink="/AutoSoins">Autorisation de soin</mat-button-toggle>
+        <mat-button-toggle class="Second-button-toolbar color-button-toolbar"
         routerLink="/PreparationALaSortie">Préparation à la sortie</mat-button-toggle>
       <mat-button-toggle class="Second-button-toolbar color-button-toolbar"
         routerLink="/Sortie">Sortie</mat-button-toggle>
@@ -19,6 +21,8 @@
   </mat-toolbar>
 </p>
 <p class="nav-place"></p>
+<button  mat-icon-button routerLink="/AssistanteSociale"><mat-icon>assignment</mat-icon></button>
+
 <section>
   <div>
     <div class="">
