@@ -17,10 +17,20 @@ import { KinesComponent } from './pages/kines/kines.component';
 import { AcceuilComponent } from './pages/Acceuil/Acceuil.component';
 import { AutorisationDeSoinComponent } from './pages/autorisation-de-soin/autorisation-de-soin.component';
 import { AdmisionSoignantVueComponent } from './pages/admision-soignant-vue/admision-soignant-vue.component';
+import { MedecinComponent } from './pages/Connexion/Medecin/medecin.component';
+import { SoignantComponent } from './pages/Connexion/Soignant/soignant.component';
 const routes: Routes = [
   {
     path: "Admission",
     component: AdmissionComponent
+  },
+  {
+    path: "TDB MED",
+    component: MedecinComponent
+  },
+  {
+    path: "TDB",
+    component: SoignantComponent
   },
   {
     path: "AdmissionSoignant",
