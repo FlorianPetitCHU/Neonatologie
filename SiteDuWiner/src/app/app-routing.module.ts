@@ -15,10 +15,15 @@ import { PrepaSortieComponent } from './pages/prepa-sortie/prepa-sortie.componen
 import { AssistSocialComponent } from './pages/assist-social/assist-social.component';
 import { KinesComponent } from './pages/kines/kines.component';
 import { AcceuilComponent } from './pages/Acceuil/Acceuil.component';
+import { AutorisationDeSoinComponent } from './pages/autorisation-de-soin/autorisation-de-soin.component';
 const routes: Routes = [
   {
     path: "Admission",
     component: AdmissionComponent
+  },
+  {
+    path: "AutoSoins",
+    component: AutorisationDeSoinComponent
   },
     {
     path: "kines",
