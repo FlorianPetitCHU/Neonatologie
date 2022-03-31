@@ -1,17 +1,37 @@
+<p class="p-toolbar" >
+  <mat-toolbar class="color-toolbar" *ngIf="role != 1">
+    <mat-button-toggle-group>
+      <mat-button-toggle class="Second-button-toolbar color-button-toolbar" style="background-color: white;">Données transverses pédiatriques</mat-button-toggle>
+      </mat-button-toggle-group>
+  </mat-toolbar>
+  <mat-toolbar class="color-toolbar">
+    <div class="Donnes-Trans" *ngIf="router.url === '/recueilDeDonnesPiedatriquesComponent'
+    || router.url === '/contexteFamilial'
+    || router.url === '/atcdFam'
+    || router.url === '/grosssessePeriodeNeonat'
+    || router.url === '/vaccin'
+    || router.url === '/croissance'">
+      <mat-button-toggle-group>
+        <mat-button-toggle class="Second-button-toolbar color-button-toolbar"  routerLink="/contexteFamilial">Contexte
+          familial et social</mat-button-toggle>
+        <mat-button-toggle class="Second-button-toolbar color-button-toolbar"  routerLink="/atcdFam">ATCD familiaux -
+          Arbre Généalogique</mat-button-toggle>
+        <mat-button-toggle class="Second-button-toolbar color-button-toolbar" routerLink="/grosssessePeriodeNeonat" >
+          Grossesse - période Néonatale</mat-button-toggle>
+        <mat-button-toggle class="Second-button-toolbar color-button-toolbar"  routerLink="/vaccin">Vaccinations
+        </mat-button-toggle>
+        <mat-button-toggle class="Second-button-toolbar color-button-toolbar" style="background-color: white;" routerLink="/croissance">Croissance
+        </mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+  </mat-toolbar>
+</p>
 <p class="nav-place"></p>
-<mat-toolbar class="color-toolbar">
-  <mat-button-toggle-group>
-    <mat-button-toggle class="Second-button-toolbar color-button-toolbar" (click)="role_soignant()">Soignant
-    </mat-button-toggle>
-    <mat-button-toggle class="Second-button-toolbar color-button-toolbar" (click)="role_med()">Médecin
-    </mat-button-toggle>
-  </mat-button-toggle-group>
-</mat-toolbar>
 <div class="row">
   <div class="content">
     <div class="tableau">
       <div class="tablHeader">
-        <mat-grid-list cols="11" rowHeight="10:3">
+        <mat-grid-list cols="11" rowHeight="3:1">
           <mat-grid-tile></mat-grid-tile>
           <mat-grid-tile>Date de naissance</mat-grid-tile>
           <mat-grid-tile>Durée de grossesse (SA)</mat-grid-tile>
@@ -25,7 +45,7 @@
           <mat-grid-tile>Jumeaux ou plus</mat-grid-tile>
         </mat-grid-list>
       </div>
-      <mat-grid-list cols="11" rowHeight="10:3">
+      <mat-grid-list cols="11" rowHeight="3:1">
         <mat-grid-tile>Données de Naissance</mat-grid-tile>
         <mat-grid-tile><input type="date"></mat-grid-tile>
         <mat-grid-tile><input type="number"></mat-grid-tile>

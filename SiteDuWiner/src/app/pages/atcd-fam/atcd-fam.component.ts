@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Route, Router } from '@angular/router';
 @Component({
   selector: 'app-atcd-fam',
   templateUrl: './atcd-fam.component.html',
@@ -9,7 +9,7 @@ export class AtcdFamComponent implements OnInit {
 secondSelectValue = null;
   test = "";
   AntecedentsFamiliaux = "";
-  constructor() { }
+  constructor(public router:Router) { }
 
   ngOnInit(): void {
   }

@@ -1,16 +1,18 @@
-<body>
-    <button mat-icon-button [matMenuTriggerFor]="aboveMenu" aria-label="Example icon-button with a menu">
+
+    <button mat-icon-button [matMenuTriggerFor]="aboveMenu" aria-label="Example icon-button with a menu" style="position: absolute;">
         <span>Poste</span>
     </button>
     <mat-menu #aboveMenu="matMenu" yPosition="above">
-        <button mat-menu-item (click)="role_med()">
+
+        <button mat-menu-item routerLink="/">
             <span>Médecin</span>
         </button>
-        <button mat-menu-item (click)="role_soignant()">
-            <span >Soignant</span>
+        <button mat-menu-item routerLink="/">
+            <span>Soignant</span>
         </button>
         <button mat-menu-item disabled>
             <span>??</span>
         </button>
     </mat-menu>
-</body>
+
+    <img src="../../../assets/ConnexionOrbis.png" style="width: 100%;height: 100%;">

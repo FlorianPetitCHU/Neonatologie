@@ -1,12 +1,24 @@
+<p class="p-toolbar" >
+  <label style="float: left;display: block;
+  width: 100%;" align="right">Medecin</label>
+  <mat-toolbar class="color-toolbar" >
+    <mat-button-toggle-group>
+      <mat-button-toggle class="Second-button-toolbar color-button-toolbar"  routerLink="/Admission">Admission
+      </mat-button-toggle>
+      <mat-button-toggle class="Second-button-toolbar color-button-toolbar"
+        routerLink="/ExamenCliniqueInitial">Examen clinique initial</mat-button-toggle>
+      <mat-button-toggle class="Second-button-toolbar color-button-toolbar"
+        routerLink="/EvolutionMedical">Evolution médicale</mat-button-toggle>
+        <mat-button-toggle class="Second-button-toolbar color-button-toolbar"
+        routerLink="/AssistanteSociale" >Assistante sociale</mat-button-toggle>
+        <mat-button-toggle class="Second-button-toolbar color-button-toolbar"
+        routerLink="/PreparationALaSortie" >Préparation à la sortie</mat-button-toggle>
+      <mat-button-toggle class="Second-button-toolbar color-button-toolbar"
+        routerLink="/Sortie" style="background-color: white;">Sortie</mat-button-toggle>
+      </mat-button-toggle-group>
+  </mat-toolbar>
+</p>
 <p class="nav-place"></p>
-<mat-toolbar class="color-toolbar">
-  <mat-button-toggle-group>
-    <mat-button-toggle class="Second-button-toolbar color-button-toolbar" (click)="role_soignant()">Soignant
-    </mat-button-toggle>
-    <mat-button-toggle class="Second-button-toolbar color-button-toolbar" (click)="role_med()">Médecin
-    </mat-button-toggle>
-  </mat-button-toggle-group>
-</mat-toolbar>
 <section>
   <div>
     <div class="">
@@ -141,7 +153,7 @@
             </mat-panel-title>
           </mat-expansion-panel-header>
           <div class="row"><br>
-            
+
           </div>
         </mat-expansion-panel><mat-expansion-panel [expanded]="true">
           <mat-expansion-panel-header class="panel">
@@ -150,7 +162,7 @@
             </mat-panel-title>
           </mat-expansion-panel-header>
           <div class="row"><br>
-            
+
           </div>
         </mat-expansion-panel><mat-expansion-panel [expanded]="true">
           <mat-expansion-panel-header class="panel">
@@ -159,7 +171,7 @@
             </mat-panel-title>
           </mat-expansion-panel-header>
           <div class="row"><br>
-            
+
           </div>
         </mat-expansion-panel><mat-expansion-panel [expanded]="true">
           <mat-expansion-panel-header class="panel">
@@ -168,7 +180,7 @@
             </mat-panel-title>
           </mat-expansion-panel-header>
           <div class="row"><br>
-            
+
           </div>
         </mat-expansion-panel><mat-expansion-panel [expanded]="true">
           <mat-expansion-panel-header class="panel">
@@ -177,7 +189,7 @@
             </mat-panel-title>
           </mat-expansion-panel-header>
           <div class="row"><br>
-            
+
           </div>
         </mat-expansion-panel>
       </div>
