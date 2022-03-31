@@ -1,5 +1,5 @@
 import { Component, OnInit,ViewChild } from '@angular/core';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contexte-familial',
@@ -12,7 +12,7 @@ export class ContexteFamilialComponent implements OnInit {
   val2 = "";
   val3 = "";
   val4 = "";
-  constructor() { }
+  constructor(public router:Router) { }
 
   ngOnInit(): void {
   }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import { DialogSignerComponent } from '../dialog-signer/dialog-signer.component';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-grosssesse-periode-neonat',
   templateUrl: './grosssesse-periode-neonat.component.html',
@@ -9,7 +10,7 @@ import { DialogSignerComponent } from '../dialog-signer/dialog-signer.component'
 export class GrosssessePeriodeNeonatComponent implements OnInit {
 secondSelectValue = null;
   test = "";
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog,public router :Router) { }
   val1 = "";
   val2 = "";
   val3 = "";
