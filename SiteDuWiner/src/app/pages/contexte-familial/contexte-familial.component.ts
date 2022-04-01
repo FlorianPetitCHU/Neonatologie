@@ -12,6 +12,7 @@ export class ContexteFamilialComponent implements OnInit {
   val2 = "";
   val3 = "";
   val4 = "";
+  ContexteFamilial = "";
   constructor(public router:Router) { }
 
   ngOnInit(): void {

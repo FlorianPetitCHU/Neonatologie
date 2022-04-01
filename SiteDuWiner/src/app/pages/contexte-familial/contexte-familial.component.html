@@ -66,6 +66,13 @@
               <label>Lieu</label>
               <input type="text" style="width: 80%;">
             </div>
+            <mat-radio-group aria-label="Select an option" [(ngModel)]="ContexteFamilial"
+                required>
+                <mat-radio-button value="1">Pose bracelet sur incubateur</mat-radio-button><br>
+                <mat-radio-button value="2">Pose bracelet d'identification</mat-radio-button><br>
+                <mat-radio-button value="3">Patient déjà porteur du bracelet</mat-radio-button><br>
+                <mat-radio-button value="4">Refus pose bracelet</mat-radio-button><br>
+              </mat-radio-group>
           </div>
         </mat-expansion-panel>
       </div>
