@@ -36,7 +36,7 @@ const routes: Routes = [
   },
   {
     path: "TDB MED",
-    component: SoignantComponent
+    component: MedecinComponent
   },
   {
     path: "TDB",
