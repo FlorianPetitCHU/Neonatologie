@@ -12,6 +12,7 @@ VentilSpont = null;
 Signedelutte = null;
 Auscultrespiratoire = null;
 Abdomen = null;
+NouveauNe = null;
 OrgGenExt = null;
 Anus = null;
 BoucheOreilleCou = null;

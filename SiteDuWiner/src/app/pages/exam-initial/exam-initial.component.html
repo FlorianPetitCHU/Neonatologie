@@ -7,8 +7,12 @@
     <p>Date : <input type="date"></p>
     <p>Heure d'arrivée : <input type="time"></p>
     <p>Heure du premier examen : <input type="time"></p>
+    <mat-radio-group aria-label="Select an option" [(ngModel)]="NouveauNe">
+      <mat-radio-button value="1">Nouveau-né prématuré</mat-radio-button>
+      <mat-radio-button value="2">Nouveau-né à terme</mat-radio-button>
+    </mat-radio-group>
 
-    <mat-expansion-panel [expanded]="false">
+    <mat-expansion-panel *ngIf="NouveauNe == 1">
       <mat-expansion-panel-header class="panel">
         <mat-panel-title>
           Nouveau-né prématuré
@@ -115,7 +119,7 @@
       </mat-radio-group></p>??????
     </mat-expansion-panel>
 
-    <mat-expansion-panel [expanded]="false">
+    <mat-expansion-panel *ngIf="NouveauNe == 2">
       <mat-expansion-panel-header class="panel">
         <mat-panel-title>
           Nouveau-né à terme
