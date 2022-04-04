@@ -136,7 +136,19 @@
             </mat-panel-title>
           </mat-expansion-panel-header>
           <div class="row"><br>
-
+            Information médicale ciblés : <mat-radio-group aria-label="Select an option">
+              <mat-radio-button value="1">Oui</mat-radio-button>
+              <mat-radio-button value="2">Non</mat-radio-button>
+            </mat-radio-group><br>
+            Information sur la prise en charge du nouveau-né : <mat-radio-group aria-label="Select an option">
+              <mat-radio-button value="1">Oui</mat-radio-button>
+              <mat-radio-button value="2">Non</mat-radio-button>
+            </mat-radio-group><br>
+            Alimentation <br>
+            Rythme biologique <br>
+            Nursing <br>
+            Vaccination <br>
+            Autre : <input type="text">
           </div>
         </mat-expansion-panel><mat-expansion-panel [expanded]="true">
           <mat-expansion-panel-header class="panel">
@@ -145,7 +157,22 @@
             </mat-panel-title>
           </mat-expansion-panel-header>
           <div class="row"><br>
-
+            BMR/BHRE : <mat-radio-group aria-label="Select an option">
+              <mat-radio-button value="1">Oui</mat-radio-button>
+              <mat-radio-button value="2">Non</mat-radio-button>
+            </mat-radio-group><br>
+            Transfusionnel : <mat-radio-group aria-label="Select an option">
+              <mat-radio-button value="1">Oui</mat-radio-button>
+              <mat-radio-button value="2">Non</mat-radio-button>
+            </mat-radio-group><br>
+            Evènement indésirable : <mat-radio-group aria-label="Select an option">
+              <mat-radio-button value="1">Oui</mat-radio-button>
+              <mat-radio-button value="2">Non</mat-radio-button>
+            </mat-radio-group><br>
+            Poste d'un DMI lors du séjour : <mat-radio-group aria-label="Select an option">
+              <mat-radio-button value="1">Oui</mat-radio-button>
+              <mat-radio-button value="2">Non</mat-radio-button>
+            </mat-radio-group><br>
           </div>
         </mat-expansion-panel><mat-expansion-panel [expanded]="true">
           <mat-expansion-panel-header class="panel">
@@ -154,7 +181,14 @@
             </mat-panel-title>
           </mat-expansion-panel-header>
           <div class="row"><br>
-
+            Lettre remise aux parents en mains propres le jour de la sortie de leur nouveau-né : <mat-radio-group aria-label="Select an option">
+              <mat-radio-button value="1">Oui</mat-radio-button>
+              <mat-radio-button value="2">Non</mat-radio-button>
+            </mat-radio-group><br>
+            Lettre adressé au médecin traitant : <mat-radio-group aria-label="Select an option">
+              <mat-radio-button value="1">Oui</mat-radio-button>
+              <mat-radio-button value="2">Non</mat-radio-button>
+            </mat-radio-group> <input type="text"><br>
           </div>
         </mat-expansion-panel><mat-expansion-panel [expanded]="true">
           <mat-expansion-panel-header class="panel">
@@ -163,7 +197,7 @@
             </mat-panel-title>
           </mat-expansion-panel-header>
           <div class="row"><br>
-
+            Conclusion - Diagnostics <input type="text">
           </div>
         </mat-expansion-panel><mat-expansion-panel [expanded]="true">
           <mat-expansion-panel-header class="panel">
@@ -172,7 +206,8 @@
             </mat-panel-title>
           </mat-expansion-panel-header>
           <div class="row"><br>
-
+            <button>Génerer lettre de liaison</button><br>
+            Historique :
           </div>
         </mat-expansion-panel>
       </div>
