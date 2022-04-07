@@ -21,10 +21,15 @@ import { MedecinComponent } from './pages/BtCreer/Medecin/medecin.component';
 import { SoignantComponent } from './pages/BtCreer/Soignant/soignant.component';
 import { LogMedecinComponent } from './pages/Connexion/Medecin/medecin.component';
 import { LogSoignantComponent } from './pages/Connexion/Soignant/soignant.component';
+import { OrthophonisteComponent } from './pages/orthophoniste/orthophoniste.component';
 const routes: Routes = [
   {
     path: "Admission",
     component: AdmissionComponent
+  },
+  {
+    path: "Orthophoniste",
+    component: OrthophonisteComponent
   },
   {
     path: "LOGIDE",

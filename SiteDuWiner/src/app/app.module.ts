@@ -39,6 +39,7 @@ import { AcceuilComponent } from './pages/Acceuil/Acceuil.component';
 import { AutorisationDeSoinComponent } from './pages/autorisation-de-soin/autorisation-de-soin.component';
 import { AdmisionSoignantVueComponent } from './pages/admision-soignant-vue/admision-soignant-vue.component';
 import { ToolbarMedComponent } from './partials/toolbar-med/toolbar-med.component';
+import { OrthophonisteComponent } from './pages/orthophoniste/orthophoniste.component';
 
 
 
@@ -63,7 +64,8 @@ import { ToolbarMedComponent } from './partials/toolbar-med/toolbar-med.componen
     AcceuilComponent,
     AutorisationDeSoinComponent,
     AdmisionSoignantVueComponent,
-    ToolbarMedComponent
+    ToolbarMedComponent,
+    OrthophonisteComponent
   ],
   imports: [
     BrowserModule,
