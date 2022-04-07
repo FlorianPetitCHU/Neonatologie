@@ -1,11 +1,13 @@
 <app-toolbar></app-toolbar>
 <p class="nav-place"></p>
 
-<button  mat-icon-button routerLink="/AdmissionSoignant"><mat-icon>assignment</mat-icon>Accès formulaire mèdecin</button>
+<button mat-icon-button routerLink="/AdmissionSoignant">
+  <mat-icon>assignment</mat-icon>Accès formulaire mèdecin
+</button>
 <section>
   <div>
     <div class="">
-      <div class="row" >
+      <div class="row">
         <mat-expansion-panel [expanded]="true">
           <mat-expansion-panel-header class="panel">
             <mat-panel-title>
@@ -25,9 +27,9 @@
                 <option>Non définie</option>
               </select><br><br>
               <label>Age à l'entrée</label>
-              <input type="number">
+              <input type="number" [(ngModel)]="Naissance">
               <label>Poids à l'entrée</label>
-              <input type="number">kg <br><br>
+              <input type="number" [(ngModel)]="poids">kg <br><br>
             </div>
             <h3>Naisssance</h3>
             <div class="content">
@@ -44,12 +46,11 @@
               <label>Poids de naissance</label>
               <input type="number">kg
             </div><br>
-            <mat-radio-group aria-label="Select an option" [(ngModel)]="ContexteFamilial"
-                required>
-                <mat-radio-button value="1">Bracelet sur incubateur</mat-radio-button><br>
-                <mat-radio-button value="2">Bracelet d'identification</mat-radio-button><br>
-                <mat-radio-button value="3">Patient déjà porteur du bracelet</mat-radio-button><br>
-              </mat-radio-group>
+            <mat-radio-group aria-label="Select an option" required>
+              <mat-radio-button value="1" *ngIf="poids>30 && Naissance>20">Bracelet sur incubateur</mat-radio-button>
+              <br>
+              <mat-radio-button value="2">Bracelet d'identification</mat-radio-button><input type="text" *ngIf="2"><br>
+            </mat-radio-group>
           </div>
         </mat-expansion-panel>
       </div>
@@ -64,13 +65,18 @@
             <div class="content">
               <label>Titulaire de l'autorité parental</label>
               <select [(ngModel)]="secondSelectValue">
-                <option></option>
-                <option value="Titulaire_Pere">Pére</option>
-                <option value="Titulaire_Mere">Mére</option>
+                <option value="Titulaire_Pere">Pére et mère</option>
+                <option value="Titulaire_Mere">Mère isolée</option>
                 <option value="Titulaire_Autre">Autre</option>
+                <input *ngIf="secondSelectValue" type="text">
               </select>
               <input type="text" *ngIf="secondSelectValue == 'Titulaire_Autre'">
-            </div>
+            </div><br>
+            <label>L'autorisation d'opérer à été obtenue</label>
+            <mat-radio-group aria-label="Select an option">
+              <mat-radio-button value="1">Oui</mat-radio-button>
+              <mat-radio-button value="2">Non</mat-radio-button>
+            </mat-radio-group>
           </div>
         </mat-expansion-panel>
       </div>
@@ -85,7 +91,8 @@
             <div class="content">
               <div class="tableau">
                 <div class="tablHeader">
-                  <mat-grid-list cols="9" rowHeight="10:1">
+                  <mat-grid-list cols="10" rowHeight="10:1">
+                    <mat-grid-tile>Nom de jeune fille</mat-grid-tile>
                     <mat-grid-tile>Nom</mat-grid-tile>
                     <mat-grid-tile>Prenom</mat-grid-tile>
                     <mat-grid-tile>Type parent</mat-grid-tile>
@@ -97,10 +104,14 @@
                     <mat-grid-tile>Profession</mat-grid-tile>
                   </mat-grid-list>
                 </div>
-                <mat-grid-list cols="9" rowHeight="5:1" class="tableInput">
+                <mat-grid-list cols="10" rowHeight="5:1" class="tableInput">
                   <mat-grid-tile><input matInput [(ngModel)]="val1" #ctrl="ngModel"></mat-grid-tile>
                   <mat-grid-tile><input matInput></mat-grid-tile>
                   <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><select [(ngModel)]="secondSelectValue">
+                      <option value="Titulaire_Pere">Parent 1</option>
+                      <option value="Titulaire_Mere">Parent 2</option>
+                    </select></mat-grid-tile>
                   <mat-grid-tile><input type="date"></mat-grid-tile>
                   <mat-grid-tile><input matInput></mat-grid-tile>
                   <mat-grid-tile><input type="tel"></mat-grid-tile>
@@ -109,10 +120,14 @@
                   <mat-grid-tile><input matInput></mat-grid-tile>
                 </mat-grid-list>
                 <div class="showInputField"></div>
-                <mat-grid-list cols="9" rowHeight="5:1" class="tableInput" *ngIf="val1 != ''">
+                <mat-grid-list cols="10" rowHeight="5:1" class="tableInput" *ngIf="val1 != ''">
                   <mat-grid-tile><input matInput></mat-grid-tile>
                   <mat-grid-tile><input matInput></mat-grid-tile>
                   <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><select [(ngModel)]="secondSelectValue">
+                      <option value="Titulaire_Pere">Parent 1</option>
+                      <option value="Titulaire_Mere">Parent 2</option>
+                    </select></mat-grid-tile>
                   <mat-grid-tile><input type="date"></mat-grid-tile>
                   <mat-grid-tile><input matInput></mat-grid-tile>
                   <mat-grid-tile><input type="tel"></mat-grid-tile>
@@ -120,26 +135,12 @@
                   <mat-grid-tile><input matInput></mat-grid-tile>
                   <mat-grid-tile><input matInput></mat-grid-tile>
                 </mat-grid-list>
-
-                <div class="infoMere">
-                  <div class="content">
-                    <label>Nom de jeune fille de la mère</label>
-                    <input matInput>
-                  </div>
-                  <div class="content">
-                    <label>Niveau d'étude de la mère</label>
-                    <select>
-                      <option></option><!--  A REMPLIR -->
-                    </select>
-                  </div>
-                  <div class="content">
-                    <label>Niveau d'étude du second parent</label>
-                    <select>
-                      <option></option><!--  A REMPLIR -->
-                    </select>
-                  </div>
-                </div>
               </div>
+              <label>Parents vivant ensemble</label>
+              <mat-radio-group aria-label="Select an option">
+                <mat-radio-button value="1">Oui</mat-radio-button>
+                <mat-radio-button value="2">Non</mat-radio-button>
+              </mat-radio-group>
             </div>
           </div>
         </mat-expansion-panel>
@@ -197,30 +198,21 @@
             <div class="content">
               <div class="tableau">
                 <div class="tablHeader">
-                  <mat-grid-list cols="6" rowHeight="10:1">
-                    <mat-grid-tile>Période de</mat-grid-tile>
-                    <mat-grid-tile>à</mat-grid-tile>
+                  <mat-grid-list cols="3" rowHeight="10:1">
                     <mat-grid-tile>Situation familliale</mat-grid-tile>
                     <mat-grid-tile>Lieu de vie de l'enfant</mat-grid-tile>
-                    <mat-grid-tile>Type de logement</mat-grid-tile>
                     <mat-grid-tile>Commentaire</mat-grid-tile>
                   </mat-grid-list>
                 </div>
-                <mat-grid-list cols="6" rowHeight="10:1" class="tableInput">
+                <mat-grid-list cols="3" rowHeight="10:1" class="tableInput">
                   <mat-grid-tile><input matInput [(ngModel)]="val3" #ctrl="ngModel"></mat-grid-tile>
-                  <mat-grid-tile><input matInput></mat-grid-tile>
-                  <mat-grid-tile><input matInput></mat-grid-tile>
-                  <mat-grid-tile><input matInput></mat-grid-tile>
                   <mat-grid-tile><select>
-                      <option>Non définie</option>
+                      <option>Non définie texte libre ?</option>
                     </select></mat-grid-tile>
                   <mat-grid-tile><input matInput></mat-grid-tile>
                 </mat-grid-list>
                 <div class="showInputField"></div>
-                <mat-grid-list cols="6" rowHeight="10:1" class="tableInput" *ngIf="val3 != ''">
-                  <mat-grid-tile><input matInput></mat-grid-tile>
-                  <mat-grid-tile><input matInput></mat-grid-tile>
-                  <mat-grid-tile><input matInput></mat-grid-tile>
+                <mat-grid-list cols="3" rowHeight="10:1" class="tableInput" *ngIf="val3 != ''">
                   <mat-grid-tile><input matInput></mat-grid-tile>
                   <mat-grid-tile><select>
                       <option>Non définie</option>
@@ -247,12 +239,12 @@
                       <mat-radio-button value="2">Non</mat-radio-button>
                     </mat-radio-group>
                     <label style="float: right;">Moyen de locomotion :
-                    <select>
-                      <option></option>
-                      <option></option>
-                      <option>Non définie</option>
-                    </select>
-                  <input type="text" name="" id=""></label>
+                      <select>
+                        <option></option>
+                        <option></option>
+                        <option>Non définie</option>
+                      </select>
+                      <input type="text" name="" id=""></label>
                   </div>
                   <div class="content">
                     <label>D3P :</label>
@@ -260,10 +252,6 @@
                       <mat-radio-button value="1">Oui</mat-radio-button>
                       <mat-radio-button value="2">Non</mat-radio-button>
                     </mat-radio-group>
-                  </div>
-                  <div class="content">
-                    <label>Autre mesure social :</label>
-                    <input matInput>
                   </div>
                   <div class="content">
                     <label>Contraintes et difficultés :</label>
@@ -298,10 +286,8 @@
                   <mat-grid-tile><input type="date" [(ngModel)]="val4" #ctrl="ngModel"></mat-grid-tile>
                   <mat-grid-tile><input type="date"></mat-grid-tile>
                   <mat-grid-tile><select>
-                    <option></option>
-                    <option></option>
-                    <option>Non définie</option>
-                  </select></mat-grid-tile>
+                      <option>Non définie</option>
+                    </select></mat-grid-tile>
                   <mat-grid-tile><input matInput></mat-grid-tile>
                   <mat-grid-tile><input matInput></mat-grid-tile>
                 </mat-grid-list>
@@ -310,10 +296,8 @@
                   <mat-grid-tile><input type="date"></mat-grid-tile>
                   <mat-grid-tile><input type="date"></mat-grid-tile>
                   <mat-grid-tile><select>
-                    <option></option>
-                    <option></option>
-                    <option>Non définie</option>
-                  </select></mat-grid-tile>
+                      <option>Non définie</option>
+                    </select></mat-grid-tile>
                   <mat-grid-tile><input matInput></mat-grid-tile>
                   <mat-grid-tile><input matInput></mat-grid-tile>
                 </mat-grid-list>
@@ -329,6 +313,83 @@
           </mat-expansion-panel-header>
           <div class="row"><br>
             <textarea style="width: 100%;" matInput cdkTextareaAutosize></textarea>
+          </div>
+        </mat-expansion-panel>
+      </div>
+      <div class="row">
+        <mat-expansion-panel [expanded]="true">
+          <mat-expansion-panel-header class="panel">
+            <mat-panel-title>
+              Personnes ressources
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="row">
+            <div class="content">
+              <div class="tableau">
+                <div class="tablHeader">
+                  <mat-grid-list cols="6" rowHeight="10:1">
+                    <mat-grid-tile>Nom</mat-grid-tile>
+                    <mat-grid-tile>Prénom</mat-grid-tile>
+                    <mat-grid-tile>Lien avec le patient</mat-grid-tile>
+                    <mat-grid-tile>Télèphone</mat-grid-tile>
+                    <mat-grid-tile>Adresse</mat-grid-tile>
+                    <mat-grid-tile>Ville</mat-grid-tile>
+                  </mat-grid-list>
+                </div>
+                <mat-grid-list cols="6" rowHeight="10:1" class="tableInput">
+                  <mat-grid-tile><input type="date" [(ngModel)]="val4" #ctrl="ngModel"></mat-grid-tile>
+                  <mat-grid-tile><input type="date"></mat-grid-tile>
+                  <mat-grid-tile><select>
+                      <option></option>
+                      <option></option>
+                      <option>Non définie</option>
+                    </select></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                </mat-grid-list>
+                <div class="showInputField"></div>
+                <mat-grid-list cols="6" rowHeight="10:1" class="tableInput" *ngIf="val4 != ''">
+                  <mat-grid-tile><input type="date"></mat-grid-tile>
+                  <mat-grid-tile><input type="date"></mat-grid-tile>
+                  <mat-grid-tile><select>
+                      <option></option>
+                      <option></option>
+                      <option>Non définie</option>
+                    </select></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                  <mat-grid-tile><input matInput></mat-grid-tile>
+                </mat-grid-list>
+              </div>
+            </div>
+          </div>
+        </mat-expansion-panel>
+      </div>
+      <div class="row">
+        <mat-expansion-panel [expanded]="true">
+          <mat-expansion-panel-header class="panel">
+            <mat-panel-title>
+              Remise du livret d’accueil
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="row">
+            <mat-radio-group aria-label="Select an option">
+              <mat-radio-button value="1">Oui</mat-radio-button>
+              <mat-radio-button value="2">Non</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </mat-expansion-panel>
+      </div>
+      <div class="row">
+        <mat-expansion-panel [expanded]="true">
+          <mat-expansion-panel-header class="panel">
+            <mat-panel-title>
+              Motif d'hospitalisation
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="row">
+            <textarea cols="30" rows="2"></textarea>
           </div>
         </mat-expansion-panel>
       </div>
