@@ -42,8 +42,8 @@
               <label>Terme de naissance</label>
               <input type="number">
               <label>Poids de naissance</label>
-              <input type="number">kg 
-            </div><br>  
+              <input type="number">kg
+            </div><br>
             <mat-radio-group aria-label="Select an option" [(ngModel)]="ContexteFamilial"
                 required>
                 <mat-radio-button value="1">Bracelet sur incubateur</mat-radio-button><br>
@@ -319,6 +319,16 @@
                 </mat-grid-list>
               </div>
             </div>
+          </div>
+        </mat-expansion-panel>
+        <mat-expansion-panel [expanded]="true">
+          <mat-expansion-panel-header class="panel">
+            <mat-panel-title>
+              Souhait d'ordre religieux, éthique, culturel ...
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="row"><br>
+            <textarea style="width: 100%;" matInput cdkTextareaAutosize></textarea>
           </div>
         </mat-expansion-panel>
       </div>

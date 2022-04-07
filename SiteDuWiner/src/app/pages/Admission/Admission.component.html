@@ -21,17 +21,37 @@
               </div>
               <div class="content">
                 <label>Mode d'entrée :</label>
-                <select [(ngModel)]="secondSelectValue">
+                <select >
                   <option></option>
-                  <option value="Titulaire_Pere">1 - ???</option>
-                  <option value="Titulaire_Mere">2 - Entrée en urgence</option>
-                  <option value="Titulaire_Autre">Autre</option>
+                  <option >1 - ???</option>
+                  <option >2 - Entrée en urgence</option>
+                  <option >Autre</option>
                 </select>
-              </div><br>
-              <div>
+              </div>
+              <div class="content">
                 <label>Motif d'hospitalisation</label>
                 <input type="text">
-              </div><br>
+              </div>
+              <div class="content">
+                <label>Age</label>
+                <input type="number">
+              </div>
+              <div class="content">
+                <label>Age à l'entrée</label>
+                <input type="number">
+                <label>Poids à l'entrée</label>
+                <input type="number">kg
+              </div>
+              <div class="content">
+                <label>Terme de naissance</label>
+                <input type="number">
+                <label>Poids de naissance</label>
+                <input type="number">kg
+              </div>
+              <div class="content">
+                <label>Score d'apgar</label>
+                <input matInput>
+              </div>
             </div>
           </div>
         </mat-expansion-panel>
@@ -43,39 +63,53 @@
           </mat-expansion-panel-header>
           <div class="row">
             <div class="content">
-              <div class="content">
-                <div>
+                <div class="content">
                   <label>En provenance de </label>
-                  <input type="text">
-                </div><br>
+                  <select [(ngModel)]="secondSelectValue">
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                    <option value="Titulaire_Autre">Autre</option>
+                  </select>
+                  <input type="text" *ngIf="secondSelectValue == 'Titulaire_Autre'">
+                </div>
+                <div class="content">
                 <label>Mode de transport :</label>
-                <select [(ngModel)]="secondSelectValue">
+                <select >
                   <option></option>
-                  <option value="Titulaire_Pere">???</option>
-                  <option value="Titulaire_Mere">Ambulance</option>
-                  <option value="Titulaire_Autre">Autre</option>
+                  <option value="fgfg">SAMU terrestre</option>
+                  <option value="zae">Moyen aérien</option>
                 </select>
-              </div><br>
-              <div>
+              </div>
+              <div class="content">
                 <label>Lieu de naissance :</label>
                 <input type="text">
-              </div><br>
-              <mat-radio-group aria-label="Select an option" [(ngModel)]="Admission" #ctrl="ngModel"
-                required>
-                <mat-radio-button value="1"> Dossier </mat-radio-button>
-                <mat-radio-button value="2"> Carnet de santé </mat-radio-button>
-                <mat-radio-button value="3"> Autre à preciser <input type="text"></mat-radio-button>
-              </mat-radio-group>
-              <div>
+              </div>
+              <div class="content">
+                <mat-radio-group aria-label="Select an option" [(ngModel)]="Admission" #ctrl="ngModel"
+                  required>
+                  <mat-radio-button value="1"> Dossier </mat-radio-button>
+                  <mat-radio-button value="2"> Carnet de santé </mat-radio-button>
+                  <mat-radio-button value="3"> Autre à preciser <input type="text"></mat-radio-button>
+                </mat-radio-group>
+              </div>
+              <div class="content">
                 <label>Faits à signaler (SAMU / Ambulance) </label>
                 <input type="text">
-              </div><br>
+              </div>
               <label> Scan de la fiche SAMU</label>
               <a href=" ">Sélectionner le document scanné</a><br>
               <mat-radio-button>T.I.U</mat-radio-button><br>
-              <div><label>Date de transfert </label>
+              <div class="content"><label>Date de transfert </label>
                 <input type="date"><br>
-                <label>Maternité d'origine <input type="text"></label><br>
                 <label>Indications <input type="text"></label><br>
               </div>
             </div>
@@ -164,16 +198,6 @@
                 </mat-grid-list>
               </div>
             </div>
-          </div>
-        </mat-expansion-panel>
-        <mat-expansion-panel [expanded]="true">
-          <mat-expansion-panel-header class="panel">
-            <mat-panel-title>
-              Souhait d'ordre religieux, éthique, culturel ...
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <div class="row"><br>
-            <textarea style="width: 100%;" matInput cdkTextareaAutosize></textarea>
           </div>
         </mat-expansion-panel>
       </div>

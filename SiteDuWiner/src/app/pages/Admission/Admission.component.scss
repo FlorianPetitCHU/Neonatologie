@@ -5,6 +5,9 @@ label{
 input{
   margin-right: 15px;
 }
+.example-margin{
+  margin-right: 15px;
+}
 select{
   margin-right: 15px;
 }
@@ -52,6 +55,20 @@ h1{
     height: 60px;
   }
 }
+.mat-radio-button{
+  margin-right: 10px;
+}
+.souligner{
+  text-decoration: underline;
+}
+.aligne-gauche{
+  position: absolute;
+  left: 5px;
+}
+.mat-radio-container-no-show .mat-radio-container {
+  display: none;
+}
+
 .spacer {
   flex: 1 1 auto;
 }
