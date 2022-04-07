@@ -76,7 +76,7 @@
           </mat-expansion-panel-header>
           <div class="row">
             <div class="content">
-              Période anténatale : <input type="text">
+             <input type="checkbox"> Période anténatale : <input type="text">
             </div>
           </div>
         </mat-expansion-panel>
@@ -88,13 +88,13 @@
           </mat-expansion-panel-header>
           <div class="row">
             <div class="content">
-              Terme : <input type="text">
-              Score d'Apgar : <input type="text"><br>
-              pH au cordon : <input type="text">
-              Lactates au cordon : <input type="text"><br>
-              Poids : <input type="text">
-              Taille : <input type="text">
-              PC : <input type="text">
+              <input type="checkbox"> Terme : <input type="text">
+              <input type="checkbox">Score d'Apgar : <input type="text"><br>
+              <input type="checkbox">pH au cordon : <input type="text">
+              <input type="checkbox">Lactates au cordon : <input type="text"><br>
+              <input type="checkbox">Poids : <input type="text">
+              <input type="checkbox">Taille : <input type="text">
+              <input type="checkbox">PC : <input type="text">
           </div>
         </div>
         </mat-expansion-panel><mat-expansion-panel [expanded]="true">
@@ -104,15 +104,15 @@
             </mat-panel-title>
           </mat-expansion-panel-header>
           <div class="row">
-            <label>Appareil respiratoire : <input type="text"></label> <br>
-            <label>Système cardio-vasculaire : <input type="text"></label><br>
-            <label>Système digestif-Nutrition-Cathéters centraux : <input type="text"></label><br>
-            <label>Appareil ostéo-articulaire et musculaire-Peau : <input type="text"></label><br>
-            <label>Hématologie : <input type="text"></label><br>
-            <label>Infections : <input type="text"></label><br>
-            <label>Biologie : <input type="text"></label><br>
-            <label>Sérovaccinations : <input type="text"></label><br>
-            <label>Autres : <input type="text"></label><br>
+            <input type="checkbox"> <label>Appareil respiratoire : <input type="text"></label> <br>
+            <input type="checkbox"> <label>Système cardio-vasculaire : <input type="text"></label><br>
+            <input type="checkbox"><label>Système digestif-Nutrition-Cathéters centraux : <input type="text"></label><br>
+            <input type="checkbox"><label>Appareil ostéo-articulaire et musculaire-Peau : <input type="text"></label><br>
+            <input type="checkbox"><label>Hématologie : <input type="text"></label><br>
+            <input type="checkbox"><label>Infections : <input type="text"></label><br>
+            <input type="checkbox"><label>Biologie : <input type="text"></label><br>
+            <input type="checkbox"><label>Sérovaccinations : <input type="text"></label><br>
+            <input type="checkbox"><label>Autres : <input type="text"></label><br>
           </div>
         </mat-expansion-panel><mat-expansion-panel [expanded]="true">
           <mat-expansion-panel-header class="panel">
@@ -122,12 +122,12 @@
           </mat-expansion-panel-header>
           <div class="row"><br>
             A la sortie <br>
-            <label>Terme corrigé : <input type="text"></label><br>
-            <label>Poids : <input type="text"></label>
-            <label>Taille : <input type="text"></label>
-            <label>PC : <input type="text"></label><br>
-            <label>Traitement de sortie : <input type="text"></label><br>
-            <label>Suite à donner : <input type="text"></label><br>
+            <input type="checkbox"><label>Terme corrigé : <input type="text"></label><br>
+            <input type="checkbox"><label>Poids : <input type="text"></label>
+            <input type="checkbox"><label>Taille : <input type="text"></label>
+            <input type="checkbox"> <label>PC : <input type="text"></label><br>
+            <input type="checkbox"> <label>Traitement de sortie : <input type="text"></label><br>
+            <input type="checkbox"> <label>Suite à donner : <input type="text"></label><br>
           </div>
         </mat-expansion-panel><mat-expansion-panel [expanded]="true">
           <mat-expansion-panel-header class="panel">
@@ -136,19 +136,18 @@
             </mat-panel-title>
           </mat-expansion-panel-header>
           <div class="row"><br>
-            Information médicale ciblés : <mat-radio-group aria-label="Select an option">
+            <input type="checkbox"> Information médicale ciblés : <mat-radio-group aria-label="Select an option">
               <mat-radio-button value="1">Oui</mat-radio-button>
               <mat-radio-button value="2">Non</mat-radio-button>
             </mat-radio-group><br>
-            Information sur la prise en charge du nouveau-né : <mat-radio-group aria-label="Select an option">
+            <input type="checkbox"> Information sur la prise en charge du nouveau-né : <mat-radio-group aria-label="Select an option">
               <mat-radio-button value="1">Oui</mat-radio-button>
               <mat-radio-button value="2">Non</mat-radio-button>
             </mat-radio-group><br>
-            Alimentation <br>
-            Rythme biologique <br>
-            Nursing <br>
-            Vaccination <br>
-            Autre : <input type="text">
+            <input type="checkbox"> Alimentation <br>
+            <input type="checkbox"> Nursing <br>
+            <input type="checkbox">Vaccination <br>
+            <input type="checkbox"> Autre : <input type="text">
           </div>
         </mat-expansion-panel><mat-expansion-panel [expanded]="true">
           <mat-expansion-panel-header class="panel">
@@ -157,19 +156,19 @@
             </mat-panel-title>
           </mat-expansion-panel-header>
           <div class="row"><br>
-            BMR/BHRE : <mat-radio-group aria-label="Select an option">
+            <input type="checkbox"> BMR/BHRE : <mat-radio-group aria-label="Select an option">
               <mat-radio-button value="1">Oui</mat-radio-button>
               <mat-radio-button value="2">Non</mat-radio-button>
             </mat-radio-group><br>
-            Transfusionnel : <mat-radio-group aria-label="Select an option">
+            <input type="checkbox"> Transfusionnel : <mat-radio-group aria-label="Select an option">
               <mat-radio-button value="1">Oui</mat-radio-button>
               <mat-radio-button value="2">Non</mat-radio-button>
             </mat-radio-group><br>
-            Evènement indésirable : <mat-radio-group aria-label="Select an option">
+            <input type="checkbox"> Evènement indésirable : <mat-radio-group aria-label="Select an option">
               <mat-radio-button value="1">Oui</mat-radio-button>
               <mat-radio-button value="2">Non</mat-radio-button>
             </mat-radio-group><br>
-            Poste d'un DMI lors du séjour : <mat-radio-group aria-label="Select an option">
+            <input type="checkbox">   Poste d'un DMI lors du séjour : <mat-radio-group aria-label="Select an option">
               <mat-radio-button value="1">Oui</mat-radio-button>
               <mat-radio-button value="2">Non</mat-radio-button>
             </mat-radio-group><br>
@@ -181,11 +180,11 @@
             </mat-panel-title>
           </mat-expansion-panel-header>
           <div class="row"><br>
-            Lettre remise aux parents en mains propres le jour de la sortie de leur nouveau-né : <mat-radio-group aria-label="Select an option">
+            <input type="checkbox">   Lettre remise aux parents en mains propres le jour de la sortie de leur nouveau-né : <mat-radio-group aria-label="Select an option">
               <mat-radio-button value="1">Oui</mat-radio-button>
               <mat-radio-button value="2">Non</mat-radio-button>
             </mat-radio-group><br>
-            Lettre adressé au médecin traitant : <mat-radio-group aria-label="Select an option">
+            <input type="checkbox">  Lettre adressé au médecin traitant : <mat-radio-group aria-label="Select an option">
               <mat-radio-button value="1">Oui</mat-radio-button>
               <mat-radio-button value="2">Non</mat-radio-button>
             </mat-radio-group> <input type="text"><br>
