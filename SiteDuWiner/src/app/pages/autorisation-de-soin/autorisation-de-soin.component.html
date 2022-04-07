@@ -1,42 +1,9 @@
-<app-toolbar-med></app-toolbar-med>
+<app-toolbar></app-toolbar>
 <p class="nav-place"></p>
 <button  mat-icon-button routerLink="/contexteFamilial"><mat-icon>assignment</mat-icon>Accès formulaire soignant</button>
 
 <div class="content">
 <img src="../../../assets/autoSoins1.png" style="width: 100%;">
-<div class="row">
-  <mat-expansion-panel [expanded]="true">
-    <mat-expansion-panel-header class="panel">
-      <mat-panel-title>
-        Autorisation de visite
-      </mat-panel-title>
-    </mat-expansion-panel-header>
-    <div class="row">
-      <div class="content">
-        <label>Nom du père</label> <input matInput style="width: 85%;">
-      </div>
-      <div class="content">
-        <label>Nom de la mère</label> <input matInput style="width: 85%;">
-      </div>
-      <div class="content">
-        <label>autorise Mr,Mme,Mile,</label> <input matInput style="width: 40%;" [(ngModel)]="val1" #ctrl="ngModel">
-        <select>
-          <option></option>
-          <option>Frère ou soeur</option>
-          <option>Grands-parents</option>
-        </select>
-      </div>
-      <div class="content" *ngIf="val1 != ''">
-        <label>autorise Mr,Mme,Mile,</label> <input matInput style="width: 40%;">
-        <select>
-          <option></option>
-          <option>Frère ou soeur</option>
-          <option>Grands-parents</option>
-        </select>
-      </div>
-    </div>
-  </mat-expansion-panel>
-</div>
 <img src="../../../assets/autoSoins2.png" style="width: 100%;">
 </div>
 
