@@ -12,6 +12,9 @@ export class ContexteFamilialComponent implements OnInit {
   val2 = "";
   val3 = "";
   val4 = "";
+  poids=  0;
+  Naissance= 0;
+  
   ContexteFamilial = "";
   constructor(public router:Router) { }
 
