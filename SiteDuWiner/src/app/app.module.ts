@@ -18,7 +18,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { GrosssessePeriodeNeonatComponent } from './pages/medecin/grosssesse-periode-neonat/grosssesse-periode-neonat.component';
 import { VaccinComponent } from './pages/medecin/vaccin/vaccin.component';
-import { CroissanceComponent } from './pages/medecin/croissance/croissance.component';
+import { CroissanceComponent } from './pages/soignant/croissance/croissance.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSelectModule} from '@angular/material/select';

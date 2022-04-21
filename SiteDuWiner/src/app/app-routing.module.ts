@@ -5,7 +5,7 @@ import { RecueilDeDonnesPiedatriquesComponent } from './pages/soignant/recueil-d
 import { ContexteFamilialComponent } from './pages/soignant/contexte-familial/contexte-familial.component';
 import { VaccinComponent } from './pages/medecin/vaccin/vaccin.component';
 import { GrosssessePeriodeNeonatComponent } from './pages/medecin/grosssesse-periode-neonat/grosssesse-periode-neonat.component';
-import { CroissanceComponent } from './pages/medecin/croissance/croissance.component';
+import { CroissanceComponent } from './pages/soignant/croissance/croissance.component';
 import { AtcdFamComponent } from './pages/medecin/atcd-fam/atcd-fam.component';
 import { ExamInitialComponent } from './pages/medecin/exam-initial/exam-initial.component';
 import { DialogSignerComponent } from './pages/autre/dialog-signer/dialog-signer.component';
