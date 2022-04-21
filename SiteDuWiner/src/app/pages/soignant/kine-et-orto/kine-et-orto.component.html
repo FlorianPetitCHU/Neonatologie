@@ -1,0 +1,17 @@
+<app-toolbar></app-toolbar>
+<p class="nav-place"></p>
+
+<button mat-icon-button routerLink="/AdmissionSoignant">
+  <mat-icon>assignment</mat-icon>Accès formulaire mèdecin
+</button>
+  <div class="content">
+    <mat-expansion-panel [expanded]="true">
+      <mat-expansion-panel-header class="panel">
+        <mat-panel-title>
+          Orthophoniste
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <app-orthophoniste></app-orthophoniste>
+    </mat-expansion-panel>
+  </div>
+

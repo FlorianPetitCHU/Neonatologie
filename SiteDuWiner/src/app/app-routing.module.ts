@@ -13,7 +13,7 @@ import { SortieComponent } from './pages/medecin/sortie/sortie.component';
 import { EvolMedComponent } from './pages/medecin/evol-med/evol-med.component';
 import { PrepaSortieComponent } from './pages/autre/prepa-sortie/prepa-sortie.component';
 import { AssistSocialComponent } from './pages/autre/assist-social/assist-social.component';
-import { KinesComponent } from './pages/autre/kines/kines.component';
+import { KinesComponent } from './pages/soignant/kines/kines.component';
 import { AcceuilComponent } from './pages/Acceuil/Acceuil.component';
 import { AutorisationDeSoinComponent } from './pages/soignant/autorisation-de-soin/autorisation-de-soin.component';
 import { AdmisionSoignantVueComponent } from './pages/soignant/admision-soignant-vue/admision-soignant-vue.component';
@@ -21,11 +21,15 @@ import { MedecinComponent } from './pages/BtCreer/Medecin/medecin.component';
 import { SoignantComponent } from './pages/BtCreer/Soignant/soignant.component';
 import { LogMedecinComponent } from './pages/Connexion/Medecin/medecin.component';
 import { LogSoignantComponent } from './pages/Connexion/Soignant/soignant.component';
-import { OrthophonisteComponent } from './pages/autre/orthophoniste/orthophoniste.component';
+import { OrthophonisteComponent } from './pages/soignant/orthophoniste/orthophoniste.component';
+import { KineEtOrtoComponent } from './pages/soignant/kine-et-orto/kine-et-orto.component';
 const routes: Routes = [
   {
     path: "Admission",
     component: AdmissionComponent
+  },  {
+    path: "KineEtOrto",
+    component: KineEtOrtoComponent
   },
   {
     path: "Orthophoniste",

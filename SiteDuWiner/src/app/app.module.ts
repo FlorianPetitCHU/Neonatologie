@@ -34,12 +34,13 @@ import { SortieComponent } from './pages/medecin/sortie/sortie.component';
 import { EvolMedComponent } from './pages/medecin/evol-med/evol-med.component';
 import { PrepaSortieComponent } from './pages/autre/prepa-sortie/prepa-sortie.component';
 import { AssistSocialComponent } from './pages/autre/assist-social/assist-social.component';
-import { KinesComponent } from './pages/autre/kines/kines.component';
+import { KinesComponent } from './pages/soignant/kines/kines.component';
 import { AcceuilComponent } from './pages/Acceuil/Acceuil.component';
 import { AutorisationDeSoinComponent } from './pages/soignant/autorisation-de-soin/autorisation-de-soin.component';
 import { AdmisionSoignantVueComponent } from './pages/soignant/admision-soignant-vue/admision-soignant-vue.component';
 import { ToolbarMedComponent } from './partials/toolbar-med/toolbar-med.component';
-import { OrthophonisteComponent } from './pages/autre/orthophoniste/orthophoniste.component';
+import { OrthophonisteComponent } from './pages/soignant/orthophoniste/orthophoniste.component';
+import { KineEtOrtoComponent } from './pages/soignant/kine-et-orto/kine-et-orto.component';
 
 
 
@@ -65,7 +66,8 @@ import { OrthophonisteComponent } from './pages/autre/orthophoniste/orthophonist
     AutorisationDeSoinComponent,
     AdmisionSoignantVueComponent,
     ToolbarMedComponent,
-    OrthophonisteComponent
+    OrthophonisteComponent,
+    KineEtOrtoComponent
   ],
   imports: [
     BrowserModule,
