@@ -1,3 +1,77 @@
 <app-toolbar></app-toolbar>
 <p class="nav-place"></p>
-<button  mat-icon-button routerLink="/contexteFamilial"><mat-icon>assignment</mat-icon>Accès formulaire soignant</button>
+<button mat-icon-button routerLink="/contexteFamilial">
+    <mat-icon>assignment</mat-icon>Accès formulaire soignant
+</button>
+<p>Nom du médecin traitant : <input type="text"></p>
+<p>PMI: <mat-radio-group aria-label="Select an option">
+        <mat-radio-button value="1">1er lien</mat-radio-button>
+        <mat-radio-button value="2">Lien avant la sortie</mat-radio-button>
+    </mat-radio-group>
+</p>
+<p>Matériel au domicile :<br><br>
+    <mat-radio-group aria-label="Select an option">
+        <mat-radio-button value="1">Lit</mat-radio-button>
+        <mat-radio-button value="2">Baignoire</mat-radio-button>
+        <mat-radio-button value="3">Siège auto / poussette / système de portage</mat-radio-button>
+    </mat-radio-group>
+</p>
+<div class="row">
+    <mat-expansion-panel [expanded]="true">
+        <mat-expansion-panel-header class="panel">
+            <mat-panel-title>
+                Alimentation
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>Régime de sortie : <input type="text"></p>
+        <mat-radio-group aria-label="Select an option">
+            <mat-radio-button value="1">Eau</mat-radio-button>
+            <mat-radio-button value="2">Lait <input type="text"></mat-radio-button>
+        </mat-radio-group>
+        <p>Biberon personnel testé : <input type="text"></p>
+    </mat-expansion-panel>
+</div>
+<div class="row">
+    <mat-expansion-panel [expanded]="true">
+        <mat-expansion-panel-header class="panel">
+            <mat-panel-title>
+                Conseils
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-radio-group aria-label="Select an option">
+            <mat-radio-button value="1">Conseil de sécurité sur le couchage/MIN</mat-radio-button><br>
+            <mat-radio-button value="2">Position ventrale lors des phases d'éveil</mat-radio-button><br>
+            <mat-radio-button value="3">Portage</mat-radio-button>
+        </mat-radio-group>
+    </mat-expansion-panel>
+</div>
+<div class="row">
+    <mat-expansion-panel [expanded]="true">
+        <mat-expansion-panel-header class="panel">
+            <mat-panel-title>
+                Réunion de service
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <label>Ont assisté à :</label>
+        <mat-radio-group aria-label="Select an option">
+            <mat-radio-button value="1">la réunio de préparation à la sortie</mat-radio-button><br>
+            <mat-radio-button value="2">l'atelier préparation biberon</mat-radio-button><br>
+            <mat-radio-button value="3">Autres : <input type="text"></mat-radio-button>
+        </mat-radio-group>
+    </mat-expansion-panel>
+</div>
+<div class="row">
+    <mat-expansion-panel [expanded]="true">
+        <mat-expansion-panel-header class="panel">
+            <mat-panel-title>
+                Traitement 
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-radio-group aria-label="Select an option">
+            <mat-radio-button value="1">Ordonnance donnée</mat-radio-button><br>
+            <mat-radio-button value="2">Traitement dans la chambre de l'enfant</mat-radio-button><br>
+            <mat-radio-button value="3">Préparation des traitements fait</mat-radio-button><br>
+            <mat-radio-button value="3">Administration des traitements fait</mat-radio-button>
+        </mat-radio-group>
+    </mat-expansion-panel>
+</div>
