@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
-import { DialogSignerComponent } from '../dialog-signer/dialog-signer.component';
 import { Router } from '@angular/router';
+import { DialogSignerComponent } from '../../autre/dialog-signer/dialog-signer.component';
 @Component({
   selector: 'app-grosssesse-periode-neonat',
   templateUrl: './grosssesse-periode-neonat.component.html',
