@@ -76,7 +76,8 @@
             <mat-radio-group aria-label="Select an option">
               <mat-radio-button value="1">Oui</mat-radio-button>
               <mat-radio-button value="2">Non</mat-radio-button>
-            </mat-radio-group>
+            </mat-radio-group><br><br>
+            <a href="">Importer autorisations de soins</a>
           </div>
         </mat-expansion-panel>
       </div>
@@ -378,6 +379,30 @@
               <mat-radio-button value="1">Oui</mat-radio-button>
               <mat-radio-button value="2">Non</mat-radio-button>
             </mat-radio-group>
+          </div>
+        </mat-expansion-panel>
+      </div>
+      <div class="row">
+        <mat-expansion-panel [expanded]="true">
+          <mat-expansion-panel-header class="panel">
+            <mat-panel-title>
+              Diagnostic médical
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="row">
+            <textarea cols="30" rows="1"></textarea>
+          </div>
+        </mat-expansion-panel>
+      </div>
+      <div class="row">
+        <mat-expansion-panel [expanded]="true">
+          <mat-expansion-panel-header class="panel">
+            <mat-panel-title>
+              Observation médical
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="row">
+            <a href="">Visualiser</a>
           </div>
         </mat-expansion-panel>
       </div>
