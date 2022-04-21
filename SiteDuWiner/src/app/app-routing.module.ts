@@ -1,27 +1,27 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AdmissionComponent } from './pages/Admission/Admission.component';
-import { RecueilDeDonnesPiedatriquesComponent } from './pages/recueil-de-donnes-piedatriques/recueil-de-donnes-piedatriques.component';
-import { ContexteFamilialComponent } from './pages/contexte-familial/contexte-familial.component';
-import { VaccinComponent } from './pages/vaccin/vaccin.component';
-import { GrosssessePeriodeNeonatComponent } from './pages/grosssesse-periode-neonat/grosssesse-periode-neonat.component';
-import { CroissanceComponent } from './pages/croissance/croissance.component';
-import { AtcdFamComponent } from './pages/atcd-fam/atcd-fam.component';
-import { ExamInitialComponent } from './pages/exam-initial/exam-initial.component';
-import { DialogSignerComponent } from './pages/dialog-signer/dialog-signer.component';
-import { SortieComponent } from './pages/sortie/sortie.component';
-import { EvolMedComponent } from './pages/evol-med/evol-med.component';
-import { PrepaSortieComponent } from './pages/prepa-sortie/prepa-sortie.component';
-import { AssistSocialComponent } from './pages/assist-social/assist-social.component';
-import { KinesComponent } from './pages/kines/kines.component';
+import { AdmissionComponent } from './pages/medecin/Admission/Admission.component';
+import { RecueilDeDonnesPiedatriquesComponent } from './pages/soignant/recueil-de-donnes-piedatriques/recueil-de-donnes-piedatriques.component';
+import { ContexteFamilialComponent } from './pages/soignant/contexte-familial/contexte-familial.component';
+import { VaccinComponent } from './pages/medecin/vaccin/vaccin.component';
+import { GrosssessePeriodeNeonatComponent } from './pages/medecin/grosssesse-periode-neonat/grosssesse-periode-neonat.component';
+import { CroissanceComponent } from './pages/medecin/croissance/croissance.component';
+import { AtcdFamComponent } from './pages/medecin/atcd-fam/atcd-fam.component';
+import { ExamInitialComponent } from './pages/medecin/exam-initial/exam-initial.component';
+import { DialogSignerComponent } from './pages/autre/dialog-signer/dialog-signer.component';
+import { SortieComponent } from './pages/medecin/sortie/sortie.component';
+import { EvolMedComponent } from './pages/medecin/evol-med/evol-med.component';
+import { PrepaSortieComponent } from './pages/autre/prepa-sortie/prepa-sortie.component';
+import { AssistSocialComponent } from './pages/autre/assist-social/assist-social.component';
+import { KinesComponent } from './pages/autre/kines/kines.component';
 import { AcceuilComponent } from './pages/Acceuil/Acceuil.component';
-import { AutorisationDeSoinComponent } from './pages/autorisation-de-soin/autorisation-de-soin.component';
-import { AdmisionSoignantVueComponent } from './pages/admision-soignant-vue/admision-soignant-vue.component';
+import { AutorisationDeSoinComponent } from './pages/soignant/autorisation-de-soin/autorisation-de-soin.component';
+import { AdmisionSoignantVueComponent } from './pages/soignant/admision-soignant-vue/admision-soignant-vue.component';
 import { MedecinComponent } from './pages/BtCreer/Medecin/medecin.component';
 import { SoignantComponent } from './pages/BtCreer/Soignant/soignant.component';
 import { LogMedecinComponent } from './pages/Connexion/Medecin/medecin.component';
 import { LogSoignantComponent } from './pages/Connexion/Soignant/soignant.component';
-import { OrthophonisteComponent } from './pages/orthophoniste/orthophoniste.component';
+import { OrthophonisteComponent } from './pages/autre/orthophoniste/orthophoniste.component';
 const routes: Routes = [
   {
     path: "Admission",
