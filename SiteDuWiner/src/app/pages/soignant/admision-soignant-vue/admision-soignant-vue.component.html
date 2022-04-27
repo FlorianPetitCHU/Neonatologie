@@ -1,28 +1,6 @@
-<p class="p-toolbar" >
-  <label style="float: left;display: block;
-  width: 100%;" align="right">Médecin</label>
-    <mat-toolbar class="color-toolbar" >
-    <mat-button-toggle-group>
-      <mat-button-toggle class="Second-button-toolbar color-button-toolbar" style="background-color: white;">Observation médicale pédiatrique</mat-button-toggle>
-      </mat-button-toggle-group>
-  </mat-toolbar>
-  <mat-toolbar class="color-toolbar" >
-    <mat-button-toggle-group>
-      <mat-button-toggle routerLinkActive="Color" class="Second-button-toolbar color-button-toolbar"routerLink="/Admission" style="background-color: white;">Admission
-      </mat-button-toggle>
-      <mat-button-toggle class="Second-button-toolbar color-button-toolbar"
-        routerLink="/ExamenCliniqueInitial" routerLinkActive="Color">Examen clinique initial</mat-button-toggle>
-      <mat-button-toggle class="Second-button-toolbar color-button-toolbar"
-        routerLink="/EvolutionMedical" routerLinkActive="Color">Evolution médicale</mat-button-toggle>
-        <mat-button-toggle class="Second-button-toolbar color-button-toolbar"
-        routerLink="/AutoSoins" routerLinkActive="Color">Autorisation de soin</mat-button-toggle>
-      <mat-button-toggle class="Second-button-toolbar color-button-toolbar"
-        routerLink="/Sortie" routerLinkActive="Color">Sortie</mat-button-toggle>
-      </mat-button-toggle-group>
-  </mat-toolbar>
-</p>
+<app-toolbar-med></app-toolbar-med>
 <p class="nav-place"></p>
-<img src="../../../assets/bare3.png" usemap="#image-map" style="width: 100%;">
+
 <button  mat-icon-button routerLink="/contexteFamilial"><mat-icon>assignment</mat-icon>Accès formulaire soignant</button>
 
 <section>
@@ -35,7 +13,7 @@
               Admission en néonatologie
             </mat-panel-title>
           </mat-expansion-panel-header>
-          <div class="row" >
+          <div class="row">
             <div class="content">
               <div class="content">
                 <label>Date d'admission :</label>
@@ -43,22 +21,37 @@
               </div>
               <div class="content">
                 <label>Mode d'entrée :</label>
-                <select [(ngModel)]="secondSelectValue" disabled>
-                  <option value="Titulaire_Mere">2 - Entrée en urgence</option>
-                  <option value="Titulaire_Autre">Autre</option>
+                <select disabled>
+                  <option></option>
+                  <option >1 - ???</option>
+                  <option >2 - Entrée en urgence</option>
+                  <option >Autre</option>
                 </select>
-              </div><br>
-              <div>
+              </div>
+              <div class="content">
                 <label>Motif d'hospitalisation</label>
-                <input type="text" disabled value="Un motif">
-              </div><br>
-              <mat-radio-group aria-label="Select an option" [(ngModel)]="Admission"
-                required disabled>
-                <mat-radio-button value="1">Pose bracelet sur incubateur</mat-radio-button><br>
-                <mat-radio-button value="2">Pose bracelet d'identification</mat-radio-button><br>
-                <mat-radio-button value="3">Patient déjà porteur du bracelet</mat-radio-button><br>
-                <mat-radio-button value="4">Refus pose bracelet</mat-radio-button><br>
-              </mat-radio-group>
+                <input type="text" disabled>
+              </div>
+              <div class="content">
+                <label>Age</label>
+                <input type="number" disabled>
+              </div>
+              <div class="content">
+                <label>Age à l'entrée</label>
+                <input type="number" disabled>
+                <label>Poids à l'entrée</label>
+                <input type="number" disabled>kg
+              </div>
+              <div class="content">
+                <label>Terme de naissance</label>
+                <input type="number" disabled>
+                <label>Poids de naissance</label>
+                <input type="number" disabled >kg
+              </div>
+              <div class="content">
+                <label>Score d'apgar</label>
+                <input matInput disabled>
+              </div>
             </div>
           </div>
         </mat-expansion-panel>
@@ -70,39 +63,52 @@
           </mat-expansion-panel-header>
           <div class="row">
             <div class="content">
-              <div class="content">
-                <div>
+                <div class="content">
                   <label>En provenance de </label>
-                  <input type="text" disabled>
-                </div><br>
+                  <select [(ngModel)]="secondSelectValue" disabled>
+                    <option></option>
+                    <option>Archet</option>
+                    <option>Monaco</option>
+                    <option>St-Jean</option>
+                    <option>AntibesGrasse</option>
+                    <option>Kantise</option>
+                    <option>Cannes</option>
+                    <option>Draguignan</option>
+                    <option>Fréjus</option>
+                    <option>Bastia </option>
+                    <option value="Titulaire_Autre">Autre</option>
+                  </select>
+                  <input type="text" *ngIf="secondSelectValue == 'Titulaire_Autre'" disabled>
+                </div>
+                <div class="content">
                 <label>Mode de transport :</label>
-                <select [(ngModel)]="secondSelectValue" disabled>
+                <select disabled>
                   <option></option>
-                  <option value="Titulaire_Pere">???</option>
-                  <option value="Titulaire_Mere">Ambulance</option>
-                  <option value="Titulaire_Autre">Autre</option>
+                  <option value="fgfg">SAMU terrestre</option>
+                  <option value="zae">Moyen aérien</option>
                 </select>
-              </div><br>
-              <div>
+              </div>
+              <div class="content">
                 <label>Lieu de naissance :</label>
                 <input type="text" disabled>
-              </div><br>
-              <mat-radio-group disabled aria-label="Select an option" [(ngModel)]="Admission" #ctrl="ngModel"
-                required>
-                <mat-radio-button value="1"> Dossier </mat-radio-button>
-                <mat-radio-button value="2"> Carnet de santé </mat-radio-button>
-                <mat-radio-button value="3"> Autre à preciser <input type="text" disabled></mat-radio-button>
-              </mat-radio-group>
-              <div>
+              </div>
+              <div class="content">
+                <mat-radio-group aria-label="Select an option" [(ngModel)]="Admission" #ctrl="ngModel"
+                   disabled>
+                  <mat-radio-button value="1"> Dossier </mat-radio-button>
+                  <mat-radio-button value="2"> Carnet de santé </mat-radio-button>
+                  <mat-radio-button value="3"> Autre à preciser <input type="text"></mat-radio-button>
+                </mat-radio-group>
+              </div>
+              <div class="content">
                 <label>Faits à signaler (SAMU / Ambulance) </label>
                 <input type="text" disabled>
-              </div><br>
+              </div>
               <label> Scan de la fiche SAMU</label>
-              <a href=" " disabled>Sélectionner le document scanné</a><br>
+              <a href=" ">Sélectionner le document scanné</a><br>
               <mat-radio-button disabled>T.I.U</mat-radio-button><br>
-              <div><label>Date de transfert </label>
+              <div class="content"><label>Date de transfert </label>
                 <input type="date" disabled><br>
-                <label>Maternité d'origine <input type="text" disabled></label><br>
                 <label>Indications <input type="text" disabled></label><br>
               </div>
             </div>
@@ -114,10 +120,10 @@
               Correspondants
             </mat-panel-title>
           </mat-expansion-panel-header>
-          <div class="row">
+          <div class="row" >
             <div class="content">
               <div class="tablHeader">
-                <mat-grid-list cols="7" rowHeight="10:1">
+                <mat-grid-list cols="7" rowHeight="10:1" >
                   <mat-grid-tile>Type</mat-grid-tile>
                   <mat-grid-tile>Nom</mat-grid-tile>
                   <mat-grid-tile>Spécialité</mat-grid-tile>
@@ -127,7 +133,7 @@
                   <mat-grid-tile>Actualiser le</mat-grid-tile>
                 </mat-grid-list>
                 <mat-grid-list cols="7" rowHeight="10:1" class="tableInput">
-                  <mat-grid-tile><select [(ngModel)]="secondSelectValue" disabled>
+                  <mat-grid-tile><select [(ngModel)]="secondSelectValue">
                     <option></option>
                     <option value="Titulaire_Pere">???</option>
                     <option value="Titulaire_Mere">Médecin traitant</option>
@@ -141,13 +147,13 @@
                   <mat-grid-tile><input type="date" disabled></mat-grid-tile>
                 </mat-grid-list>
                 <mat-grid-list cols="7" rowHeight="10:1" class="tableInput" *ngIf="val1 != ''">
-                  <mat-grid-tile><input matInput [(ngModel)]="val2" #ctrl="ngModel"></mat-grid-tile>
-                  <mat-grid-tile><input matInput></mat-grid-tile>
-                  <mat-grid-tile><input matInput></mat-grid-tile>
-                  <mat-grid-tile><input type="tel"></mat-grid-tile>
-                  <mat-grid-tile><input type="email"></mat-grid-tile>
-                  <mat-grid-tile><input type="text"></mat-grid-tile>
-                  <mat-grid-tile><input type="date"></mat-grid-tile>
+                  <mat-grid-tile><input matInput [(ngModel)]="val2" #ctrl="ngModel" disabled></mat-grid-tile>
+                  <mat-grid-tile><input matInput disabled></mat-grid-tile>
+                  <mat-grid-tile><input matInput disabled></mat-grid-tile>
+                  <mat-grid-tile><input type="tel" disabled></mat-grid-tile>
+                  <mat-grid-tile><input type="email" disabled></mat-grid-tile>
+                  <mat-grid-tile><input type="text" disabled></mat-grid-tile>
+                  <mat-grid-tile><input type="date" disabled></mat-grid-tile>
                 </mat-grid-list>
               </div>
             </div>
@@ -172,35 +178,25 @@
                   <mat-grid-tile>Actualiser le</mat-grid-tile>
                 </mat-grid-list>
                 <mat-grid-list cols="7" rowHeight="10:1" class="tableInput">
-                  <mat-grid-tile><input disabled matInput [(ngModel)]="val1" #ctrl="ngModel"></mat-grid-tile>
-                  <mat-grid-tile><input disabled matInput></mat-grid-tile>
-                  <mat-grid-tile><input disabled matInput></mat-grid-tile>
-                  <mat-grid-tile><input disabled type="tel"></mat-grid-tile>
-                  <mat-grid-tile><input disabled type="email"></mat-grid-tile>
-                  <mat-grid-tile><input disabled type="text"></mat-grid-tile>
-                  <mat-grid-tile><input disabled type="date"></mat-grid-tile>
+                  <mat-grid-tile><input matInput [(ngModel)]="val1" #ctrl="ngModel" disabled></mat-grid-tile>
+                  <mat-grid-tile><input matInput disabled></mat-grid-tile>
+                  <mat-grid-tile><input matInput disabled></mat-grid-tile>
+                  <mat-grid-tile><input type="tel" disabled></mat-grid-tile>
+                  <mat-grid-tile><input type="email" disabled></mat-grid-tile>
+                  <mat-grid-tile><input type="text" disabled></mat-grid-tile>
+                  <mat-grid-tile><input type="date" disabled></mat-grid-tile>
                 </mat-grid-list>
                 <mat-grid-list cols="7" rowHeight="10:1" class="tableInput" *ngIf="val1 != ''">
-                  <mat-grid-tile><input matInput [(ngModel)]="val2" #ctrl="ngModel"></mat-grid-tile>
-                  <mat-grid-tile><input matInput></mat-grid-tile>
-                  <mat-grid-tile><input matInput></mat-grid-tile>
-                  <mat-grid-tile><input type="tel"></mat-grid-tile>
-                  <mat-grid-tile><input type="email"></mat-grid-tile>
-                  <mat-grid-tile><input type="text"></mat-grid-tile>
-                  <mat-grid-tile><input type="date"></mat-grid-tile>
+                  <mat-grid-tile><input matInput [(ngModel)]="val2" #ctrl="ngModel" disabled></mat-grid-tile>
+                  <mat-grid-tile><input matInput disabled></mat-grid-tile>
+                  <mat-grid-tile><input matInput disabled></mat-grid-tile>
+                  <mat-grid-tile><input type="tel" disabled></mat-grid-tile>
+                  <mat-grid-tile><input type="email" disabled></mat-grid-tile>
+                  <mat-grid-tile><input type="text" disabled></mat-grid-tile>
+                  <mat-grid-tile><input type="date" disabled></mat-grid-tile>
                 </mat-grid-list>
               </div>
             </div>
-          </div>
-        </mat-expansion-panel>
-        <mat-expansion-panel [expanded]="true">
-          <mat-expansion-panel-header class="panel">
-            <mat-panel-title>
-              Souhait d'ordre religieux, éthique, culturel ...
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <div class="row"><br>
-            <textarea style="width: 100%;" matInput cdkTextareaAutosize disabled></textarea>
           </div>
         </mat-expansion-panel>
       </div>

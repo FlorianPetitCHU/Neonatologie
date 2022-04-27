@@ -23,11 +23,18 @@ import { LogMedecinComponent } from './pages/Connexion/Medecin/medecin.component
 import { LogSoignantComponent } from './pages/Connexion/Soignant/soignant.component';
 import { OrthophonisteComponent } from './pages/soignant/orthophoniste/orthophoniste.component';
 import { KineEtOrtoComponent } from './pages/soignant/kine-et-orto/kine-et-orto.component';
+import { PsychoComponent } from './pages/soignant/psycho/psycho.component';
 const routes: Routes = [
   {
     path: "Admission",
     component: AdmissionComponent
-  },  {
+  },
+  {
+    path: "psycho",
+    component: PsychoComponent
+  },
+  
+    {
     path: "KineEtOrto",
     component: KineEtOrtoComponent
   },
@@ -115,6 +122,7 @@ const routes: Routes = [
     path: "croissance",
     component: CroissanceComponent
   },
+
 ];
 
 @NgModule({
