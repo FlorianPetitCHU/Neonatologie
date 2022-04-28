@@ -42,6 +42,7 @@ import { ToolbarMedComponent } from './partials/toolbar-med/toolbar-med.componen
 import { OrthophonisteComponent } from './pages/soignant/orthophoniste/orthophoniste.component';
 import { KineEtOrtoComponent } from './pages/soignant/kine-et-orto/kine-et-orto.component';
 import { PsychoComponent } from './pages/soignant/psycho/psycho.component';
+import { CroissanceMedComponent } from './pages/medecin/croissance-med/croissance-med.component';
 
 
 @NgModule({
@@ -69,6 +70,7 @@ import { PsychoComponent } from './pages/soignant/psycho/psycho.component';
     OrthophonisteComponent,
     KineEtOrtoComponent,
     PsychoComponent,
+    CroissanceMedComponent,
   ],
   imports: [
     BrowserModule,

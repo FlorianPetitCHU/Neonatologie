@@ -24,16 +24,21 @@ import { LogSoignantComponent } from './pages/Connexion/Soignant/soignant.compon
 import { OrthophonisteComponent } from './pages/soignant/orthophoniste/orthophoniste.component';
 import { KineEtOrtoComponent } from './pages/soignant/kine-et-orto/kine-et-orto.component';
 import { PsychoComponent } from './pages/soignant/psycho/psycho.component';
+import { CroissanceMedComponent } from './pages/medecin/croissance-med/croissance-med.component';
 const routes: Routes = [
   {
     path: "Admission",
     component: AdmissionComponent
   },
   {
+    path: "CroissanceMed",
+    component: CroissanceMedComponent
+  },
+  {
     path: "psycho",
     component: PsychoComponent
   },
-  
+
     {
     path: "KineEtOrto",
     component: KineEtOrtoComponent
