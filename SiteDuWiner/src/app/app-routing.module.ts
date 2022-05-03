@@ -26,10 +26,20 @@ import { KineEtOrtoComponent } from './pages/soignant/kine-et-orto/kine-et-orto.
 import { PsychoComponent } from './pages/soignant/psycho/psycho.component';
 import { CroissanceMedComponent } from './pages/medecin/croissance-med/croissance-med.component';
 import { GrossesseVueSoignantComponent } from './pages/soignant/grossesse-vue-soignant/grossesse-vue-soignant.component';
+import { AtcdVueSoignantComponent } from './pages/soignant/atcd-vue-soignant/atcd-vue-soignant.component';
+import { VaccinVueSoignantComponent } from './pages/soignant/vaccin-vue-soignant/vaccin-vue-soignant.component';
 const routes: Routes = [
   {
     path: "Admission",
     component: AdmissionComponent
+  },
+  {
+    path: "VaccinVueSoignant",
+    component: VaccinVueSoignantComponent
+  },
+  {
+    path: "AtcdVueSoignant",
+    component: AtcdVueSoignantComponent
   },
   {
     path: "GrossesseVueSoignant",

@@ -1,0 +1,92 @@
+<app-toolbar></app-toolbar>
+<p class="nav-place-soignant"></p>
+<section>
+  <div>
+    <div class="">
+      <div class="row">
+        <mat-expansion-panel [expanded]="true">
+          <mat-expansion-panel-header class="panel">
+            <mat-panel-title>
+              Antécédents famliaux
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="row">
+            <div class="content">
+              <div class="content">
+                <label>Consanguinité des parents :</label>
+                <mat-radio-group aria-label="Select an option">
+                  <mat-radio-button value="1" disabled>Oui</mat-radio-button>
+                  <mat-radio-button value="2" disabled>Non</mat-radio-button>
+                </mat-radio-group>
+              </div>
+              <div class="content">
+                <label>Tabagisme des parents :</label>
+                <input matInput disabled>
+              </div>
+              <div class="content">
+                <label>Autres addiction des parents :</label>
+                <input matInput disabled>
+                <p></p>
+              </div>
+              <div>
+                <label>Antécédents famliaux</label>
+                <mat-radio-group aria-label="Select an option" [(ngModel)]="AntecedentsFamiliaux" #ctrl="ngModel"
+                  required>
+                  <mat-radio-button value="1" disabled>Oui</mat-radio-button>
+                  <mat-radio-button value="2" disabled>Non</mat-radio-button>
+                </mat-radio-group>
+              </div>
+              <div class="tableau" *ngIf="AntecedentsFamiliaux == '1'">
+                <div class="tablHeader">
+                  <mat-grid-list cols="3" rowHeight="10:1">
+                    <mat-grid-tile>Lien familial</mat-grid-tile>
+                    <mat-grid-tile>Pathologies</mat-grid-tile>
+                    <mat-grid-tile>Commentaires</mat-grid-tile>
+                  </mat-grid-list>
+                </div>
+                <mat-grid-list cols="3" rowHeight="10:1" class="tableInput">
+                  <mat-grid-tile><select [(ngModel)]="test" #ctrl="ngModel">
+                      <option>Test</option>
+                    </select></mat-grid-tile>
+                  <mat-grid-tile><input matInput disabled></mat-grid-tile>
+                  <mat-grid-tile><input matInput disabled></mat-grid-tile>
+                </mat-grid-list>
+                <div class="showInputField"></div>
+                <mat-grid-list cols="3" rowHeight="10:1" class="tableInput" *ngIf="test != ''">
+                  <mat-grid-tile><select [(ngModel)]="test" #ctrl="ngModel">
+                      <option>Test</option>
+                    </select></mat-grid-tile>
+                  <mat-grid-tile><input matInput disabled></mat-grid-tile>
+                  <mat-grid-tile><input matInput disabled></mat-grid-tile>
+                </mat-grid-list>
+              </div>
+              <div class="content"><label>Mère</label><label>Taille(cm) :</label><input type="number" disabled><label>Poids(kg)
+                  :</label><input type="number" disabled><label>IMC(kg/m²) :</label><input type="number" disabled></div>
+              <div class="content"><label>Père</label><label>Taille(cm) :</label><input type="number" disabled><label>Poids(kg)
+                  :</label><input type="number" disabled><label>IMC(kg/m²) :</label><input type="number" disabled></div>
+                 <div class="content"><label>Taille cible(cm):</label><input type="number" disabled> </div>
+              <div class="content">
+                <label>Commentaire :</label>
+                <input matInput disabled>
+              </div>
+            </div>
+          </div>
+        </mat-expansion-panel>
+      </div>
+      <div class="row">
+        <mat-expansion-panel [expanded]="true">
+          <mat-expansion-panel-header class="panel">
+            <mat-panel-title>
+              Scan de l'arbre généalogique
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="row">
+            <div class="content">
+              <a href=" " >Scanner de l'arbre généalogique</a>
+            </div>
+          </div>
+        </mat-expansion-panel>
+      </div>
+    </div>
+  </div>
+</section>
