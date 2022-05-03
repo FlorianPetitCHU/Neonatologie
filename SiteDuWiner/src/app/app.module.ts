@@ -43,7 +43,7 @@ import { OrthophonisteComponent } from './pages/soignant/orthophoniste/orthophon
 import { KineEtOrtoComponent } from './pages/soignant/kine-et-orto/kine-et-orto.component';
 import { PsychoComponent } from './pages/soignant/psycho/psycho.component';
 import { CroissanceMedComponent } from './pages/medecin/croissance-med/croissance-med.component';
-
+import { GrossesseVueSoignantComponent } from './pages/soignant/grossesse-vue-soignant/grossesse-vue-soignant.component';
 
 @NgModule({
   declarations: [
@@ -71,6 +71,7 @@ import { CroissanceMedComponent } from './pages/medecin/croissance-med/croissanc
     KineEtOrtoComponent,
     PsychoComponent,
     CroissanceMedComponent,
+    GrossesseVueSoignantComponent,
   ],
   imports: [
     BrowserModule,
