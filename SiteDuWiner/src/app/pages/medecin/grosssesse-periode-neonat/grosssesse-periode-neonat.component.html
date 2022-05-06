@@ -59,11 +59,23 @@
     <div class="row">
       <div class="content">
         <div class="content">
-          <mat-radio-group aria-label="Select an option">
+          <mat-radio-group aria-label="Select an option"  [(ngModel)]="secondSelectValue">
+            <label>Grossesse spontannée :</label>
+            <mat-radio-button value="1">Oui</mat-radio-button>
+            <mat-radio-button value="2" >Non</mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <div class="content">
+          <mat-radio-group aria-label="Select an option"  [(ngModel)]="secondSelectValue">
             <label>Grossesse normale :</label>
             <mat-radio-button value="1">Oui</mat-radio-button>
-            <mat-radio-button value="2">Non</mat-radio-button>
+            <mat-radio-button value="2" >Non</mat-radio-button>
           </mat-radio-group>
+          <input matInput style="width: 40%;" >
+        </div>
+        <div class="content">
+          <label>Nombre de placentas</label><input matInput>
+          <label>Nombre de poches des eaux</label><input matInput>
         </div>
         <div class="content">
           <label>Gestité/Parité :</label>
@@ -403,6 +415,7 @@
           <mat-radio-group aria-label="Select an option">
             <mat-radio-button value="1">Oui</mat-radio-button>
             <mat-radio-button value="2">Non</mat-radio-button>
+            <mat-radio-button value="3">Non connu</mat-radio-button>
           </mat-radio-group>
         </div>
         <div class="content">
@@ -410,6 +423,7 @@
           <mat-radio-group aria-label="Select an option">
             <mat-radio-button value="1">Oui</mat-radio-button>
             <mat-radio-button value="2">Non</mat-radio-button>
+            <mat-radio-button value="3">Non connu</mat-radio-button>
           </mat-radio-group>
         </div>
         <div class="content">
@@ -417,6 +431,7 @@
           <mat-radio-group aria-label="Select an option">
             <mat-radio-button value="1">Oui</mat-radio-button>
             <mat-radio-button value="2">Non</mat-radio-button>
+            <mat-radio-button value="3">Non connu</mat-radio-button>
           </mat-radio-group>
         </div>
         <div class="content">
@@ -424,6 +439,7 @@
           <mat-radio-group aria-label="Select an option">
             <mat-radio-button value="1">Oui</mat-radio-button>
             <mat-radio-button value="2">Non</mat-radio-button>
+            <mat-radio-button value="3">Non connu</mat-radio-button>
           </mat-radio-group>
         </div>
       </div>
@@ -536,6 +552,7 @@
                   <mat-radio-button value="1">Oui</mat-radio-button>
                   <mat-radio-button value="2">Non</mat-radio-button>
                 </mat-radio-group>
+                <input matInput> °C
              </div>
             </mat-grid-tile>
         </mat-grid-list>
@@ -571,6 +588,41 @@
                   <mat-radio-button value="2">Non</mat-radio-button>
                 </mat-radio-group>
              </div>
+            </mat-grid-tile>
+          </mat-grid-list>
+        </div>
+        <div class="content">
+          <mat-grid-list cols="6" rowHeight="10:1">
+            <mat-grid-tile colspan="1">
+              <div class="aligne-gauche">
+               <label>Voie</label>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="5">
+              <div class="aligne-gauche">
+                <mat-radio-group aria-label="Select an option">
+                  <mat-radio-button value="1">voie basse instrumentale</mat-radio-button>
+                  <mat-radio-button value="2">voie non instrumentale</mat-radio-button>
+                </mat-radio-group>
+             </div>
+            </mat-grid-tile>
+          </mat-grid-list>
+        </div>
+        <div class="content">
+          <mat-grid-list cols="6" rowHeight="10:1">
+            <mat-grid-tile colspan="1">
+              <div class="aligne-gauche">
+               <label>Antibiotique</label>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="5">
+              <div class="aligne-gauche">
+                <mat-radio-group aria-label="Select an option">
+                  <mat-radio-button value="1">Oui</mat-radio-button>
+                  <mat-radio-button value="2">Non</mat-radio-button>
+                </mat-radio-group>
+             </div>
+             <input matInput style="width: 70%;">
             </mat-grid-tile>
           </mat-grid-list>
         </div>
@@ -1133,10 +1185,6 @@
             </mat-grid-list>
           </div>
         </div>
-          <div class="content">
-            <label>Nombre de placentas</label><input matInput>
-            <label>Nombre de poches des eaux</label><input matInput>
-          </div>
         </div>
       </div>
     </mat-expansion-panel>
