@@ -12,7 +12,7 @@
       <mat-radio-button value="2">Nouveau-né à terme</mat-radio-button>
     </mat-radio-group>
 
-    <mat-expansion-panel *ngIf="NouveauNe == 1">
+    <mat-expansion-panel *ngIf="NouveauNe == 1" expanded>
       <mat-expansion-panel-header class="panel">
         <mat-panel-title>
           Nouveau-né prématuré
@@ -30,7 +30,7 @@
           <option value="5">Moribond</option>
           <option selected></option>
         </select></p>
-      <p>Température à l'arrivée : <input type="number">°C ??????????</p>
+      <p>Température à l'arrivée : <input type="number">°C</p>
       <h3>Examen cardio-hémodynamique</h3>
       <p>Fréquence cardiaque : <input type="number"> Bpm</p>
       <p>Pression artérielle :</p>
@@ -105,7 +105,8 @@
         <mat-radio-button value="1">Oui</mat-radio-button>
         <mat-radio-button value="2">Non</mat-radio-button>
       </mat-radio-group></p>
-      <p>Cordon ombilical : ??????</p>
+      <p>Cordon ombilical : <input type="text"> </p>
+      <p><input type="number"> artères et <input type="number"> veines</p>
       <h3>Membres - Peau</h3>
       <mat-radio-group aria-label="Select an option" [(ngModel)]="BoucheOreilleCou">
         <mat-radio-button value="1">Sans Particularité</mat-radio-button>
@@ -117,9 +118,45 @@
         <mat-radio-button value="1">Oui</mat-radio-button>
         <mat-radio-button value="2">Non</mat-radio-button>
       </mat-radio-group></p>??????
+      <p>Tonus Axial <select [(ngModel)]="TA">
+        <option value="1">Normal pour le terma</option>
+        <option value="2">Hypotonie</option>
+        <option value="3">Hypertonie</option>
+        <option value="4">Non évaluable</option>
+      </select> <input type="text" *ngIf="TA == 4"></p>
+      <p>Tonus périphérique <select [(ngModel)]="TP">
+        <option value="1">Normal pour le terma</option>
+        <option value="2">Hypotonie en rapport avec le terme</option>
+        <option value="3">Hypotonie</option>
+        <option value="4">Hypertonie</option>
+        <option value="5">Non évaluable</option>
+      </select> <input type="text" *ngIf="TP ==5"></p>
+      <p>Gesticulation spontanée - motricité <select [(ngModel)]="GSM">
+        <option value="1">Normal pour le terma</option>
+        <option value="2">Particularité</option>
+      </select> <input type="text" *ngIf="GSM == 2"></p>
+      <p>Contact <select [(ngModel)]="GSM">
+        <option value="1">Normal</option>
+        <option value="2">Particularité</option>
+      </select> <input type="text" *ngIf="GSM == 2"></p>
+      <p>Fontanelle <select [(ngModel)]="Fontanelle">
+        <option value="1">Normale et normotendue</option>
+        <option value="2">Particularité</option>
+      </select> <input type="text" *ngIf="Fontanelle == 2"></p>
+      <p>Reflexe archaïques <select [(ngModel)]="RA">
+        <option value="1">Présents et habituels pour le terme</option>
+        <option value="2">Particularité</option>
+      </select> <input type="text" *ngIf="RA == 2"></p>
+      <p>Succion <select [(ngModel)]="Fontanelle">
+        <option value="1">Efficace</option>
+        <option value="2">Ebauche</option>
+        <option value="3">Particularité</option>
+      </select> <input type="text" *ngIf="Fontanelle == 2"></p>
+      <p>Synthèse de l'examen clinique initial</p>
+      <textarea name="" id="" cols="60" rows="10"></textarea>
     </mat-expansion-panel>
 
-    <mat-expansion-panel *ngIf="NouveauNe == 2">
+    <mat-expansion-panel *ngIf="NouveauNe == 2" expanded>
       <mat-expansion-panel-header class="panel">
         <mat-panel-title>
           Nouveau-né à terme
@@ -137,7 +174,7 @@
           <option value="5">Moribond</option>
           <option selected></option>
         </select></p>
-      <p>Température à l'arrivée : <input type="number">°C ??????????</p>
+      <p>Température à l'arrivée : <input type="number">°C</p>
       <h3>Examen cardio-hémodynamique</h3>
       <p>Fréquence cardiaque : <input type="number"> Bpm</p>
       <p>Pression artérielle :</p>
@@ -213,7 +250,8 @@
           <mat-radio-button value="2">Non</mat-radio-button>
         </mat-radio-group>
       </p>
-      <p>Cordon ombilical : ??????</p>
+      <p>Cordon ombilical : <input type="text"> </p>
+      <p><input type="number"> artères et <input type="number"> veines</p>
       <h3>Membres - Peau</h3>
       <mat-radio-group aria-label="Select an option" [(ngModel)]="BoucheOreilleCou">
         <mat-radio-button value="1">Sans Particularité</mat-radio-button>
@@ -226,6 +264,53 @@
           <mat-radio-button value="2">Non</mat-radio-button>
         </mat-radio-group>
       </p>??????
+      <p>Tonus Axial <select [(ngModel)]="TA">
+        <option value="1">Normal pour le terma</option>
+        <option value="2">Hypotonie</option>
+        <option value="3">Hypertonie</option>
+        <option value="4">Non évaluable</option>
+      </select> <input type="text" *ngIf="TA == 4"></p>
+      <p>Tonus périphérique <select [(ngModel)]="TP">
+        <option value="1">Normal pour le terma</option>
+        <option value="2">Hypotonie en rapport avec le terme</option>
+        <option value="3">Hypotonie</option>
+        <option value="4">Hypertonie</option>
+        <option value="5">Non évaluable</option>
+      </select> <input type="text" *ngIf="TP ==5"></p>
+      <p>Gesticulation spontanée - motricité <select [(ngModel)]="GSM">
+        <option value="1">Normal pour le terma</option>
+        <option value="2">Particularité</option>
+      </select> <input type="text" *ngIf="GSM == 2"></p>
+      <p>Contact <select [(ngModel)]="GSM">
+        <option value="1">Normal</option>
+        <option value="2">Particularité</option>
+      </select> <input type="text" *ngIf="GSM == 2"></p>
+      <p>Fontanelle <select [(ngModel)]="Fontanelle">
+        <option value="1">Normale et normotendue</option>
+        <option value="2">Particularité</option>
+      </select> <input type="text" *ngIf="Fontanelle == 2"></p>
+      <p>Reflexe archaïques <select [(ngModel)]="RA">
+        <option value="1">Présents et habituels pour le terme</option>
+        <option value="2">Particularité</option>
+      </select> <input type="text" *ngIf="RA == 2"></p>
+      Neurologique si contexte d’asphyxie périnatale<mat-radio-group aria-label="Select an option" [(ngModel)]="Neuro">
+        <mat-radio-button value="1">Oui</mat-radio-button>
+        <mat-radio-button value="2">Non</mat-radio-button>
+      </mat-radio-group><br><br>
+      <div *ngIf="Neuro== 1">
+        Nouveau-né avec analgésie-sédation<mat-radio-group aria-label="Select an option" [(ngModel)]="analgesie">
+          <mat-radio-button value="1">Oui</mat-radio-button>
+          <mat-radio-button value="2">Non</mat-radio-button>
+          <input type="text" *ngIf="analgesie== 1">
+        </mat-radio-group>*
+        <p>Fontanelle <select [(ngModel)]="Fontanelle">
+          <option value="1">Normale et normotendue</option>
+          <option value="2">Particularité</option>
+        </select> <input type="text" *ngIf="Fontanelle == 2"></p>
+        <img src="../../../../assets/Sarnat.png">
+      </div>
+      <p>Synthèse de l'examen clinique initial</p>
+      <textarea name="" id="" cols="60" rows="10"></textarea>
     </mat-expansion-panel>
   </div>
 </div>

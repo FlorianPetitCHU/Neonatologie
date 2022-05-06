@@ -15,6 +15,14 @@ Abdomen = null;
 NouveauNe = null;
 OrgGenExt = null;
 Anus = null;
+TA = null;
+TP = null;
+GSM = null;
+Fontanelle = null;
+RA = null;
+Neuro = null;
+analgesie = null;
+
 BoucheOreilleCou = null;
   constructor() { }
 
