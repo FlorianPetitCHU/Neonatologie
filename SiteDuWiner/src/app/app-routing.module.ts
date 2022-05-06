@@ -71,7 +71,7 @@ const routes: Routes = [
     component: LogMedecinComponent
   },
   {
-    path: "TDB MED",
+    path: "TDBMED",
     component: MedecinComponent
   },
   {
