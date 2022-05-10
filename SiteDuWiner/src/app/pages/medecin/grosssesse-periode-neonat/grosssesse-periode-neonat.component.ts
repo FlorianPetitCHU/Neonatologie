@@ -9,6 +9,7 @@ import { DialogSignerComponent } from '../../autre/dialog-signer/dialog-signer.c
 })
 export class GrosssessePeriodeNeonatComponent implements OnInit {
 secondSelectValue = null;
+thirdSelectValue = null;
   test = "";
   constructor(public dialog: MatDialog,public router :Router) { }
   val1 = "";

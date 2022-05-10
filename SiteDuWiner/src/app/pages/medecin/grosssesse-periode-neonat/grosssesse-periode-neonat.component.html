@@ -66,12 +66,12 @@
           </mat-radio-group>
         </div>
         <div class="content">
-          <mat-radio-group aria-label="Select an option"  [(ngModel)]="secondSelectValue">
+          <mat-radio-group aria-label="Select an option"  [(ngModel)]="thirdSelectValue">
             <label>Grossesse normale :</label>
             <mat-radio-button value="1">Oui</mat-radio-button>
             <mat-radio-button value="2" >Non</mat-radio-button>
           </mat-radio-group>
-          <input matInput style="width: 40%;" >
+          <input matInput style="width: 40%;" *ngIf="thirdSelectValue == 2">
         </div>
         <div class="content">
           <label>Nombre de placentas</label><input matInput>
