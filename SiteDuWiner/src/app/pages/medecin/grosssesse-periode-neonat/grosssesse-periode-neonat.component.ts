@@ -17,6 +17,8 @@ thirdSelectValue = null;
   val3 = "";
   val4 = "";
   val5 = "";
+  fievre = null;
+  antibio = null;
   ngOnInit(): void {
   }
 role : any;

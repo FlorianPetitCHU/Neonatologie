@@ -476,8 +476,9 @@
         </div>
         <div class="content">
           <mat-radio-group>
-            <mat-radio-button value="1">Voie basse</mat-radio-button>
-            <mat-radio-button value="2">Césarienne</mat-radio-button>
+            <mat-radio-button value="1">Voie basse instrumentale</mat-radio-button>
+            <mat-radio-button value="2">Voie basse non instrumentale</mat-radio-button>
+            <mat-radio-button value="3">Césarienne</mat-radio-button>
           </mat-radio-group>
         </div>
         <div class="content">
@@ -548,11 +549,11 @@
             </mat-grid-tile>
             <mat-grid-tile colspan="5">
               <div class="aligne-gauche">
-                <mat-radio-group aria-label="Select an option">
+                <mat-radio-group aria-label="Select an option" [(ngModel)]="fievre">
                   <mat-radio-button value="1">Oui</mat-radio-button>
                   <mat-radio-button value="2">Non</mat-radio-button>
                 </mat-radio-group>
-                <input matInput> °C
+               <label *ngIf="fievre"> <input matInput> °C</label>
              </div>
             </mat-grid-tile>
         </mat-grid-list>
@@ -595,34 +596,17 @@
           <mat-grid-list cols="6" rowHeight="10:1">
             <mat-grid-tile colspan="1">
               <div class="aligne-gauche">
-               <label>Voie</label>
-              </div>
-            </mat-grid-tile>
-            <mat-grid-tile colspan="5">
-              <div class="aligne-gauche">
-                <mat-radio-group aria-label="Select an option">
-                  <mat-radio-button value="1">voie basse instrumentale</mat-radio-button>
-                  <mat-radio-button value="2">voie non instrumentale</mat-radio-button>
-                </mat-radio-group>
-             </div>
-            </mat-grid-tile>
-          </mat-grid-list>
-        </div>
-        <div class="content">
-          <mat-grid-list cols="6" rowHeight="10:1">
-            <mat-grid-tile colspan="1">
-              <div class="aligne-gauche">
                <label>Antibiotique</label>
               </div>
             </mat-grid-tile>
             <mat-grid-tile colspan="5">
               <div class="aligne-gauche">
-                <mat-radio-group aria-label="Select an option">
+                <mat-radio-group aria-label="Select an option" [(ngModel)]="antibio">
                   <mat-radio-button value="1">Oui</mat-radio-button>
                   <mat-radio-button value="2">Non</mat-radio-button>
                 </mat-radio-group>
              </div>
-             <input matInput style="width: 70%;">
+             <input matInput style="width: 70%;" *ngIf="antibio == 1">
             </mat-grid-tile>
           </mat-grid-list>
         </div>
