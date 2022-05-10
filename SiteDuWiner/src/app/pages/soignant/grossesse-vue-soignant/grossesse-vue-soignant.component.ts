@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GrossesseVueSoignantComponent implements OnInit {
   secondSelectValue = null;
+  antibio = null;
+  thirdSelectValue = null;
   test = "";
   constructor() { }
   val1 = "";

@@ -56,11 +56,23 @@
     <div class="row">
       <div class="content">
         <div class="content">
-          <mat-radio-group aria-label="Select an option">
-            <label>Grossesse normale :</label>
-            <mat-radio-button value="1" disabled="true">Oui</mat-radio-button>
-            <mat-radio-button value="2" disabled="true">Non</mat-radio-button>
+          <mat-radio-group aria-label="Select an option"  [(ngModel)]="secondSelectValue">
+            <label>Grossesse spontannée :</label>
+            <mat-radio-button value="1" disabled>Oui</mat-radio-button>
+            <mat-radio-button value="2" disabled>Non</mat-radio-button>
           </mat-radio-group>
+        </div>
+        <div class="content">
+          <mat-radio-group aria-label="Select an option"  [(ngModel)]="thirdSelectValue">
+            <label>Grossesse normale :</label>
+            <mat-radio-button value="1" disabled>Oui</mat-radio-button>
+            <mat-radio-button value="2" disabled>Non</mat-radio-button>
+          </mat-radio-group>
+          <input matInput style="width: 40%;" *ngIf="thirdSelectValue == 2">
+        </div>
+        <div class="content">
+          <label>Nombre de placentas</label><input matInput disabled>
+          <label>Nombre de poches des eaux</label><input matInput disabled>
         </div>
         <div class="content">
           <label>Gestité/Parité :</label>
@@ -568,6 +580,24 @@
                   <mat-radio-button value="2" disabled="true">Non</mat-radio-button>
                 </mat-radio-group>
              </div>
+            </mat-grid-tile>
+          </mat-grid-list>
+        </div>
+        <div class="content">
+          <mat-grid-list cols="6" rowHeight="10:1">
+            <mat-grid-tile colspan="1">
+              <div class="aligne-gauche">
+               <label>Antibiotique</label>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="5">
+              <div class="aligne-gauche">
+                <mat-radio-group aria-label="Select an option" [(ngModel)]="antibio">
+                  <mat-radio-button value="1" disabled>Oui</mat-radio-button>
+                  <mat-radio-button value="2" disabled>Non</mat-radio-button>
+                </mat-radio-group>
+             </div>
+             <input matInput style="width: 70%;" *ngIf="antibio == 1">
             </mat-grid-tile>
           </mat-grid-list>
         </div>
