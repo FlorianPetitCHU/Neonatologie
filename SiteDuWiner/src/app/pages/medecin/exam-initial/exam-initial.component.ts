@@ -22,6 +22,7 @@ Fontanelle = null;
 RA = null;
 Neuro = null;
 analgesie = null;
+VUS = null;
 
 BoucheOreilleCou = null;
   constructor() { }

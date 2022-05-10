@@ -117,7 +117,12 @@
       <p>Ouverture spontanée des yeux : <mat-radio-group aria-label="Select an option">
         <mat-radio-button value="1">Oui</mat-radio-button>
         <mat-radio-button value="2">Non</mat-radio-button>
-      </mat-radio-group></p>??????
+      </mat-radio-group></p>
+      <p>Vus <select [(ngModel)]="VUS">
+        <option value="1">Sans particularité</option>
+        <option value="2">Avec particularité</option>
+        <option value="3">Non vus</option>
+      </select> <input type="text" *ngIf="VUS == 2"></p>
       <p>Tonus Axial <select [(ngModel)]="TA">
         <option value="1">Normal pour le terma</option>
         <option value="2">Hypotonie</option>
@@ -263,7 +268,12 @@
           <mat-radio-button value="1">Oui</mat-radio-button>
           <mat-radio-button value="2">Non</mat-radio-button>
         </mat-radio-group>
-      </p>??????
+      </p>
+      <p>Vus <select [(ngModel)]="VUS">
+        <option value="1">Sans particularité</option>
+        <option value="2">Avec particularité</option>
+        <option value="3">Non vus</option>
+      </select> <input type="text" *ngIf="VUS == 2"></p>
       <p>Tonus Axial <select [(ngModel)]="TA">
         <option value="1">Normal pour le terma</option>
         <option value="2">Hypotonie</option>
