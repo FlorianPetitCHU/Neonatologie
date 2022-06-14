@@ -1,7 +1,0 @@
-
-	# Note du 02.02.2022
-
-	1) Inclure dans l'architecture l'integration des différentes parties : soignants vs médecin
-	2) Dossier papier de la Néonatologie transmis le 01.02.2022 => à inclure dans la maquette en prenant en compte note 1)
-	3) Définir interface Orbis - Logipren
-	4) Définir interface Orbis - GrowthXP
